@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Learning, Sharing, Growing.  Stay foolish, Stay hungry.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://tangxin.club//"/>
-  <updated>2015-06-26T04:00:46.921Z</updated>
+  <updated>2015-06-26T14:21:10.621Z</updated>
   <id>http://tangxin.club//</id>
   
   <author>
@@ -16,15 +16,68 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[test article]]></title>
-    <link href="http://tangxin.club/2015/06/26/test-article/"/>
-    <id>http://tangxin.club/2015/06/26/test-article/</id>
-    <published>2015-06-26T04:00:46.000Z</published>
-    <updated>2015-06-26T04:00:46.921Z</updated>
-    <content type="html"></content>
+    <title><![CDATA[使用Hexo框架搭Blog]]></title>
+    <link href="http://tangxin.club/2015/06/26/%E4%BD%BF%E7%94%A8Hexo%E6%A1%86%E6%9E%B6%E6%90%ADBlog/"/>
+    <id>http://tangxin.club/2015/06/26/使用Hexo框架搭Blog/</id>
+    <published>2015-06-26T14:21:10.621Z</published>
+    <updated>2015-06-26T14:21:10.621Z</updated>
+    <content type="html"><![CDATA[<h2 id="快速部署环境">快速部署环境</h2><h3 id="下载安装hexo">下载安装hexo</h3><pre><code>1.下载并安装node.js  https:<span class="comment">//nodejs.org/</span>
+2.下载并安装git      http:<span class="comment">//www.git-scm.com/download/</span>
+3.安装 hexo         $ npm install -<span class="keyword">g</span> hexo-<span class="keyword">cli</span>
+4.检查是否成功         $ hexo <span class="keyword">version</span>
+</code></pre><h3 id="生成hexo">生成hexo</h3><pre><code><span class="number">1</span>.<span class="variable">$ </span>hexo init &lt;folder&gt;
+<span class="number">2</span>.<span class="variable">$ </span>cd &lt;folder&gt;
+<span class="number">3</span>.<span class="variable">$ </span>npm install
+</code></pre><p>了解目录</p>
+<pre><code>node_modules 是  执行npm install..后生成的
+public 是在   执行hexo g中生成的静太网页文件
+----------------------
+下面是hexo init 初始化就有的
+source  
+themes
+scaffolds   <span class="comment">//骨架 hexo draf/page/post new "article_title"</span>
+draf/page/post scaffolds中用对应的.md文件对应生成相应的格式可以自定义
+_config<span class="class">.yml</span>
+db<span class="class">.json</span>
+package<span class="class">.json</span>
+
+source/_posts <span class="comment">//中的文章 hexo g后生成</span>
+source/_draft <span class="comment">//中的文单 hexo g后不生成</span>
+source/_draft <span class="comment">//通过hexo new draft "article_title"生成 相当于草稿文件  </span>
+hexo publish draft <span class="string">"article_title"</span> <span class="comment">//草稿移动到source/_posts</span>
+</code></pre><h3 id="生成静态HTML">生成静态HTML</h3><pre><code><span class="variable">$ </span>npm install hexo --save
+<span class="variable">$ </span>hexo g
+</code></pre><h3 id="在本地调试">在本地调试</h3><pre><code>$ npm <span class="operator"><span class="keyword">install</span> hexo-<span class="keyword">server</span> <span class="comment">--save</span>
+$ hexo s 或 hexo s -p端口</span>
+</code></pre><h3 id="发布到Github上">发布到Github上</h3><pre><code><span class="number">1</span>.安装hexo-deployer-git  
+    $ npm install hexo-deployer-git --save
+<span class="number">2</span>.配制_config.yml文件deploy:
+     type: git
+      repo: git@github<span class="class">.com</span>:qq897425998/qq897425998<span class="class">.github</span><span class="class">.io</span><span class="class">.git</span>
+      branch: master
+<span class="number">3</span>.$ hexo d
+</code></pre><h2 id="写文章操作">写文章操作</h2><pre><code><span class="variable">$ </span>hexo new <span class="string">"article_title"</span>
+<span class="variable">$ </span>hexo new draft <span class="string">"article_title"</span>
+<span class="variable">$ </span>hexo publish draft <span class="string">"article_title"</span>
+</code></pre><p>  除了用合令也可以直接在source/_posts文件下新建文章</p>
+<h2 id="扩展阅读">扩展阅读</h2><p><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">github上中文wiki</a></p>
+<h2 id="我遇到过的问题">我遇到过的问题</h2><blockquote>
+<p>Q1.浏览器中出现”Cannot GET /“ 怎么办?  </p>
+<p>A1. 执行 <code>npm install</code>  </p>
+<p>Q2.怎么显示read more ?</p>
+<p>A2. 在文章中适合处添加 <code>&lt;!-- more --&gt;</code></p>
+<p>Q3.配制<code>theme icrus</code> 遇到  Cannot GET /archives   ?</p>
+<p>A3.在<code>theme/_config.yml</code> 中将menu中代/的去掉就行了  作者的锅</p>
+</blockquote>
+]]></content>
     <summary type="html">
-    
+    <![CDATA[<h2 id="快速部署环境">快速部署环境</h2><h3 id="下载安装hexo">下载安装hexo</h3><pre><code>1.下载并安装node.js  https:<span class="comment">//nodejs.org/</span>
+2.下载并安]]>
     </summary>
+    
+      <category term="hexo" scheme="http://tangxin.club/tags/hexo/"/>
+    
+      <category term="工具" scheme="http://tangxin.club/categories/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
