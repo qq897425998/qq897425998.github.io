@@ -7,7 +7,7 @@
     <title>Hello World | Michael</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
-    <meta name="author" content="John Doe">
+    <meta name="author" content="Michael">
     
 
     
@@ -57,19 +57,20 @@ Quick">
 				<ul>
 					<ul>
 					 
-						<li><a href="/">Home</a></li>
+						<li><a href="/">主页 | Home</a></li>
 					
-						<li><a href="/archives">Archives</a></li>
+						<li><a href="/archives">归档 | Archives</a></li>
 					
-						<li><a href="/about">About</a></li>
+						<li><a href="/about">关于 | About</a></li>
+					
+						<li><a href="/categories">分类 | Categories</a></li>
 					
 					<li>
  					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-						<input type="hidden" name="q" value="site:yoursite.com">
-					</form>
+						<form class="search">
+							<label>Search</label>
+						<input type="text" id="ts-search-input" name="q" size="30" placeholder="搜索"><br>
+						</form>
 					
 					</li>
 				</ul>
@@ -87,7 +88,7 @@ Quick">
   </h1>
   <p class="article-author">By
        
-		<a href="/about" title="John Doe" target="_blank" itemprop="author">John Doe</a>
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
     <time datetime="2015-06-25T15:39:56.079Z" itemprop="datePublished"> 发表于 2015-06-25</time>
@@ -149,6 +150,10 @@ Quick">
 </nav>
 
 	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/06/25/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2015/06/25/hello-world/"></div>
+</section>
+
 
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
@@ -178,12 +183,6 @@ Quick">
             
           </li>
         
-          <li>
-            
-            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
-            
-          </li>
-        
     </ul>
 </div>
 
@@ -206,13 +205,14 @@ Quick">
 	
 	
 	<section class="info">
-		<p> Hello ,I&#39;m Larry Page in Google. <br/>
-			This is my blog,believe it or not.</p>
+		<p> 学习、分享、成长. <br/>
+			Welcome to my blog</p>
 	</section>
 	 
 	<div class="social-font" class="clearfix">
 		
 		
+		<a href="https://github.com/qq897425998" target="_blank" class="icon-github" title="github"></a>
 		
 		
 		
@@ -220,6 +220,9 @@ Quick">
 		
 		
 		
+		
+		
+		<a href="mailto:897425998@qq.com" target="_blank" class="icon-email" title="Email Me"></a>
 		
 	</div>
 			
@@ -228,7 +231,7 @@ Quick">
 		<p class="copyright">
 		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
 		
-		<a href="/about" target="_blank" title="John Doe">John Doe</a>
+		<a href="/about" target="_blank" title="Michael">Michael</a>
 		
 		
 		</p>
@@ -343,6 +346,18 @@ $(document).ready(function(){
 
 
 
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"tangxin"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
 
 
 
@@ -376,6 +391,11 @@ $(document).ready(function(){
 
 
 
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F31067404449864376fe63c3e704aff64' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
 
 
 <!-- Analytics End -->
@@ -396,6 +416,23 @@ $(document).ready(function(){
 <!-- MathJax End -->
 
 <!-- Tiny_search Begin -->
+
+<script>
+var option = {
+  engineKey: 'b42197e63be1d5ef8bc5'
+};
+(function(w,d,t,u,n,s,e){
+  s = d.createElement(t);
+  s.src = u;
+  s.async = 1;
+  w[n] = function(r){
+    w[n].opts = r;
+  };
+  e = d.getElementsByTagName(t)[0];
+  e.parentNode.insertBefore(s, e);
+})(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
+_ts(option);
+</script>
 
 <!-- Tiny_search End -->
 
