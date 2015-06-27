@@ -1,38 +1,25 @@
 
- <!DOCTYPE HTML>
+  <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   
-    <title>categories | Michael</title>
+    <title>分类 : WEB | Michael</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Michael">
     
 
     
-    <meta name="description" content="android
-ios
-java
-tools
-others">
+    <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://tangxin.club/categories/index.html">
+<meta property="og:title" content="Michael">
+<meta property="og:url" content="http://tangxin.club/categories/WEB/index.html">
 <meta property="og:site_name" content="Michael">
-<meta property="og:description" content="android
-ios
-java
-tools
-others">
-<meta property="og:updated_time" content="2015-06-26T10:09:22.836Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="android
-ios
-java
-tools
-others">
+<meta name="twitter:title" content="Michael">
+<meta name="twitter:description">
 
     
     <link rel="alternative" href="/atom.xml" title="Michael" type="application/atom+xml">
@@ -80,17 +67,31 @@ others">
 </div>
       </header>
       <div id="container">
-          
+        
+
 <div class="archive-title" >
-<h2 class="category-icon">分类</h2>
-
-<a data-src="/categories/工具/" href="#工具" title="工具">工具<sup>1</sup></a>
-
+  <h2 class="category-icon">WEB</h2>
+  
 </div>
-<div id="main" class="archive-part">
-<div class="all-list-box"></div>
-</div>
+<div id="main" class="archive-part clearfix">
+  <div id="archive-page">
 
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2015/06/26/使用Hexo框架搭Blog/" title="使用Hexo框架搭Blog" itemprop="url">
+  
+
+    <time datetime="2015-06-26T14:54:59.040Z" itemprop="datePublished">2015-06-26</time>
+
+
+    <h1 itemprop="name">使用Hexo框架搭Blog</h1>
+
+  </a>
+</section>
+
+
+  </div>
+</div>
 
       </div>
       <footer><div id="footer" >
@@ -204,24 +205,6 @@ $(document).ready(function(){
 
 
 
-
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var list    = $('.archive-title a'),
-      box     = $('.all-list-box'),
-      first   = $('.archive-title a:first-of-type');
-      box.load(first.attr('data-src').toString()+' #archive-page');
-      first.addClass('current');
-  list.each(function(){
-    $(this).click(function(){
-      var listSrc=$(this).attr('data-src').toString()+' #archive-page';
-      box.load(listSrc);
-      list.removeClass('current');
-      $(this).addClass('current');
-     });  
-    });
-  }); 
-</script>
 
 
 <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
