@@ -4,50 +4,49 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>关于怎么有效学习Android的思考 | Michael</title>
+    <title>Android日志系统 | Michael&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Michael">
     
 
     
-    <meta name="description" content="遇到困难解快问题的顺序
-1.查帮助文档
-2.在github中wiki与issus
-3.到google搜索
-4.到StackOverFlow搜索
-5.到 github issus 和 StackOverFlow提问
+    <meta name="description" content="使用日志 API
+之前一直用system.out.print system.err.print是java本身提供的
+调整Log level 只能看到当前级别和比当前级别高的信息
 
-快速分析项目源码  待学习总结
-参考:知呼上的回答">
+
+
+log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于怎么有效学习Android的思考">
-<meta property="og:url" content="http://tangxin.club/2015/06/28/关于怎么有效学习Android的思考/index.html">
-<meta property="og:site_name" content="Michael">
-<meta property="og:description" content="遇到困难解快问题的顺序
-1.查帮助文档
-2.在github中wiki与issus
-3.到google搜索
-4.到StackOverFlow搜索
-5.到 github issus 和 StackOverFlow提问
+<meta property="og:title" content="Android日志系统">
+<meta property="og:url" content="http://tangxin.club/2015/07/04/android日志系统/index.html">
+<meta property="og:site_name" content="Michael's Blog">
+<meta property="og:description" content="使用日志 API
+之前一直用system.out.print system.err.print是java本身提供的
+调整Log level 只能看到当前级别和比当前级别高的信息
 
-快速分析项目源码  待学习总结
-参考:知呼上的回答">
-<meta property="og:updated_time" content="2015-06-27T16:36:42.586Z">
+
+
+log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/80631137.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/40361784.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/86920859.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/82152529.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/63744910.jpg">
+<meta property="og:updated_time" content="2015-07-05T05:15:18.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于怎么有效学习Android的思考">
-<meta name="twitter:description" content="遇到困难解快问题的顺序
-1.查帮助文档
-2.在github中wiki与issus
-3.到google搜索
-4.到StackOverFlow搜索
-5.到 github issus 和 StackOverFlow提问
+<meta name="twitter:title" content="Android日志系统">
+<meta name="twitter:description" content="使用日志 API
+之前一直用system.out.print system.err.print是java本身提供的
+调整Log level 只能看到当前级别和比当前级别高的信息
 
-快速分析项目源码  待学习总结
-参考:知呼上的回答">
+
+
+log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”">
 
     
-    <link rel="alternative" href="/atom.xml" title="Michael" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/favicon.ico">
@@ -62,8 +61,8 @@
 <div>
 		
 			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="Michael">Michael</a></h1>
-				<h2 class="blog-motto">Learning, Sharing, Growing.  Stay foolish, Stay hungry.</h2>
+				<h1 class="site-name"><a href="/" title="Michael&#39;s Blog">Michael&#39;s Blog</a></h1>
+				<h2 class="blog-motto">Stay foolish, Stay hungry, Learning, Sharing, Growing.</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
@@ -98,14 +97,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/06/28/关于怎么有效学习Android的思考/" title="关于怎么有效学习Android的思考" itemprop="url">关于怎么有效学习Android的思考</a>
+      <a href="/2015/07/04/android日志系统/" title="Android日志系统" itemprop="url">Android日志系统</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-27T16:36:42.586Z" itemprop="datePublished"> 发表于 2015-06-28</time>
+    <time datetime="2015-07-04T02:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-04</time>
     
   </p>
 </header>
@@ -114,19 +113,24 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到困难解快问题的顺序"><span class="toc-number">1.</span> <span class="toc-text">遇到困难解快问题的顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速分析项目源码_待学习总结"><span class="toc-number">2.</span> <span class="toc-text">快速分析项目源码  待学习总结</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用日志_API"><span class="toc-number">1.</span> <span class="toc-text">使用日志 API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日志分类"><span class="toc-number">2.</span> <span class="toc-text">日志分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用_DDMS_查看日志"><span class="toc-number">3.</span> <span class="toc-text">使用 DDMS 查看日志</span></a></li></ol>
 		
 		</div>
 		
-		<h2 id="遇到困难解快问题的顺序">遇到困难解快问题的顺序</h2><blockquote>
-<p>1.查帮助文档</p>
-<p>2.在github中wiki与issus</p>
-<p>3.到google搜索</p>
-<p>4.到StackOverFlow搜索</p>
-<p>5.到 github issus 和 StackOverFlow提问</p>
+		<h2 id="使用日志_API">使用日志 API</h2><blockquote>
+<p>之前一直用<br><code>system.out.print</code> <code>system.err.print</code><br>是java本身提供的</p>
+<p>调整Log level 只能看到当前级别和比当前级别高的信息</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/80631137.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/40361784.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/86920859.jpg" alt=""></p>
+<p>log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”<br><a id="more"></a></p>
 </blockquote>
-<h2 id="快速分析项目源码_待学习总结">快速分析项目源码  待学习总结</h2><blockquote>
-<p>参考:<a href="http://www.zhihu.com/question/26343609" target="_blank" rel="external">知呼上的回答</a></p>
+<h2 id="日志分类">日志分类</h2><blockquote>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/82152529.jpg" alt=""></p>
+</blockquote>
+<h2 id="使用_DDMS_查看日志">使用 DDMS 查看日志</h2><blockquote>
+<p>DDMS 是用来调式Android的非常重要的一个工具<br>可以独立运行 还可以模拟打电话 发送短息</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/63744910.jpg" alt=""></p>
 </blockquote>
   
 	</div>
@@ -141,7 +145,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/思考/">思考</a>
+  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
   </div>
 
 </div>
@@ -186,11 +190,19 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2015/07/04/Context 与Application/" title="Context与 Application">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Context与 Application</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/2015/06/26/使用Hexo框架搭Blog/"  title="使用Hexo框架搭Blog">
+<a href="/2015/07/03/BroadcastReceiver/"  title="BroadcastReceiver">
  <strong>下一篇：</strong><br/> 
- <span>使用Hexo框架搭Blog
+ <span>BroadcastReceiver
 </span>
 </a>
 </div>
@@ -199,7 +211,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/06/28/关于怎么有效学习Android的思考/" data-title="关于怎么有效学习Android的思考" data-url="http://tangxin.club/2015/06/28/关于怎么有效学习Android的思考/"></div>
+	<div class="ds-thread" data-thread-key="2015/07/04/android日志系统/" data-title="Android日志系统" data-url="http://tangxin.club/2015/07/04/android日志系统/"></div>
 </section>
 
 
@@ -209,7 +221,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#遇到困难解快问题的顺序"><span class="toc-number">1.</span> <span class="toc-text">遇到困难解快问题的顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速分析项目源码_待学习总结"><span class="toc-number">2.</span> <span class="toc-text">快速分析项目源码  待学习总结</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用日志_API"><span class="toc-number">1.</span> <span class="toc-text">使用日志 API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日志分类"><span class="toc-number">2.</span> <span class="toc-text">日志分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用_DDMS_查看日志"><span class="toc-number">3.</span> <span class="toc-text">使用 DDMS 查看日志</span></a></li></ol>
  
   </div>
 
@@ -223,7 +235,7 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Android/" title="Android">Android<sup>1</sup></a></li>
+			<li><a href="/categories/Android/" title="Android">Android<sup>10</sup></a></li>
 		  
 		
 		  
@@ -240,11 +252,19 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/思考/" title="思考">思考<sup>1</sup></a></li>
+				<li><a href="/tags/Android极客学院视频笔记/" title="Android极客学院视频笔记">Android极客学院视频笔记<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thinking/" title="Thinking">Thinking<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -282,6 +302,8 @@
 	</section>
 	 
 	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/678897425" target="_blank" class="icon-weibo" title="微博"></a>
 		
 		
 		<a href="https://github.com/qq897425998" target="_blank" class="icon-github" title="github"></a>
