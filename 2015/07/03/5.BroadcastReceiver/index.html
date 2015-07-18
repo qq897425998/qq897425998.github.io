@@ -4,62 +4,38 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Michael&#39;s Blog</title>
+    <title>BroadcastReceiver | Michael&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Michael">
     
 
     
-    <meta name="description" content="常用命令行大全
-创建文件夹  mkdir test
-
-进入文件夹  cd test
-
-显示路径  在需要显示的文件夹中执行 pwd
-
-创建空文件  touch fileName
-
-查看文本内容  cat xxx.txt
-
-删除文件  rm xxx.txt  rm -rf file// -fr表示递归和强制，一定要小心使用 rm -fr / 那你的电脑就over了
-
-拷贝  cp -R 源文件  目">
+    <meta name="description" content="使用BroadcastReceiver
+创建new-&amp;gt;other-&amp;gt;BroadcastReceiver
+发送息消1SendBroadcast(new Intent,this,MyReceiver.class)
+onReceivie 接收消息  Intent可以携带数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Michael's Blog">
-<meta property="og:url" content="http://tangxin.club/2015/07/18/Java基础-07.常用命令行大全/index.html">
+<meta property="og:title" content="BroadcastReceiver">
+<meta property="og:url" content="http://tangxin.club/2015/07/03/5.BroadcastReceiver/index.html">
 <meta property="og:site_name" content="Michael's Blog">
-<meta property="og:description" content="常用命令行大全
-创建文件夹  mkdir test
-
-进入文件夹  cd test
-
-显示路径  在需要显示的文件夹中执行 pwd
-
-创建空文件  touch fileName
-
-查看文本内容  cat xxx.txt
-
-删除文件  rm xxx.txt  rm -rf file// -fr表示递归和强制，一定要小心使用 rm -fr / 那你的电脑就over了
-
-拷贝  cp -R 源文件  目">
-<meta property="og:updated_time" content="2015-07-18T05:52:38.197Z">
+<meta property="og:description" content="使用BroadcastReceiver
+创建new-&amp;gt;other-&amp;gt;BroadcastReceiver
+发送息消1SendBroadcast(new Intent,this,MyReceiver.class)
+onReceivie 接收消息  Intent可以携带数据">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/76984611.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/12367311.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/62681533.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/3286742.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/48444028.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/28902550.jpg">
+<meta property="og:updated_time" content="2015-07-18T05:55:29.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Michael's Blog">
-<meta name="twitter:description" content="常用命令行大全
-创建文件夹  mkdir test
-
-进入文件夹  cd test
-
-显示路径  在需要显示的文件夹中执行 pwd
-
-创建空文件  touch fileName
-
-查看文本内容  cat xxx.txt
-
-删除文件  rm xxx.txt  rm -rf file// -fr表示递归和强制，一定要小心使用 rm -fr / 那你的电脑就over了
-
-拷贝  cp -R 源文件  目">
+<meta name="twitter:title" content="BroadcastReceiver">
+<meta name="twitter:description" content="使用BroadcastReceiver
+创建new-&amp;gt;other-&amp;gt;BroadcastReceiver
+发送息消1SendBroadcast(new Intent,this,MyReceiver.class)
+onReceivie 接收消息  Intent可以携带数据">
 
     
     <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
@@ -113,14 +89,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/18/Java基础-07.常用命令行大全/" title="" itemprop="url"></a>
+      <a href="/2015/07/03/5.BroadcastReceiver/" title="BroadcastReceiver" itemprop="url">BroadcastReceiver</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-18T06:09:39.283Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    <time datetime="2015-07-03T02:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-03</time>
     
   </p>
 </header>
@@ -129,50 +105,44 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常用命令行大全"><span class="toc-number">1.</span> <span class="toc-text">常用命令行大全</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用BroadcastReceiver"><span class="toc-number">1.</span> <span class="toc-text">使用BroadcastReceiver</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态注册和注消BroadcastReceiver"><span class="toc-number">2.</span> <span class="toc-text">动态注册和注消BroadcastReceiver</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BroadcastReceiver_的优先级"><span class="toc-number">3.</span> <span class="toc-text">BroadcastReceiver 的优先级</span></a></li></ol>
 		
 		</div>
 		
-		<h1 id="常用命令行大全">常用命令行大全</h1><ul>
-<li><p>创建文件夹<br>  <code>mkdir test</code></p>
-</li>
-<li><p>进入文件夹<br>  <code>cd test</code></p>
-</li>
-<li><p>显示路径<br>  在需要显示的文件夹中执行 <code>pwd</code></p>
-</li>
-<li><p>创建空文件<br>  <code>touch fileName</code></p>
-</li>
-<li><p>查看文本内容<br>  <code>cat xxx.txt</code></p>
-</li>
-<li><p>删除文件<br>  <code>rm xxx.txt</code><br>  <code>rm -rf file</code>// -fr表示递归和强制，一定要小心使用 rm -fr / 那你的电脑就over了</p>
-</li>
-<li><p>拷贝<br>  <code>cp -R 源文件  目标文件</code>// -R 表示对目录进行递归操作</p>
-</li>
-<li><p>移动<br>  <code>mv filePath toPath</code></p>
-</li>
-<li><p>显示当前目录的路径名<br>  在目录中执行<code>pwd</code>    </p>
-</li>
-<li><p>查看文件内容<br>  <code>cat fileName</code></p>
-</li>
-<li><p>清楚命令行内容<br>  <code>clear</code></p>
-</li>
-<li><p>显示日期<br>  <code>date</code></p>
-</li>
-<li><p>显示文件<br>  <code>ls</code><br>  <code>ls -a</code>// 显示隐藏文件<br>  <code>ls -l</code>列出详细信息</p>
-</li>
-<li><p>关机<br>  <code>sudo shutdown -h now</code>// -h 是关闭电源 now立即关机<br>  <code>sudo shutdown -r now</code>//重启<br>  <code>sudo shutdown -h -time 60</code>// 表示60分钟后关机，注意单位是分钟      </p>
-</li>
-</ul>
-<hr>
-<ul>
-<li>邮箱 ：charon.chui@gmail.com  </li>
-<li>Good Luck! </li>
-</ul>
+		<h2 id="使用BroadcastReceiver">使用BroadcastReceiver</h2><blockquote>
+<p>创建new-&gt;other-&gt;BroadcastReceiver</p>
+<p>发送息消<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SendBroadcast(<span class="keyword">new</span> Intent,<span class="keyword">this</span>,MyReceiver.class)</span><br></pre></td></tr></table></figure></p>
+<p>onReceivie 接收消息  Intent可以携带数据<br><a id="more"></a><br><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/76984611.jpg" alt=""></p>
+</blockquote>
+<h2 id="动态注册和注消BroadcastReceiver">动态注册和注消BroadcastReceiver</h2><blockquote>
+<p>在有的时候我们不希望BroadcastReceiver始终处在监听状态</p>
+<p>1在Manifest.xml中删除</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/12367311.jpg" alt=""></p>
+<p>2在MyReceiver中添加ACTION常量</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/62681533.jpg" alt=""></p>
+<p>3通过registerReceiver来注册   unregisterReceiver来注消</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/3286742.jpg" alt=""></p>
+<p>4通过隐式Intent来传送</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/48444028.jpg" alt=""></p>
+</blockquote>
+<h2 id="BroadcastReceiver_的优先级">BroadcastReceiver 的优先级</h2><blockquote>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/28902550.jpg" alt=""></p>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
+  </div>
 
 </div>
 
@@ -217,18 +187,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/07/18/Java基础-09.死锁/" title="">
+ <a href="/2015/07/04/4.android日志系统/" title="Android日志系统">
   <strong>上一篇：</strong><br/>
   <span>
-  (no title)</span>
+  Android日志系统</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/07/18/Java基础-06.单例的最佳实现方式/"  title="">
+<a href="/2015/07/03/7.Intent与IntentFilter/"  title="Intent与IntentFilter">
  <strong>下一篇：</strong><br/> 
- <span>(no title)
+ <span>Intent与IntentFilter
 </span>
 </a>
 </div>
@@ -237,7 +207,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/07/18/Java基础-07.常用命令行大全/" data-title="" data-url="http://tangxin.club/2015/07/18/Java基础-07.常用命令行大全/"></div>
+	<div class="ds-thread" data-thread-key="2015/07/03/5.BroadcastReceiver/" data-title="BroadcastReceiver" data-url="http://tangxin.club/2015/07/03/5.BroadcastReceiver/"></div>
 </section>
 
 
@@ -247,7 +217,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#常用命令行大全"><span class="toc-number">1.</span> <span class="toc-text">常用命令行大全</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用BroadcastReceiver"><span class="toc-number">1.</span> <span class="toc-text">使用BroadcastReceiver</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动态注册和注消BroadcastReceiver"><span class="toc-number">2.</span> <span class="toc-text">动态注册和注消BroadcastReceiver</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BroadcastReceiver_的优先级"><span class="toc-number">3.</span> <span class="toc-text">BroadcastReceiver 的优先级</span></a></li></ol>
  
   </div>
 
@@ -261,7 +231,11 @@
 		<ul>
 		
 		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
 		
+		  
+			<li><a href="/categories/WEB/" title="WEB">WEB<sup>1</sup></a></li>
 		  
 		
 		  
@@ -276,15 +250,19 @@
 		<ul class="clearfix">
 		
 			
-		
+				<li><a href="/tags/Android极客学院视频笔记/" title="Android极客学院视频笔记">Android极客学院视频笔记<sup>8</sup></a></li>
 			
 		
 			
-		
+				<li><a href="/tags/Android/" title="Android">Android<sup>1</sup></a></li>
 			
 		
 			
+				<li><a href="/tags/转载/" title="转载">转载<sup>1</sup></a></li>
+			
 		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			

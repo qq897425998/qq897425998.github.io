@@ -4,23 +4,38 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Michael&#39;s Blog</title>
+    <title>Intent与IntentFilter | Michael&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Michael">
     
 
     
-    <meta name="description" content="RMB大小写转换123456789101112131415161718192021public class RenMingBi &amp;#123;    private static final char[] data = new char[] &amp;#123; &apos;零&apos;, &apos;壹&apos;, &apos;贰&apos;, &apos;叁&apos;, &apos;肆&apos;, &apos;伍&apos;, &apos;陆&apos;, &apos;柒&apos;, &apos;捌&apos;, &apos;玖&apos; &amp;#125;;    private stati">
+    <meta name="description" content="显示Intent  startActivity(new Intent(MainActiviy.this,AnotherAcitivy.class));  通过这种方式起动的是显示Intent,  指定的要启动的activity的类的定义
+隐示Intent启动本应用的Activiy">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Michael's Blog">
-<meta property="og:url" content="http://tangxin.club/2015/07/18/Java基础-04.RMB大小写转换/index.html">
+<meta property="og:title" content="Intent与IntentFilter">
+<meta property="og:url" content="http://tangxin.club/2015/07/03/7.Intent与IntentFilter/index.html">
 <meta property="og:site_name" content="Michael's Blog">
-<meta property="og:description" content="RMB大小写转换123456789101112131415161718192021public class RenMingBi &amp;#123;    private static final char[] data = new char[] &amp;#123; &apos;零&apos;, &apos;壹&apos;, &apos;贰&apos;, &apos;叁&apos;, &apos;肆&apos;, &apos;伍&apos;, &apos;陆&apos;, &apos;柒&apos;, &apos;捌&apos;, &apos;玖&apos; &amp;#125;;    private stati">
-<meta property="og:updated_time" content="2015-07-18T05:52:38.195Z">
+<meta property="og:description" content="显示Intent  startActivity(new Intent(MainActiviy.this,AnotherAcitivy.class));  通过这种方式起动的是显示Intent,  指定的要启动的activity的类的定义
+隐示Intent启动本应用的Activiy">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/3934227.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/37770327.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/95602176.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/3089636.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/84708025.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/50809455.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/60559696.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/25616824.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/78854863.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/63104448.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/58685903.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/73317927.jpg">
+<meta property="og:updated_time" content="2015-07-18T05:55:29.735Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Michael's Blog">
-<meta name="twitter:description" content="RMB大小写转换123456789101112131415161718192021public class RenMingBi &amp;#123;    private static final char[] data = new char[] &amp;#123; &apos;零&apos;, &apos;壹&apos;, &apos;贰&apos;, &apos;叁&apos;, &apos;肆&apos;, &apos;伍&apos;, &apos;陆&apos;, &apos;柒&apos;, &apos;捌&apos;, &apos;玖&apos; &amp;#125;;    private stati">
+<meta name="twitter:title" content="Intent与IntentFilter">
+<meta name="twitter:description" content="显示Intent  startActivity(new Intent(MainActiviy.this,AnotherAcitivy.class));  通过这种方式起动的是显示Intent,  指定的要启动的activity的类的定义
+隐示Intent启动本应用的Activiy">
 
     
     <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
@@ -74,14 +89,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/18/Java基础-04.RMB大小写转换/" title="" itemprop="url"></a>
+      <a href="/2015/07/03/7.Intent与IntentFilter/" title="Intent与IntentFilter" itemprop="url">Intent与IntentFilter</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-18T06:09:27.633Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    <time datetime="2015-07-02T22:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-03</time>
     
   </p>
 </header>
@@ -90,21 +105,61 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RMB大小写转换"><span class="toc-number">1.</span> <span class="toc-text">RMB大小写转换</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#显示Intent"><span class="toc-number">1.</span> <span class="toc-text">显示Intent</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#隐示Intent"><span class="toc-number">2.</span> <span class="toc-text">隐示Intent</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#启动本应用的Activiy"><span class="toc-number">2.1.</span> <span class="toc-text">启动本应用的Activiy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动外部应用的Activity"><span class="toc-number">2.2.</span> <span class="toc-text">启动外部应用的Activity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过浏览器链接启动本地_Activity"><span class="toc-number">2.3.</span> <span class="toc-text">通过浏览器链接启动本地 Activity</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它"><span class="toc-number">3.</span> <span class="toc-text">其它</span></a></li></ol>
 		
 		</div>
 		
-		<h1 id="RMB大小写转换">RMB大小写转换</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RenMingBi</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span>[] data = <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'零'</span>, <span class="string">'壹'</span>, <span class="string">'贰'</span>, <span class="string">'叁'</span>, <span class="string">'肆'</span>, <span class="string">'伍'</span>, <span class="string">'陆'</span>, <span class="string">'柒'</span>, <span class="string">'捌'</span>, <span class="string">'玖'</span> &#125;;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span>[] units = <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'元'</span>, <span class="string">'拾'</span>, <span class="string">'佰'</span>, <span class="string">'仟'</span>, <span class="string">'万'</span>, <span class="string">'拾'</span>, <span class="string">'佰'</span>, <span class="string">'仟'</span>, <span class="string">'亿'</span> &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(convert(<span class="number">11</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">convert</span><span class="params">(<span class="keyword">int</span> money)</span> </span>&#123;</span><br><span class="line">        StringBuffer sbf = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        <span class="keyword">int</span> unit = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (money != <span class="number">0</span>) &#123;</span><br><span class="line">            sbf.insert(<span class="number">0</span>, units[unit++]);</span><br><span class="line">            System.out.println(sbf.toString());</span><br><span class="line">            <span class="keyword">int</span> number = money % <span class="number">10</span>;</span><br><span class="line">            sbf.insert(<span class="number">0</span>, data[number]);</span><br><span class="line">            money /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sbf.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+		<h2 id="显示Intent">显示Intent</h2><p>  startActivity(new Intent(MainActiviy.this,AnotherAcitivy.class));<br>  通过这种方式起动的是显示Intent,  指定的要启动的activity的类的定义</p>
+<h2 id="隐示Intent">隐示Intent</h2><h3 id="启动本应用的Activiy">启动本应用的Activiy</h3><blockquote>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/3934227.jpg" alt=""><br><a id="more"></a><br><img src="http://img-storage.qiniudn.com/15-7-3/37770327.jpg" alt=""></p>
+</blockquote>
 <hr>
-<ul>
-<li>邮箱 ：charon.chui@gmail.com  </li>
-<li>Good Luck! </li>
-</ul>
+<blockquote>
+<p>约定熟成的命名规则  包名+Intent.action.AnotherAcitivy<br><img src="http://img-storage.qiniudn.com/15-7-3/95602176.jpg" alt=""></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>在AnotherAcitivy添个ACTION常量 方便其它Activity访问<br><img src="http://img-storage.qiniudn.com/15-7-3/3089636.jpg" alt=""></p>
+</blockquote>
+<hr>
+<h3 id="启动外部应用的Activity">启动外部应用的Activity</h3><blockquote>
+<p>在A应用中不可能或取得到B应用的Activiy 类的定义的</p>
+<p>在这种情况下可以通过action来启动是可以做到的</p>
+<p>如果要只让本App内访问 禁止外部App访问 设置android:exported=”false”<br><img src="http://img-storage.qiniudn.com/15-7-3/84708025.jpg" alt=""></p>
+<p>所以启动外部程序Activiy 要记得捕获异常</p>
+<p>如果多个应用配制了同样的action 系统会让你选择</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/50809455.jpg" alt=""></p>
+<p>清除ALAWAYS   到被启动Activity的应用中 CLEAR DEFAULTS</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/60559696.jpg" alt=""></p>
+<p>多个应用同样的action  指明 android:scheme  就不会出现选择了</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/25616824.jpg" alt=""></p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/78854863.jpg" alt=""></p>
+</blockquote>
+<h3 id="通过浏览器链接启动本地_Activity">通过浏览器链接启动本地 Activity</h3><blockquote>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/63104448.jpg" alt=""></p>
+<p>在网页中代码<br>如果在PC上是没反映的它没法处理app协议</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/58685903.jpg" alt=""></p>
+<p>获取传递过来的数据</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/73317927.jpg" alt=""></p>
+</blockquote>
+<h2 id="其它">其它</h2><blockquote>
+<p>&lt;activity android:name=”.AnotherAcitivy”  .会和package的路经连接起来所有加个.</p>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
+  </div>
 
 </div>
 
@@ -149,18 +204,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/07/18/Java基础-06.单例的最佳实现方式/" title="">
+ <a href="/2015/07/03/5.BroadcastReceiver/" title="BroadcastReceiver">
   <strong>上一篇：</strong><br/>
   <span>
-  (no title)</span>
+  BroadcastReceiver</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/07/18/Java基础-10.生产者消费者/"  title="">
+<a href="/2015/07/02/8.Service/"  title="Service">
  <strong>下一篇：</strong><br/> 
- <span>(no title)
+ <span>Service
 </span>
 </a>
 </div>
@@ -169,7 +224,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/07/18/Java基础-04.RMB大小写转换/" data-title="" data-url="http://tangxin.club/2015/07/18/Java基础-04.RMB大小写转换/"></div>
+	<div class="ds-thread" data-thread-key="2015/07/03/7.Intent与IntentFilter/" data-title="Intent与IntentFilter" data-url="http://tangxin.club/2015/07/03/7.Intent与IntentFilter/"></div>
 </section>
 
 
@@ -179,7 +234,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RMB大小写转换"><span class="toc-number">1.</span> <span class="toc-text">RMB大小写转换</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#显示Intent"><span class="toc-number">1.</span> <span class="toc-text">显示Intent</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#隐示Intent"><span class="toc-number">2.</span> <span class="toc-text">隐示Intent</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#启动本应用的Activiy"><span class="toc-number">2.1.</span> <span class="toc-text">启动本应用的Activiy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动外部应用的Activity"><span class="toc-number">2.2.</span> <span class="toc-text">启动外部应用的Activity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#通过浏览器链接启动本地_Activity"><span class="toc-number">2.3.</span> <span class="toc-text">通过浏览器链接启动本地 Activity</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其它"><span class="toc-number">3.</span> <span class="toc-text">其它</span></a></li></ol>
  
   </div>
 
@@ -193,7 +248,11 @@
 		<ul>
 		
 		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
 		
+		  
+			<li><a href="/categories/WEB/" title="WEB">WEB<sup>1</sup></a></li>
 		  
 		
 		  
@@ -208,15 +267,19 @@
 		<ul class="clearfix">
 		
 			
-		
+				<li><a href="/tags/Android极客学院视频笔记/" title="Android极客学院视频笔记">Android极客学院视频笔记<sup>8</sup></a></li>
 			
 		
 			
-		
+				<li><a href="/tags/Android/" title="Android">Android<sup>1</sup></a></li>
 			
 		
 			
+				<li><a href="/tags/转载/" title="转载">转载<sup>1</sup></a></li>
+			
 		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			

@@ -4,29 +4,46 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Michael&#39;s Blog</title>
+    <title>Android日志系统 | Michael&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Michael">
     
 
     
-    <meta name="description" content="-MD5加密 ===
+    <meta name="description" content="使用日志 API
+之前一直用system.out.print system.err.print是java本身提供的
+调整Log level 只能看到当前级别和比当前级别高的信息
 
-MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再还原去，原来把加密后将这个数组通过Base64给变成字符串，这样是不严格的业界标准的做法是对其加密之后用每个字节&amp;amp;15然后就能得到一个int型的值，再将这个int型的值变成16进制的字符串.虽然MD5不可逆，但是网上出现了将常用的数字用md5加密之后通过数据库查询，所以MD5简单的情况下仍然可以查出来，一般可以">
+
+
+log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Michael's Blog">
-<meta property="og:url" content="http://tangxin.club/2015/07/18/Java基础-02.MD5加密/index.html">
+<meta property="og:title" content="Android日志系统">
+<meta property="og:url" content="http://tangxin.club/2015/07/04/4.android日志系统/index.html">
 <meta property="og:site_name" content="Michael's Blog">
-<meta property="og:description" content="-MD5加密 ===
+<meta property="og:description" content="使用日志 API
+之前一直用system.out.print system.err.print是java本身提供的
+调整Log level 只能看到当前级别和比当前级别高的信息
 
-MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再还原去，原来把加密后将这个数组通过Base64给变成字符串，这样是不严格的业界标准的做法是对其加密之后用每个字节&amp;amp;15然后就能得到一个int型的值，再将这个int型的值变成16进制的字符串.虽然MD5不可逆，但是网上出现了将常用的数字用md5加密之后通过数据库查询，所以MD5简单的情况下仍然可以查出来，一般可以">
-<meta property="og:updated_time" content="2015-07-18T06:17:41.781Z">
+
+
+log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/80631137.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/40361784.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/86920859.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/82152529.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/63744910.jpg">
+<meta property="og:updated_time" content="2015-07-18T05:55:29.726Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Michael's Blog">
-<meta name="twitter:description" content="-MD5加密 ===
+<meta name="twitter:title" content="Android日志系统">
+<meta name="twitter:description" content="使用日志 API
+之前一直用system.out.print system.err.print是java本身提供的
+调整Log level 只能看到当前级别和比当前级别高的信息
 
-MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再还原去，原来把加密后将这个数组通过Base64给变成字符串，这样是不严格的业界标准的做法是对其加密之后用每个字节&amp;amp;15然后就能得到一个int型的值，再将这个int型的值变成16进制的字符串.虽然MD5不可逆，但是网上出现了将常用的数字用md5加密之后通过数据库查询，所以MD5简单的情况下仍然可以查出来，一般可以">
+
+
+log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”">
 
     
     <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
@@ -80,14 +97,14 @@ MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再�
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/18/Java基础-02.MD5加密/" title="" itemprop="url"></a>
+      <a href="/2015/07/04/4.android日志系统/" title="Android日志系统" itemprop="url">Android日志系统</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-18T06:17:41.781Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    <time datetime="2015-07-04T02:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-04</time>
     
   </p>
 </header>
@@ -96,26 +113,40 @@ MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再�
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#-"><span class="toc-number">1.</span> <span class="toc-text">-</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用日志_API"><span class="toc-number">1.</span> <span class="toc-text">使用日志 API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日志分类"><span class="toc-number">2.</span> <span class="toc-text">日志分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用_DDMS_查看日志"><span class="toc-number">3.</span> <span class="toc-text">使用 DDMS 查看日志</span></a></li></ol>
 		
 		</div>
 		
-		<hr>
-<blockquote>
-<p>-<br>MD5加密 ===</p>
+		<h2 id="使用日志_API">使用日志 API</h2><blockquote>
+<p>之前一直用<br><code>system.out.print</code> <code>system.err.print</code><br>是java本身提供的</p>
+<p>调整Log level 只能看到当前级别和比当前级别高的信息</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/80631137.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/40361784.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/86920859.jpg" alt=""></p>
+<p>log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”<br><a id="more"></a></p>
 </blockquote>
-<p><code>MD5</code>是一种不可逆的加密算法只能将原文加密，不能讲密文再还原去，原来把加密后将这个数组通过<code>Base64</code>给变成字符串，<br>这样是不严格的业界标准的做法是对其加密之后用每个字节<code>&amp;15</code>然后就能得到一个<code>int</code>型的值，再将这个<code>int</code>型的值变成16进制的字符串.虽然MD5不可逆，<br>但是网上出现了将常用的数字用<code>md5</code>加密之后通过数据库查询，所以<code>MD5</code>简单的情况下仍然可以查出来，一般可以对其多加密几次或者<code>&amp;15</code>之后再和别的数运算等，<br>这称之为<em>加盐</em>.</p>
-<figure class="highlight java"><figcaption><span>public class MD5Utils &#123;</span><a href="/**">* md5加密的工具方法 */ public static String</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">encode(String password)&#123; <span class="keyword">try</span> &#123; MessageDigest digest</span><br><span class="line">= MessageDigest.getInstance(<span class="string">"md5"</span>); <span class="keyword">byte</span>[] result</span><br><span class="line">= digest.digest(password.getBytes()); StringBuilder sb = <span class="keyword">new</span></span><br><span class="line">StringBuilder();<span class="comment">//有的数很小还不到10所以得到16进制的字符串有一个 //的情况，这里对于小于10的值前面加上0</span></span><br><span class="line"><span class="comment">//16进制的方式  把结果集byte数组 打印出来 for(byte b :result)&#123; int number = (b&amp;0xff);//加盐.</span></span><br><span class="line">String str =Integer.toHexString(number); <span class="keyword">if</span>(str.length()==<span class="number">1</span>)&#123; sb.append(<span class="string">"0"</span>);</span><br><span class="line">&#125; sb.append(str); &#125; <span class="keyword">return</span> sb.toString(); &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e)</span><br><span class="line">&#123; e.printStackTrace(); <span class="keyword">return</span> <span class="string">""</span>; &#125; &#125; &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="-">-</h2><p>title: Java基础-01.Git命令.md categories: Java</p>
-<ul>
-<li>邮箱 ：charon.chui@gmail.com  </li>
-<li>Good Luck!</li>
-</ul>
+<h2 id="日志分类">日志分类</h2><blockquote>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/82152529.jpg" alt=""></p>
+</blockquote>
+<h2 id="使用_DDMS_查看日志">使用 DDMS 查看日志</h2><blockquote>
+<p>DDMS 是用来调式Android的非常重要的一个工具<br>可以独立运行 还可以模拟打电话 发送短息</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/63744910.jpg" alt=""></p>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
+  </div>
 
 </div>
 
@@ -160,18 +191,18 @@ MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再�
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/07/18/java基础-13获取今后多少天后的日期/" title="">
+ <a href="/2015/07/04/6.Context 与Application/" title="Context与 Application">
   <strong>上一篇：</strong><br/>
   <span>
-  (no title)</span>
+  Context与 Application</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/07/18/java基础-12网络请求相关内容总结/"  title="">
+<a href="/2015/07/03/5.BroadcastReceiver/"  title="BroadcastReceiver">
  <strong>下一篇：</strong><br/> 
- <span>(no title)
+ <span>BroadcastReceiver
 </span>
 </a>
 </div>
@@ -180,7 +211,7 @@ MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再�
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/07/18/Java基础-02.MD5加密/" data-title="" data-url="http://tangxin.club/2015/07/18/Java基础-02.MD5加密/"></div>
+	<div class="ds-thread" data-thread-key="2015/07/04/4.android日志系统/" data-title="Android日志系统" data-url="http://tangxin.club/2015/07/04/4.android日志系统/"></div>
 </section>
 
 
@@ -190,7 +221,7 @@ MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再�
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#-"><span class="toc-number">1.</span> <span class="toc-text">-</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用日志_API"><span class="toc-number">1.</span> <span class="toc-text">使用日志 API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日志分类"><span class="toc-number">2.</span> <span class="toc-text">日志分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用_DDMS_查看日志"><span class="toc-number">3.</span> <span class="toc-text">使用 DDMS 查看日志</span></a></li></ol>
  
   </div>
 
@@ -204,7 +235,11 @@ MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再�
 		<ul>
 		
 		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
 		
+		  
+			<li><a href="/categories/WEB/" title="WEB">WEB<sup>1</sup></a></li>
 		  
 		
 		  
@@ -219,15 +254,19 @@ MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再�
 		<ul class="clearfix">
 		
 			
-		
+				<li><a href="/tags/Android极客学院视频笔记/" title="Android极客学院视频笔记">Android极客学院视频笔记<sup>8</sup></a></li>
 			
 		
 			
-		
+				<li><a href="/tags/Android/" title="Android">Android<sup>1</sup></a></li>
 			
 		
 			
+				<li><a href="/tags/转载/" title="转载">转载<sup>1</sup></a></li>
+			
 		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			

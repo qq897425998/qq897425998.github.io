@@ -4,26 +4,32 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Michael&#39;s Blog</title>
+    <title>Android.Support.V4, V7, V13是什么？ | Michael&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Michael">
     
 
     
-    <meta name="description" content="|-获取今后多少天后的日期 ===
-java /** * Get the date some days later. * @param year the year * @param month month of the year * @param day day of the month * @return if the parameter is illegal this will return">
+    <meta name="description" content="查看原文
+Android Support V4, V7, V13是什么？本质上就是三个java library。
+为什么要有support库？如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库。
+三个Support 库的区别和作用是什么？Android Support v4 是最早（2011年4月份）实现的库。用在Android1.6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Michael's Blog">
-<meta property="og:url" content="http://tangxin.club/2015/07/18/java基础-13获取今后多少天后的日期/index.html">
+<meta property="og:title" content="Android.Support.V4, V7, V13是什么？">
+<meta property="og:url" content="http://tangxin.club/2015/07/18/3.android.support库/index.html">
 <meta property="og:site_name" content="Michael's Blog">
-<meta property="og:description" content="|-获取今后多少天后的日期 ===
-java /** * Get the date some days later. * @param year the year * @param month month of the year * @param day day of the month * @return if the parameter is illegal this will return">
-<meta property="og:updated_time" content="2015-07-18T06:21:49.112Z">
+<meta property="og:description" content="查看原文
+Android Support V4, V7, V13是什么？本质上就是三个java library。
+为什么要有support库？如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库。
+三个Support 库的区别和作用是什么？Android Support v4 是最早（2011年4月份）实现的库。用在Android1.6">
+<meta property="og:updated_time" content="2015-07-18T05:55:29.723Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Michael's Blog">
-<meta name="twitter:description" content="|-获取今后多少天后的日期 ===
-java /** * Get the date some days later. * @param year the year * @param month month of the year * @param day day of the month * @return if the parameter is illegal this will return">
+<meta name="twitter:title" content="Android.Support.V4, V7, V13是什么？">
+<meta name="twitter:description" content="查看原文
+Android Support V4, V7, V13是什么？本质上就是三个java library。
+为什么要有support库？如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库。
+三个Support 库的区别和作用是什么？Android Support v4 是最早（2011年4月份）实现的库。用在Android1.6">
 
     
     <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
@@ -77,14 +83,14 @@ java /** * Get the date some days later. * @param year the year * @param month m
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/18/java基础-13获取今后多少天后的日期/" title="" itemprop="url"></a>
+      <a href="/2015/07/18/3.android.support库/" title="Android.Support.V4, V7, V13是什么？" itemprop="url">Android.Support.V4, V7, V13是什么？</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-18T06:21:49.112Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    <time datetime="2015-07-18T06:28:33.543Z" itemprop="datePublished"> 发表于 2015-07-18</time>
     
   </p>
 </header>
@@ -93,22 +99,33 @@ java /** * Get the date some days later. * @param year the year * @param month m
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#java_/**_*_Get_the_date_some_days_later-_*_@param_year_the_year_*_@param_month_month_of_the_year_*_@param_day_day_of_the_month_*_@return_if_the_parameter_is_illegal_this_will_return_null_*/_@SuppressLint("SimpleDateFormat")_private_static_String_getClosingDate(int_year,_int_month,_int_day)_{_final_int_internalDay_=_31;_final_String_pattern_=_"yyyy-MM-dd";_DateFormat_dateFormat_=_new_SimpleDateFormat(pattern);_Date_closingDate;_try_{_Calendar_thisDay_=_Calendar-getInstance();_thisDay-set(Calendar-YEAR,_year);_thisDay-set(Calendar-MONTH,_month_-_1);//_the_first_month_of_the_year_is_0-_thisDay-set(Calendar-DAY_OF_MONTH,_day);_thisDay-add(Calendar-DAY_OF_MONTH,_internalDay);_closingDate_=_thisDay-getTime();_}_catch_(Exception_e)_{_e-printStackTrace();_return_null;_}_return_dateFormat-format(closingDate);_}"><span class="toc-number">1.</span> <span class="toc-text">java /** * Get the date some days later. * @param year the year * @param month month of the year * @param day day of the month * @return if the parameter is illegal this will return null */ @SuppressLint("SimpleDateFormat") private static String getClosingDate(int year, int month, int day) { final int internalDay = 31; final String pattern = "yyyy-MM-dd"; DateFormat dateFormat = new SimpleDateFormat(pattern); Date closingDate; try { Calendar thisDay = Calendar.getInstance(); thisDay.set(Calendar.YEAR, year); thisDay.set(Calendar.MONTH, month - 1);// the first month of the year is 0. thisDay.set(Calendar.DAY_OF_MONTH, day); thisDay.add(Calendar.DAY_OF_MONTH, internalDay); closingDate = thisDay.getTime(); } catch (Exception e) { e.printStackTrace(); return null; } return dateFormat.format(closingDate); }</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Android_Support_V4,_V7,_V13是什么？"><span class="toc-number">1.</span> <span class="toc-text">Android Support V4, V7, V13是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要有support库？"><span class="toc-number">2.</span> <span class="toc-text">为什么要有support库？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三个Support_库的区别和作用是什么？"><span class="toc-number">3.</span> <span class="toc-text">三个Support 库的区别和作用是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用？"><span class="toc-number">4.</span> <span class="toc-text">如何使用？</span></a></li></ol>
 		
 		</div>
 		
-		<hr>
-<p>|-<br>获取今后多少天后的日期 ===</p>
-<h2 id="java_/**_*_Get_the_date_some_days_later-_*_@param_year_the_year_*_@param_month_month_of_the_year_*_@param_day_day_of_the_month_*_@return_if_the_parameter_is_illegal_this_will_return_null_*/_@SuppressLint(&quot;SimpleDateFormat&quot;)_private_static_String_getClosingDate(int_year,_int_month,_int_day)_{_final_int_internalDay_=_31;_final_String_pattern_=_&quot;yyyy-MM-dd&quot;;_DateFormat_dateFormat_=_new_SimpleDateFormat(pattern);_Date_closingDate;_try_{_Calendar_thisDay_=_Calendar-getInstance();_thisDay-set(Calendar-YEAR,_year);_thisDay-set(Calendar-MONTH,_month_-_1);//_the_first_month_of_the_year_is_0-_thisDay-set(Calendar-DAY_OF_MONTH,_day);_thisDay-add(Calendar-DAY_OF_MONTH,_internalDay);_closingDate_=_thisDay-getTime();_}_catch_(Exception_e)_{_e-printStackTrace();_return_null;_}_return_dateFormat-format(closingDate);_}"><code>java /** * Get the date some days later. * @param year the year * @param month month of the year * @param day day of the month * @return if the parameter is illegal this will return null */ @SuppressLint(&quot;SimpleDateFormat&quot;) private static String getClosingDate(int year, int month, int day) { final int internalDay = 31; final String pattern = &quot;yyyy-MM-dd&quot;; DateFormat dateFormat = new SimpleDateFormat(pattern); Date closingDate; try { Calendar thisDay = Calendar.getInstance(); thisDay.set(Calendar.YEAR, year); thisDay.set(Calendar.MONTH, month - 1);// the first month of the year is 0. thisDay.set(Calendar.DAY_OF_MONTH, day); thisDay.add(Calendar.DAY_OF_MONTH, internalDay); closingDate = thisDay.getTime(); } catch (Exception e) { e.printStackTrace(); return null; } return dateFormat.format(closingDate); }</code></h2><p>title: Java基础-01.Git命令.md categories: Java</p>
-<ul>
-<li>邮箱 ：charon.chui@gmail.com  </li>
-<li>Good Luck!</li>
-</ul>
+		<p><a href="http://blog.chinaunix.net/uid-24709751-id-4571812.html" target="_blank" rel="external">查看原文</a></p>
+<h2 id="Android_Support_V4,_V7,_V13是什么？">Android Support V4, V7, V13是什么？</h2><p>本质上就是三个java library。</p>
+<h2 id="为什么要有support库？">为什么要有support库？</h2><p>如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库。</p>
+<h2 id="三个Support_库的区别和作用是什么？">三个Support 库的区别和作用是什么？</h2><p>Android Support v4 是最早（2011年4月份）实现的库。用在Android1.6 (API lever 4)或者更高版本之上。它包含了相对V4, V13大的多的功能。<br>                                例如：Fragment，NotificationCompat，LoadBroadcastManager，ViewPager，PageTabAtrip，Loader，FileProvider 等。<br>                                详细API 参考 <a href="http://developer.android.com/reference/android/support/v4/app/package-summary.html" target="_blank" rel="external">http://developer.android.com/reference/android/support/v4/app/package-summary.html</a><br>Android Support v7: 这个包是为了考虑Android2.1(API level 7) 及以上版本而设计的，但是v7是要依赖v4这个包的，也就是如果要使用，两个包得同时 被引用。<br>                                v7支持了Action Bar。<br>Android Support v13:这个包的设计是为了android 3.2及更高版本的，一般我们都不常用，平板开发中能用到。</p>
+<h2 id="如何使用？">如何使用？</h2><p>首先要保证Android Support Library 被安装</p>
+<p>然后在工程中增加（例如 support-v4 Library）</p>
+<p>在ADT中需要按照以下步骤：<br>1、右击当前工程，查找Properties<br>2、选择Java Build Path<br>3、选择Libraries tab，点击右边面板的Add External JARs按钮<br>4、选择android-support-v4.jar文件，这一文件的常见路径为:YOUR_DRIVE\android-sdks\extras\android\support\v4\android-support-v4.jar<br>5、完成添加后，选择Order and Export标签，确认即可。</p>
+<p>5 v4、v7、v13 的例子代码<br>4v : <sdk>/extras/android/support/samples/Support4Demos/<br>7v : <sdk>/extras/android/support/samples/Support7Demos/<br>13v : <sdk>/extras/android/support/samples/Support13Demos/<br>App Navigation: <sdk>/extras/android/support/samples/SupportAppNavigation/</sdk></sdk></sdk></sdk></p>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android/">Android</a><a href="/tags/转载/">转载</a>
+  </div>
 
 </div>
 
@@ -154,9 +171,9 @@ java /** * Get the date some days later. * @param year the year * @param month m
  
 
 <div class="next">
-<a href="/2015/07/18/Java基础-02.MD5加密/"  title="">
+<a href="/2015/07/04/9.权限系统/"  title="Android权限系统">
  <strong>下一篇：</strong><br/> 
- <span>(no title)
+ <span>Android权限系统
 </span>
 </a>
 </div>
@@ -165,7 +182,7 @@ java /** * Get the date some days later. * @param year the year * @param month m
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/07/18/java基础-13获取今后多少天后的日期/" data-title="" data-url="http://tangxin.club/2015/07/18/java基础-13获取今后多少天后的日期/"></div>
+	<div class="ds-thread" data-thread-key="2015/07/18/3.android.support库/" data-title="Android.Support.V4, V7, V13是什么？" data-url="http://tangxin.club/2015/07/18/3.android.support库/"></div>
 </section>
 
 
@@ -175,7 +192,7 @@ java /** * Get the date some days later. * @param year the year * @param month m
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#java_/**_*_Get_the_date_some_days_later-_*_@param_year_the_year_*_@param_month_month_of_the_year_*_@param_day_day_of_the_month_*_@return_if_the_parameter_is_illegal_this_will_return_null_*/_@SuppressLint("SimpleDateFormat")_private_static_String_getClosingDate(int_year,_int_month,_int_day)_{_final_int_internalDay_=_31;_final_String_pattern_=_"yyyy-MM-dd";_DateFormat_dateFormat_=_new_SimpleDateFormat(pattern);_Date_closingDate;_try_{_Calendar_thisDay_=_Calendar-getInstance();_thisDay-set(Calendar-YEAR,_year);_thisDay-set(Calendar-MONTH,_month_-_1);//_the_first_month_of_the_year_is_0-_thisDay-set(Calendar-DAY_OF_MONTH,_day);_thisDay-add(Calendar-DAY_OF_MONTH,_internalDay);_closingDate_=_thisDay-getTime();_}_catch_(Exception_e)_{_e-printStackTrace();_return_null;_}_return_dateFormat-format(closingDate);_}"><span class="toc-number">1.</span> <span class="toc-text">java /** * Get the date some days later. * @param year the year * @param month month of the year * @param day day of the month * @return if the parameter is illegal this will return null */ @SuppressLint("SimpleDateFormat") private static String getClosingDate(int year, int month, int day) { final int internalDay = 31; final String pattern = "yyyy-MM-dd"; DateFormat dateFormat = new SimpleDateFormat(pattern); Date closingDate; try { Calendar thisDay = Calendar.getInstance(); thisDay.set(Calendar.YEAR, year); thisDay.set(Calendar.MONTH, month - 1);// the first month of the year is 0. thisDay.set(Calendar.DAY_OF_MONTH, day); thisDay.add(Calendar.DAY_OF_MONTH, internalDay); closingDate = thisDay.getTime(); } catch (Exception e) { e.printStackTrace(); return null; } return dateFormat.format(closingDate); }</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Android_Support_V4,_V7,_V13是什么？"><span class="toc-number">1.</span> <span class="toc-text">Android Support V4, V7, V13是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么要有support库？"><span class="toc-number">2.</span> <span class="toc-text">为什么要有support库？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三个Support_库的区别和作用是什么？"><span class="toc-number">3.</span> <span class="toc-text">三个Support 库的区别和作用是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何使用？"><span class="toc-number">4.</span> <span class="toc-text">如何使用？</span></a></li></ol>
  
   </div>
 
@@ -189,7 +206,11 @@ java /** * Get the date some days later. * @param year the year * @param month m
 		<ul>
 		
 		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+		  
 		
+		  
+			<li><a href="/categories/WEB/" title="WEB">WEB<sup>1</sup></a></li>
 		  
 		
 		  
@@ -204,15 +225,19 @@ java /** * Get the date some days later. * @param year the year * @param month m
 		<ul class="clearfix">
 		
 			
-		
+				<li><a href="/tags/Android极客学院视频笔记/" title="Android极客学院视频笔记">Android极客学院视频笔记<sup>8</sup></a></li>
 			
 		
 			
-		
+				<li><a href="/tags/Android/" title="Android">Android<sup>1</sup></a></li>
 			
 		
 			
+				<li><a href="/tags/转载/" title="转载">转载<sup>1</sup></a></li>
+			
 		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
 			
 		
 			
