@@ -1,0 +1,564 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Activity | Michael&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Michael">
+    
+
+    
+    <meta name="description" content="Activity
+Activity绑定自定义视图 setConView()
+启动另一个 ActivitystartActivity()
+下载帮助文档 用于离线查看">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Activity">
+<meta property="og:url" content="http://tangxin.club/2015/07/01/temportary/Activity/index.html">
+<meta property="og:site_name" content="Michael's Blog">
+<meta property="og:description" content="Activity
+Activity绑定自定义视图 setConView()
+启动另一个 ActivitystartActivity()
+下载帮助文档 用于离线查看">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/34890526.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/55647036.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/24677583.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/21981610.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/74172036.jpg">
+<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/50854667.jpg">
+<meta property="og:updated_time" content="2015-07-18T05:55:29.720Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Activity">
+<meta name="twitter:description" content="Activity
+Activity绑定自定义视图 setConView()
+启动另一个 ActivitystartActivity()
+下载帮助文档 用于离线查看">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Michael&#39;s Blog">Michael&#39;s Blog</a></h1>
+				<h2 class="blog-motto">Stay foolish, Stay hungry, Learning, Sharing, Growing.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/indexs">索引</a></li>
+					
+						<li><a href="/about">个人简介</a></li>
+					
+					<li>
+ 					
+						<form class="search">
+							<label>Search</label>
+						<input type="text" id="ts-search-input" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/07/01/temportary/Activity/" title="Activity" itemprop="url">Activity</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
+		
+  <p class="article-time">
+    <time datetime="2015-06-30T20:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-01</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity"><span class="toc-number">1.</span> <span class="toc-text">Activity</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity生命周期"><span class="toc-number">2.</span> <span class="toc-text">Activity生命周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Intent传递数据"><span class="toc-number">3.</span> <span class="toc-text">Intent传递数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#传递简单数据"><span class="toc-number">3.1.</span> <span class="toc-text">传递简单数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传递数据包"><span class="toc-number">3.2.</span> <span class="toc-text">传递数据包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传递值对象"><span class="toc-number">3.3.</span> <span class="toc-text">传递值对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#implemente_Serializable"><span class="toc-number">3.3.1.</span> <span class="toc-text">implemente Serializable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#implemente_Parcelable"><span class="toc-number">3.3.2.</span> <span class="toc-text">implemente Parcelable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">3.3.3.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取_Activity_的返回参数"><span class="toc-number">3.4.</span> <span class="toc-text">获取 Activity 的返回参数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity的起动模式"><span class="toc-number">4.</span> <span class="toc-text">Activity的起动模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标准模式"><span class="toc-number">4.1.</span> <span class="toc-text">标准模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SingleTop"><span class="toc-number">4.2.</span> <span class="toc-text">SingleTop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SingleTask_与_SingleInstance_模式"><span class="toc-number">4.3.</span> <span class="toc-text">SingleTask 与 SingleInstance 模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SingleTask"><span class="toc-number">4.3.1.</span> <span class="toc-text">SingleTask</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SingleInstance"><span class="toc-number">4.3.2.</span> <span class="toc-text">SingleInstance</span></a></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<h2 id="Activity">Activity</h2><blockquote>
+<p>Activity绑定自定义视图 setConView()</p>
+<p>启动另一个 Activity<br>startActivity()</p>
+<p>下载帮助文档 用于离线查看<br><a id="more"></a></p>
+</blockquote>
+<h2 id="Activity生命周期">Activity生命周期</h2><pre><code><span class="title">onCreate</span>
+<span class="built_in">on</span>Start         <span class="built_in">on</span>Restart
+<span class="built_in">on</span>Resume
+
+<span class="built_in">on</span>Pause
+<span class="built_in">on</span>Stop
+<span class="built_in">on</span>Destroy
+</code></pre><blockquote>
+<p>按退出键  onPause-onStop-onDestroy<br>再次进入  onCreate-onStart-onResume</p>
+<p>按Home键 onPause-onStop-onDestroy<br>再次进入 onRestart-onStart-onResume</p>
+<p>这是一个全新的生命周期了</p>
+<p>在A B两个Activiy切换时的<br>AonPause-BonCreate-BonStart-BonResume-AonStop</p>
+<p>如果B是对话框 A在背后可见  而A不会执行onStop<br>AonPause-BonCreate-BonStart-BonResume</p>
+<p>关掉B对话框 BonPause-AonResume-BonStop-BonDestroy</p>
+</blockquote>
+<h2 id="Intent传递数据">Intent传递数据</h2><h3 id="传递简单数据">传递简单数据</h3><p>MainActivity.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent i = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,AnotherAcitivy.class);</span><br><span class="line">i.putExtra(<span class="string">"data"</span>,<span class="string">"hello tangxin"</span>);</span><br><span class="line">startActivity(i);</span><br></pre></td></tr></table></figure></p>
+<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent i = getIntent();</span><br><span class="line">textview = (TextView)findViewById(R.id.tv_show);</span><br><span class="line">textView.setText(i.getStringExtra(<span class="string">"data"</span>));</span><br></pre></td></tr></table></figure></p>
+<h3 id="传递数据包">传递数据包</h3><p>MainActivity.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Intent i = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,AnotherAcitivy.class);</span><br><span class="line">Bundle b = <span class="keyword">new</span> Bundle();</span><br><span class="line">b.putString(<span class="string">"name"</span>,<span class="string">"tangxin"</span>);</span><br><span class="line">b.putInt(<span class="string">"age"</span>,<span class="number">21</span>);</span><br><span class="line">i.putExtras(b);</span><br><span class="line"><span class="comment">//i.putExtra("data",b);</span></span><br></pre></td></tr></table></figure></p>
+<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent i = getIntent();</span><br><span class="line"><span class="comment">//Bundle data = i.getExtras(); //与i.putExtra("data",b)对应</span></span><br><span class="line">Bundle data = i.getExtra();</span><br><span class="line">textView.setText(String.format(<span class="string">"name=%s,age=%d"</span>,data.getString(<span class="string">"name"</span>),data.getInt(<span class="string">"age"</span>),date.getString(<span class="string">"name1"</span>,<span class="string">"leo"</span>))); <span class="comment">//如果name1不存在才会 name1=leo</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="传递值对象">传递值对象</h3><p>MainActivity.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i.putExtra(<span class="string">"usr"</span>,<span class="keyword">new</span> User(<span class="string">"tangxin,22"</span>)); <span class="comment">//需要implemente序列化值接写会报错</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="implemente_Serializable">implemente Serializable</h4><p>User.java</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/34890526.jpg" alt="User类implemente Serializable"></p>
+<p>MainActi.java</p>
+<blockquote>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/55647036.jpg" alt="序列化"></p>
+<p>java 提供了 java.io.Serializable</p>
+<p>android 提供了android.os.Parcelable专门面向移动的效率比java.io.Serializable高</p>
+</blockquote>
+<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User user = (Usr) i.getSerializableExtra(<span class="string">"user"</span>);</span><br><span class="line">textview.setText(String.format(<span class="string">"name=%s,age=%d"</span>,user.getName(),user.getAge()));</span><br></pre></td></tr></table></figure></p>
+<hr>
+<blockquote>
+<p>findViewById 被注释掉会出现空指针异常</p>
+</blockquote>
+<h4 id="implemente_Parcelable">implemente Parcelable</h4><p>User.java</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/24677583.jpg" alt="User类implemente Parcelable"></p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/21981610.jpg" alt=""><br>Parcelable 没有全自动的机制需要我们手动写</p>
+<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User user = (Usr) i.getParcelableExtra(<span class="string">"user"</span>);</span><br><span class="line">textview.setText(String.format(<span class="string">"name=%s,age=%d"</span>,user.getName(),user.getAge()));</span><br></pre></td></tr></table></figure></p>
+<h4 id="总结">总结</h4><blockquote>
+<p>用Serializable操作比较简单是系统帮我们操作的速度慢  java提供的</p>
+<p>用Parcelable要手动实现三个方法 速度快 是android提供的</p>
+</blockquote>
+<h3 id="获取_Activity_的返回参数">获取 Activity 的返回参数</h3><p>AnotherAcitivy.java</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/74172036.jpg" alt=""></p>
+<blockquote>
+<p>Intent它不仅可以起动一个Activiy还可以做为一个载本把数据在Activiy之间传来传去的</p>
+</blockquote>
+<p>MainActivity.java<br><img src="http://img-storage.qiniudn.com/15-7-3/50854667.jpg" alt=""></p>
+<h2 id="Activity的起动模式">Activity的起动模式</h2><h3 id="标准模式">标准模式</h3><blockquote>
+<p>toString() 可以用来获取Activity实例<br>getTask() 任务ID</p>
+<p>自己起动自己<br>通过观察TaskID和Acitivity实例发现 同一个任务栈里面创建了不同的实例</p>
+<p>任务栈的概念：<br>栈是先入后出 Activity一个一个入栈 当按back键 一个一个出栈就行了,这是Android跳转的一个机制</p>
+<p>在Manifest.xml中<android>下可以配制</android></p>
+<p><anroid:launchmode="standard"> standard是默认的</anroid:launchmode="standard"></p>
+<p>android:testAllCaps=”false” //关闭全不大写</p>
+</blockquote>
+<h3 id="SingleTop">SingleTop</h3><blockquote>
+<p>同一个文件中的ID不能一样,不同文件中的ID可以一样</p>
+<p>在同一个栈里面如果我们指明启动模式是SingleTop如果些时Activiy处于栈顶只创建一个实例<br>如果不处于栈顶会创建新的实例 <a href="[http://www.jikexueyuan.com/course/678_2.html?ss=1]">观看视频</a></p>
+</blockquote>
+<h3 id="SingleTask_与_SingleInstance_模式">SingleTask 与 SingleInstance 模式</h3><h4 id="SingleTask">SingleTask</h4><p>有个任务栈在ID是87  任务栈里有个MainActiviy<br>启动AnotherAcitivy时 任务栈有两个Activiy<br>在AnotherAcitivy中起动MainActiviy时会把AnotherAcitivy<br>弹出 弹到MainActiviy 这时按后退 直退出</p>
+<h4 id="SingleInstance">SingleInstance</h4><blockquote>
+<p>将Activity存在不同的任务栈中 任务<br>从切换的动画效果可以明显看出来</p>
+</blockquote>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	<div class="share-jiathis">
+	  
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+    var jiathis_config={
+    data_track_clickback:true,
+    sm:"copy,renren,cqq",
+    pic:"",
+    summary:"",
+     ralateuid:{"tsina":"678897425"},hideMore:false}
+    
+  </script> 
+<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=
+2042537" charset="utf-8"></script>      
+
+	 </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/07/02/temportary/Service/" title="Service">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Service</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/07/01/temportary/面试硬技能指导/"  title="Android面试硬技能指导">
+ <strong>下一篇：</strong><br/> 
+ <span>Android面试硬技能指导
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/07/01/temportary/Activity/" data-title="Activity" data-url="http://tangxin.club/2015/07/01/temportary/Activity/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity"><span class="toc-number">1.</span> <span class="toc-text">Activity</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity生命周期"><span class="toc-number">2.</span> <span class="toc-text">Activity生命周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Intent传递数据"><span class="toc-number">3.</span> <span class="toc-text">Intent传递数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#传递简单数据"><span class="toc-number">3.1.</span> <span class="toc-text">传递简单数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传递数据包"><span class="toc-number">3.2.</span> <span class="toc-text">传递数据包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传递值对象"><span class="toc-number">3.3.</span> <span class="toc-text">传递值对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#implemente_Serializable"><span class="toc-number">3.3.1.</span> <span class="toc-text">implemente Serializable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#implemente_Parcelable"><span class="toc-number">3.3.2.</span> <span class="toc-text">implemente Parcelable</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#总结"><span class="toc-number">3.3.3.</span> <span class="toc-text">总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取_Activity_的返回参数"><span class="toc-number">3.4.</span> <span class="toc-text">获取 Activity 的返回参数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Activity的起动模式"><span class="toc-number">4.</span> <span class="toc-text">Activity的起动模式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标准模式"><span class="toc-number">4.1.</span> <span class="toc-text">标准模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SingleTop"><span class="toc-number">4.2.</span> <span class="toc-text">SingleTop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SingleTask_与_SingleInstance_模式"><span class="toc-number">4.3.</span> <span class="toc-text">SingleTask 与 SingleInstance 模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SingleTask"><span class="toc-number">4.3.1.</span> <span class="toc-text">SingleTask</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SingleInstance"><span class="toc-number">4.3.2.</span> <span class="toc-text">SingleInstance</span></a></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>10</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/WEB/" title="WEB">WEB<sup>1</sup></a></li>
+		  
+		
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Android极客学院视频笔记/" title="Android极客学院视频笔记">Android极客学院视频笔记<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thinking/" title="Thinking">Thinking<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/转载/" title="转载">转载<sup>1</sup></a></li>
+			
+		
+			
+		
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 当才华还撑不起野心时,就该静下心来学习 <br/>
+			当能力还驾驭不了目标时,就该沉下心来历练</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/678897425" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/qq897425998" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		<a href="https://www.linkedin.com/in/tangxin1993" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		
+		<a href="http://www.zhihu.com/people/tang-xin-67" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Michael">Michael</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"tangxin"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F31067404449864376fe63c3e704aff64' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<script>
+var option = {
+  engineKey: 'b42197e63be1d5ef8bc5'
+};
+(function(w,d,t,u,n,s,e){
+  s = d.createElement(t);
+  s.src = u;
+  s.async = 1;
+  w[n] = function(r){
+    w[n].opts = r;
+  };
+  e = d.getElementsByTagName(t)[0];
+  e.parentNode.insertBefore(s, e);
+})(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
+_ts(option);
+</script>
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

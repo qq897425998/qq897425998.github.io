@@ -1,0 +1,543 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>使用Hexo框架搭Blog | Michael&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Michael">
+    
+
+    
+    <meta name="description" content="快速部署环境下载安装hexo下载并安装node.js  https://nodejs.org/
+下载并安装git      http://www.git-scm.com/download/
+安装 hexo         $ npm install -g hexo-cli
+检查是否成功         $ hexo version">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Hexo框架搭Blog">
+<meta property="og:url" content="http://tangxin.club/2015/06/25/temportary/使用Hexo框架搭Blog/index.html">
+<meta property="og:site_name" content="Michael's Blog">
+<meta property="og:description" content="快速部署环境下载安装hexo下载并安装node.js  https://nodejs.org/
+下载并安装git      http://www.git-scm.com/download/
+安装 hexo         $ npm install -g hexo-cli
+检查是否成功         $ hexo version">
+<meta property="og:updated_time" content="2015-07-18T05:55:29.739Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用Hexo框架搭Blog">
+<meta name="twitter:description" content="快速部署环境下载安装hexo下载并安装node.js  https://nodejs.org/
+下载并安装git      http://www.git-scm.com/download/
+安装 hexo         $ npm install -g hexo-cli
+检查是否成功         $ hexo version">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Michael&#39;s Blog">Michael&#39;s Blog</a></h1>
+				<h2 class="blog-motto">Stay foolish, Stay hungry, Learning, Sharing, Growing.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/indexs">索引</a></li>
+					
+						<li><a href="/about">个人简介</a></li>
+					
+					<li>
+ 					
+						<form class="search">
+							<label>Search</label>
+						<input type="text" id="ts-search-input" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/06/25/temportary/使用Hexo框架搭Blog/" title="使用Hexo框架搭Blog" itemprop="url">使用Hexo框架搭Blog</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
+		
+  <p class="article-time">
+    <time datetime="2015-06-25T13:49:00.000Z" itemprop="datePublished"> 发表于 2015-06-25</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#快速部署环境"><span class="toc-number">1.</span> <span class="toc-text">快速部署环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载安装hexo"><span class="toc-number">1.1.</span> <span class="toc-text">下载安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成hexo"><span class="toc-number">1.2.</span> <span class="toc-text">生成hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成静态HTML"><span class="toc-number">1.3.</span> <span class="toc-text">生成静态HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在本地调试"><span class="toc-number">1.4.</span> <span class="toc-text">在本地调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发布到Github上"><span class="toc-number">1.5.</span> <span class="toc-text">发布到Github上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写文章操作"><span class="toc-number">2.</span> <span class="toc-text">写文章操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#扩展阅读"><span class="toc-number">3.</span> <span class="toc-text">扩展阅读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我遇到过的问题"><span class="toc-number">4.</span> <span class="toc-text">我遇到过的问题</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="快速部署环境">快速部署环境</h2><h3 id="下载安装hexo">下载安装hexo</h3><pre><code>下载并安装node.js  https:<span class="comment">//nodejs.org/</span>
+下载并安装git      http:<span class="comment">//www.git-scm.com/download/</span>
+安装 hexo         $ npm install -<span class="keyword">g</span> hexo-<span class="keyword">cli</span>
+检查是否成功         $ hexo <span class="keyword">version</span>
+</code></pre><a id="more"></a>
+<h3 id="生成hexo">生成hexo</h3><pre><code><span class="variable">$ </span>hexo init &lt;folder&gt;
+<span class="variable">$ </span>cd &lt;folder&gt;
+<span class="variable">$ </span>npm install
+</code></pre><p>了解目录</p>
+<pre><code>node_modules 是  执行npm install..后生成的
+public 是在   执行hexo g中生成的静太网页文件
+----------------------
+下面是hexo init 初始化就有的
+source  
+themes
+scaffolds   <span class="comment">//骨架 hexo draf/page/post new "article_title"</span>
+draf/page/post scaffolds中用对应的.md文件对应生成相应的格式可以自定义
+_config<span class="class">.yml</span>
+db<span class="class">.json</span>
+package<span class="class">.json</span>
+
+source/_posts <span class="comment">//中的文章 hexo g后生成</span>
+source/_draft <span class="comment">//中的文单 hexo g后不生成</span>
+source/_draft <span class="comment">//通过hexo new draft "article_title"生成 相当于草稿文件  </span>
+hexo publish draft <span class="string">"article_title"</span> <span class="comment">//草稿移动到source/_posts</span>
+</code></pre><h3 id="生成静态HTML">生成静态HTML</h3><pre><code><span class="variable">$ </span>npm install hexo --save
+<span class="variable">$ </span>hexo g
+</code></pre><h3 id="在本地调试">在本地调试</h3><pre><code>$ npm <span class="operator"><span class="keyword">install</span> hexo-<span class="keyword">server</span> <span class="comment">--save</span>
+$ hexo s 或 hexo s -p端口</span>
+</code></pre><h3 id="发布到Github上">发布到Github上</h3><pre><code><span class="number">1</span>.安装hexo-deployer-git  
+    $ npm install hexo-deployer-git --save
+<span class="number">2</span>.配制_config.yml文件deploy:
+     type: git
+      repo: git@github<span class="class">.com</span>:qq897425998/qq897425998<span class="class">.github</span><span class="class">.io</span><span class="class">.git</span>
+      branch: master
+<span class="number">3</span>.$ hexo d
+</code></pre><h2 id="写文章操作">写文章操作</h2><pre><code><span class="variable">$ </span>hexo new <span class="string">"article_title"</span>
+<span class="variable">$ </span>hexo new draft <span class="string">"article_title"</span>
+<span class="variable">$ </span>hexo publish draft <span class="string">"article_title"</span>
+</code></pre><p>  除了用合令也可以直接在source/_posts文件下新建文章</p>
+<h2 id="扩展阅读">扩展阅读</h2><p><a href="https://hexo.io/docs/" target="_blank" rel="external">hexo官方文档</a><br><a href="https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2" target="_blank" rel="external">github上中文wiki</a></p>
+<h2 id="我遇到过的问题">我遇到过的问题</h2><blockquote>
+<p>Q1.浏览器中出现”Cannot GET /“ 怎么办?  </p>
+<p>A1. 执行 <code>npm install</code>  </p>
+<p>Q2.怎么显示read more ?</p>
+<p>A2. 在文章中适合处添加 <code>&lt;!-- more --&gt;</code></p>
+<p>Q3.配制<code>theme icrus</code> 遇到  Cannot GET /archives   ?</p>
+<p>A3.在<code>theme/_config.yml</code> 中将menu中/archives前的/去掉就行了 (theme作者merge我的pull request)</p>
+<p>Q4.首页文章太多怎么分页?</p>
+<p>A4.在全局_config.yml中配制 <code>per_page:</code> 每页显示数</p>
+<p>Q5.怎么给一篇文章加多个标签?</p>
+</blockquote>
+<p>A5.标答格式 [tag1,tag2,tag3..]</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/WEB/">WEB</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/hexo/">hexo</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	<div class="share-jiathis">
+	  
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+    var jiathis_config={
+    data_track_clickback:true,
+    sm:"copy,renren,cqq",
+    pic:"",
+    summary:"",
+     ralateuid:{"tsina":"678897425"},hideMore:false}
+    
+  </script> 
+<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=
+2042537" charset="utf-8"></script>      
+
+	 </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/06/27/temportary/关于怎么有效学习Android的思考/" title="关于怎么有效学习Android的思考">
+  <strong>上一篇：</strong><br/>
+  <span>
+  关于怎么有效学习Android的思考</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/06/25/temportary/hello-world/"  title="Hello World">
+ <strong>下一篇：</strong><br/> 
+ <span>Hello World
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/06/25/temportary/使用Hexo框架搭Blog/" data-title="使用Hexo框架搭Blog" data-url="http://tangxin.club/2015/06/25/temportary/使用Hexo框架搭Blog/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#快速部署环境"><span class="toc-number">1.</span> <span class="toc-text">快速部署环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载安装hexo"><span class="toc-number">1.1.</span> <span class="toc-text">下载安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成hexo"><span class="toc-number">1.2.</span> <span class="toc-text">生成hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成静态HTML"><span class="toc-number">1.3.</span> <span class="toc-text">生成静态HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在本地调试"><span class="toc-number">1.4.</span> <span class="toc-text">在本地调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发布到Github上"><span class="toc-number">1.5.</span> <span class="toc-text">发布到Github上</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#写文章操作"><span class="toc-number">2.</span> <span class="toc-text">写文章操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#扩展阅读"><span class="toc-number">3.</span> <span class="toc-text">扩展阅读</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我遇到过的问题"><span class="toc-number">4.</span> <span class="toc-text">我遇到过的问题</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>10</sup></a></li>
+		  
+		
+		  
+		
+		  
+			<li><a href="/categories/WEB/" title="WEB">WEB<sup>1</sup></a></li>
+		  
+		
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Android极客学院视频笔记/" title="Android极客学院视频笔记">Android极客学院视频笔记<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Thinking/" title="Thinking">Thinking<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/转载/" title="转载">转载<sup>1</sup></a></li>
+			
+		
+			
+		
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 当才华还撑不起野心时,就该静下心来学习 <br/>
+			当能力还驾驭不了目标时,就该沉下心来历练</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/678897425" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/qq897425998" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		<a href="https://www.linkedin.com/in/tangxin1993" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		
+		<a href="http://www.zhihu.com/people/tang-xin-67" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Michael">Michael</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"tangxin"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F31067404449864376fe63c3e704aff64' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<script>
+var option = {
+  engineKey: 'b42197e63be1d5ef8bc5'
+};
+(function(w,d,t,u,n,s,e){
+  s = d.createElement(t);
+  s.src = u;
+  s.async = 1;
+  w[n] = function(r){
+    w[n].opts = r;
+  };
+  e = d.getElementsByTagName(t)[0];
+  e.parentNode.insertBefore(s, e);
+})(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
+_ts(option);
+</script>
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

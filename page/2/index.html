@@ -75,28 +75,145 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/01/Activity/" title="Activity" itemprop="url">Activity</a>
+      <a href="/2015/07/18/RMB大小写转换/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-30T20:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-01</time>
+    <time datetime="2015-07-18T05:52:38.195Z" itemprop="datePublished"> 发表于 2015-07-18</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h2 id="Activity">Activity</h2><blockquote>
-<p>Activity绑定自定义视图 setConView()</p>
-<p>启动另一个 Activity<br>startActivity()</p>
-<p>下载帮助文档 用于离线查看<br>
+        <h1 id="RMB大小写转换">RMB大小写转换</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RenMingBi</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span>[] data = <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'零'</span>, <span class="string">'壹'</span>, <span class="string">'贰'</span>, <span class="string">'叁'</span>, <span class="string">'肆'</span>, <span class="string">'伍'</span>, <span class="string">'陆'</span>, <span class="string">'柒'</span>, <span class="string">'捌'</span>, <span class="string">'玖'</span> &#125;;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span>[] units = <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'元'</span>, <span class="string">'拾'</span>, <span class="string">'佰'</span>, <span class="string">'仟'</span>, <span class="string">'万'</span>, <span class="string">'拾'</span>, <span class="string">'佰'</span>, <span class="string">'仟'</span>, <span class="string">'亿'</span> &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(convert(<span class="number">11</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">convert</span><span class="params">(<span class="keyword">int</span> money)</span> </span>&#123;</span><br><span class="line">        StringBuffer sbf = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        <span class="keyword">int</span> unit = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (money != <span class="number">0</span>) &#123;</span><br><span class="line">            sbf.insert(<span class="number">0</span>, units[unit++]);</span><br><span class="line">            System.out.println(sbf.toString());</span><br><span class="line">            <span class="keyword">int</span> number = money % <span class="number">10</span>;</span><br><span class="line">            sbf.insert(<span class="number">0</span>, data[number]);</span><br><span class="line">            money /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sbf.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>邮箱 ：charon.chui@gmail.com  </li>
+<li>Good Luck! </li>
+</ul>
+
         
         
         <p class="article-more-link">
           
-            <a href="/2015/07/01/Activity/#more">Read More</a>
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/07/18/RMB大小写转换/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/RMB大小写转换/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/07/18/MD5加密/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
+		
+  <p class="article-time">
+    <time datetime="2015-07-18T05:52:38.194Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="MD5加密">MD5加密</h1><p><code>MD5</code>是一种不可逆的加密算法只能将原文加密，不能讲密文再还原去，原来把加密后将这个数组通过<code>Base64</code>给变成字符串，<br>这样是不严格的业界标准的做法是对其加密之后用每个字节<code>&amp;15</code>然后就能得到一个<code>int</code>型的值，再将这个<code>int</code>型的值变成16进制的字符串.虽然MD5不可逆，<br>但是网上出现了将常用的数字用<code>md5</code>加密之后通过数据库查询，所以<code>MD5</code>简单的情况下仍然可以查出来，一般可以对其多加密几次或者<code>&amp;15</code>之后再和别的数运算等，<br>这称之为<em>加盐</em>.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MD5Utils</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * md5加密的工具方法</span><br><span class="line">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">encode</span><span class="params">(String password)</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            MessageDigest digest = MessageDigest.getInstance(<span class="string">"md5"</span>);</span><br><span class="line">            <span class="keyword">byte</span>[] result = digest.digest(password.getBytes());</span><br><span class="line">            StringBuilder sb = <span class="keyword">new</span> StringBuilder();<span class="comment">//有的数很小还不到10所以得到16进制的字符串有一个</span></span><br><span class="line">                                                   <span class="comment">//的情况，这里对于小于10的值前面加上0</span></span><br><span class="line">            <span class="comment">//16进制的方式  把结果集byte数组 打印出来</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">byte</span> b :result)&#123;</span><br><span class="line">                <span class="keyword">int</span> number = (b&amp;<span class="number">0xff</span>);<span class="comment">//加盐.</span></span><br><span class="line">                String str =Integer.toHexString(number);</span><br><span class="line">                <span class="keyword">if</span>(str.length()==<span class="number">1</span>)&#123;</span><br><span class="line">                    sb.append(<span class="string">"0"</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                sb.append(str);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> sb.toString();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>邮箱 ：charon.chui@gmail.com  </li>
+<li>Good Luck! </li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/07/18/MD5加密/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/MD5加密/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/07/04/temportary/权限系统/" title="Android权限系统" itemprop="url">Android权限系统</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
+		
+  <p class="article-time">
+    <time datetime="2015-07-04T12:29:00.000Z" itemprop="datePublished"> 发表于 2015-07-04</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="请求权限实例">请求权限实例</h2><blockquote>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/30544911.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/34097929.jpg" alt=""></p>
+<p>这样设计的意义是为了让用户很方便的看到应用的权限<br>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2015/07/04/temportary/权限系统/#more">Read More</a>
           
        </p>
     </div>
@@ -122,7 +239,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2015/07/01/Activity/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/01/Activity/" data-count-type="comments">&nbsp;</a>
+		<a href="/2015/07/04/temportary/权限系统/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/04/temportary/权限系统/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -142,25 +259,27 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/01/面试硬技能指导/" title="Android面试硬技能指导" itemprop="url">Android面试硬技能指导</a>
+      <a href="/2015/07/04/temportary/Context 与Application/" title="Context与 Application" itemprop="url">Context与 Application</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-30T18:40:00.000Z" itemprop="datePublished"> 发表于 2015-07-01</time>
+    <time datetime="2015-07-04T06:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-04</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h2 id=""><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-2/83796359.jpg" alt="概要"></h2>
+        <h2 id="Context的作用">Context的作用</h2><blockquote>
+<p>常用组件继承Context 方面访问资源<br>像Activity Servers 就继承了Context</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/46806433.jpg" alt=""><br>
         
         
         <p class="article-more-link">
           
-            <a href="/2015/07/01/面试硬技能指导/#more">Read More</a>
+            <a href="/2015/07/04/temportary/Context 与Application/#more">Read More</a>
           
        </p>
     </div>
@@ -186,7 +305,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2015/07/01/面试硬技能指导/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/01/面试硬技能指导/" data-count-type="comments">&nbsp;</a>
+		<a href="/2015/07/04/temportary/Context 与Application/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/04/temportary/Context 与Application/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -206,30 +325,31 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/06/27/关于怎么有效学习Android的思考/" title="关于怎么有效学习Android的思考" itemprop="url">关于怎么有效学习Android的思考</a>
+      <a href="/2015/07/04/temportary/android日志系统/" title="Android日志系统" itemprop="url">Android日志系统</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-27T13:00:00.000Z" itemprop="datePublished"> 发表于 2015-06-27</time>
+    <time datetime="2015-07-04T02:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-04</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h2 id="遇到困难解快问题的顺序">遇到困难解快问题的顺序</h2><blockquote>
-<p>1.查帮助文档</p>
-<p>2.在github中wiki与issus</p>
-<p>3.到google搜索</p>
-<p>4.到StackOverFlow搜索</p>
-<p>5.到 github issus 和 StackOverFlow提问<br>
+        <h2 id="使用日志_API">使用日志 API</h2><blockquote>
+<p>之前一直用<br><code>system.out.print</code> <code>system.err.print</code><br>是java本身提供的</p>
+<p>调整Log level 只能看到当前级别和比当前级别高的信息</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/80631137.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/40361784.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/86920859.jpg" alt=""></p>
+<p>log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”<br>
         
         
         <p class="article-more-link">
           
-            <a href="/2015/06/27/关于怎么有效学习Android的思考/#more">Read More</a>
+            <a href="/2015/07/04/temportary/android日志系统/#more">Read More</a>
           
        </p>
     </div>
@@ -244,7 +364,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Thinking/">Thinking</a>
+  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
   </div>
 
 </div>
@@ -255,7 +375,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2015/06/27/关于怎么有效学习Android的思考/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/06/27/关于怎么有效学习Android的思考/" data-count-type="comments">&nbsp;</a>
+		<a href="/2015/07/04/temportary/android日志系统/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/04/temportary/android日志系统/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -275,29 +395,28 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/06/25/使用Hexo框架搭Blog/" title="使用Hexo框架搭Blog" itemprop="url">使用Hexo框架搭Blog</a>
+      <a href="/2015/07/03/temportary/BroadcastReceiver/" title="BroadcastReceiver" itemprop="url">BroadcastReceiver</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-25T13:49:00.000Z" itemprop="datePublished"> 发表于 2015-06-25</time>
+    <time datetime="2015-07-03T02:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-03</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h2 id="快速部署环境">快速部署环境</h2><h3 id="下载安装hexo">下载安装hexo</h3><pre><code>下载并安装node.js  https:<span class="comment">//nodejs.org/</span>
-下载并安装git      http:<span class="comment">//www.git-scm.com/download/</span>
-安装 hexo         $ npm install -<span class="keyword">g</span> hexo-<span class="keyword">cli</span>
-检查是否成功         $ hexo <span class="keyword">version</span>
-</code></pre>
+        <h2 id="使用BroadcastReceiver">使用BroadcastReceiver</h2><blockquote>
+<p>创建new-&gt;other-&gt;BroadcastReceiver</p>
+<p>发送息消<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SendBroadcast(<span class="keyword">new</span> Intent,<span class="keyword">this</span>,MyReceiver.class)</span><br></pre></td></tr></table></figure></p>
+<p>onReceivie 接收消息  Intent可以携带数据<br>
         
         
         <p class="article-more-link">
           
-            <a href="/2015/06/25/使用Hexo框架搭Blog/#more">Read More</a>
+            <a href="/2015/07/03/temportary/BroadcastReceiver/#more">Read More</a>
           
        </p>
     </div>
@@ -306,13 +425,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/WEB/">WEB</a>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/hexo/">hexo</a>
+  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
   </div>
 
 </div>
@@ -323,7 +442,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2015/06/25/使用Hexo框架搭Blog/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/06/25/使用Hexo框架搭Blog/" data-count-type="comments">&nbsp;</a>
+		<a href="/2015/07/03/temportary/BroadcastReceiver/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/03/temportary/BroadcastReceiver/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -343,32 +462,43 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/06/25/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2015/07/03/temportary/Intent与IntentFilter/" title="Intent与IntentFilter" itemprop="url">Intent与IntentFilter</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-24T23:49:00.000Z" itemprop="datePublished"> 发表于 2015-06-25</time>
+    <time datetime="2015-07-02T22:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-03</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3>
+        <h2 id="显示Intent">显示Intent</h2><p>  startActivity(new Intent(MainActiviy.this,AnotherAcitivy.class));<br>  通过这种方式起动的是显示Intent,  指定的要启动的activity的类的定义</p>
+<h2 id="隐示Intent">隐示Intent</h2><h3 id="启动本应用的Activiy">启动本应用的Activiy</h3><blockquote>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/3934227.jpg" alt=""><br>
         
         
         <p class="article-more-link">
           
-            <a href="/2015/06/25/hello-world/#more">Read More</a>
+            <a href="/2015/07/03/temportary/Intent与IntentFilter/#more">Read More</a>
           
        </p>
     </div>
     <footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
+  </div>
 
 </div>
 
@@ -378,7 +508,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2015/06/25/hello-world/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/06/25/hello-world/" data-count-type="comments">&nbsp;</a>
+		<a href="/2015/07/03/temportary/Intent与IntentFilter/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/03/temportary/Intent与IntentFilter/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -394,7 +524,7 @@
 
 
   <nav id="page-nav" class="clearfix">
-    <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next<span></span></a>
   </nav>
 
 </div>
@@ -414,7 +544,11 @@
 		  
 		
 		  
+		
+		  
 			<li><a href="/categories/WEB/" title="WEB">WEB<sup>1</sup></a></li>
+		  
+		
 		  
 		
 		</ul>
@@ -440,6 +574,14 @@
 		
 			
 				<li><a href="/tags/Android/" title="Android">Android<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/转载/" title="转载">转载<sup>1</sup></a></li>
+			
+		
+			
+		
 			
 		
 		</ul>
