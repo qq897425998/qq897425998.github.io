@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>indexs | Michael&#39;s Blog</title>
+    <title>Michael&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Michael">
     
 
     
-    <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="indexs">
-<meta property="og:url" content="http://tangxin.club/indexs/index.html">
+    <meta name="description" content="RMB大小写转换123456789101112131415161718192021public class RenMingBi &amp;#123;    private static final char[] data = new char[] &amp;#123; &apos;零&apos;, &apos;壹&apos;, &apos;贰&apos;, &apos;叁&apos;, &apos;肆&apos;, &apos;伍&apos;, &apos;陆&apos;, &apos;柒&apos;, &apos;捌&apos;, &apos;玖&apos; &amp;#125;;    private stati">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Michael's Blog">
+<meta property="og:url" content="http://tangxin.club/2015/07/18/Java基础-04.RMB大小写转换/index.html">
 <meta property="og:site_name" content="Michael's Blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2015-06-26T07:32:52.591Z">
+<meta property="og:description" content="RMB大小写转换123456789101112131415161718192021public class RenMingBi &amp;#123;    private static final char[] data = new char[] &amp;#123; &apos;零&apos;, &apos;壹&apos;, &apos;贰&apos;, &apos;叁&apos;, &apos;肆&apos;, &apos;伍&apos;, &apos;陆&apos;, &apos;柒&apos;, &apos;捌&apos;, &apos;玖&apos; &amp;#125;;    private stati">
+<meta property="og:updated_time" content="2015-07-18T05:52:38.195Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="indexs">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Michael's Blog">
+<meta name="twitter:description" content="RMB大小写转换123456789101112131415161718192021public class RenMingBi &amp;#123;    private static final char[] data = new char[] &amp;#123; &apos;零&apos;, &apos;壹&apos;, &apos;贰&apos;, &apos;叁&apos;, &apos;肆&apos;, &apos;伍&apos;, &apos;陆&apos;, &apos;柒&apos;, &apos;捌&apos;, &apos;玖&apos; &amp;#125;;    private stati">
 
     
     <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
@@ -68,26 +68,39 @@
 </div>
     </header>
     <div id="container">
-      <div id="main" class="indexs" itemscope itemprop="blogPost">
+      <div id="main" class="post" itemscope itemprop="blogPost">
   
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/indexs/index.html" title="indexs" itemprop="url">indexs</a>
+      <a href="/2015/07/18/Java基础-04.RMB大小写转换/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-26T07:32:52.591Z" itemprop="datePublished"> 发表于 2015-06-26</time>
+    <time datetime="2015-07-18T06:09:27.633Z" itemprop="datePublished"> 发表于 2015-07-18</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
-		  
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RMB大小写转换"><span class="toc-number">1.</span> <span class="toc-text">RMB大小写转换</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="RMB大小写转换">RMB大小写转换</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RenMingBi</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span>[] data = <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'零'</span>, <span class="string">'壹'</span>, <span class="string">'贰'</span>, <span class="string">'叁'</span>, <span class="string">'肆'</span>, <span class="string">'伍'</span>, <span class="string">'陆'</span>, <span class="string">'柒'</span>, <span class="string">'捌'</span>, <span class="string">'玖'</span> &#125;;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span>[] units = <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'元'</span>, <span class="string">'拾'</span>, <span class="string">'佰'</span>, <span class="string">'仟'</span>, <span class="string">'万'</span>, <span class="string">'拾'</span>, <span class="string">'佰'</span>, <span class="string">'仟'</span>, <span class="string">'亿'</span> &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(convert(<span class="number">11</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">convert</span><span class="params">(<span class="keyword">int</span> money)</span> </span>&#123;</span><br><span class="line">        StringBuffer sbf = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        <span class="keyword">int</span> unit = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (money != <span class="number">0</span>) &#123;</span><br><span class="line">            sbf.insert(<span class="number">0</span>, units[unit++]);</span><br><span class="line">            System.out.println(sbf.toString());</span><br><span class="line">            <span class="keyword">int</span> number = money % <span class="number">10</span>;</span><br><span class="line">            sbf.insert(<span class="number">0</span>, data[number]);</span><br><span class="line">            money /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sbf.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>邮箱 ：charon.chui@gmail.com  </li>
+<li>Good Luck! </li>
+</ul>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -133,14 +146,42 @@
    	       
 	</article>
 	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/07/18/Java基础-06.单例的最佳实现方式/" title="">
+  <strong>上一篇：</strong><br/>
+  <span>
+  (no title)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/07/18/Java基础-10.生产者消费者/"  title="">
+ <strong>下一篇：</strong><br/> 
+ <span>(no title)
+</span>
+</a>
+</div>
+
+</nav>
+
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="indexs/index.html" data-title="indexs" data-url="http://tangxin.club/indexs/index.html"></div>
+	<div class="ds-thread" data-thread-key="2015/07/18/Java基础-04.RMB大小写转换/" data-title="" data-url="http://tangxin.club/2015/07/18/Java基础-04.RMB大小写转换/"></div>
 </section>
 
 
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RMB大小写转换"><span class="toc-number">1.</span> <span class="toc-text">RMB大小写转换</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -289,8 +330,36 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
   });
 });
 </script>
@@ -389,4 +458,4 @@ _ts(option);
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>

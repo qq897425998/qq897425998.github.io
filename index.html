@@ -75,94 +75,25 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/18/temportary/android.support库/" title="Android.Support.V4, V7, V13是什么？" itemprop="url">Android.Support.V4, V7, V13是什么？</a>
+      <a href="/2015/07/18/java基础-13获取今后多少天后的日期/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-18T05:55:29.723Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    <time datetime="2015-07-18T06:21:49.112Z" itemprop="datePublished"> 发表于 2015-07-18</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p><a href="http://blog.chinaunix.net/uid-24709751-id-4571812.html" target="_blank" rel="external">查看原文</a></p>
-<h2 id="Android_Support_V4,_V7,_V13是什么？">Android Support V4, V7, V13是什么？</h2><p>本质上就是三个java library。</p>
-<h2 id="为什么要有support库？">为什么要有support库？</h2><p>如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库。</p>
-<h2 id="三个Support_库的区别和作用是什么？">三个Support 库的区别和作用是什么？</h2><p>Android Support v4 是最早（2011年4月份）实现的库。用在Android1.6 (API lever 4)或者更高版本之上。它包含了相对V4, V13大的多的功能。<br>                                例如：Fragment，NotificationCompat，LoadBroadcastManager，ViewPager，PageTabAtrip，Loader，FileProvider 等。<br>                                详细API 参考 <a href="http://developer.android.com/reference/android/support/v4/app/package-summary.html" target="_blank" rel="external">http://developer.android.com/reference/android/support/v4/app/package-summary.html</a><br>Android Support v7: 这个包是为了考虑Android2.1(API level 7) 及以上版本而设计的，但是v7是要依赖v4这个包的，也就是如果要使用，两个包得同时 被引用。<br>                                v7支持了Action Bar。<br>Android Support v13:这个包的设计是为了android 3.2及更高版本的，一般我们都不常用，平板开发中能用到。</p>
-<h2 id="如何使用？">如何使用？</h2><p>首先要保证Android Support Library 被安装</p>
-<p>然后在工程中增加（例如 support-v4 Library）</p>
-<p>在ADT中需要按照以下步骤：<br>1、右击当前工程，查找Properties<br>2、选择Java Build Path<br>3、选择Libraries tab，点击右边面板的Add External JARs按钮<br>4、选择android-support-v4.jar文件，这一文件的常见路径为:YOUR_DRIVE\android-sdks\extras\android\support\v4\android-support-v4.jar<br>5、完成添加后，选择Order and Export标签，确认即可。</p>
-<p>5 v4、v7、v13 的例子代码<br>4v : <sdk>/extras/android/support/samples/Support4Demos/<br>7v : <sdk>/extras/android/support/samples/Support7Demos/<br>13v : <sdk>/extras/android/support/samples/Support13Demos/<br>App Navigation: <sdk>/extras/android/support/samples/SupportAppNavigation/</sdk></sdk></sdk></sdk></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/Android/">Android</a>
-</div>
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Android/">Android</a><a href="/tags/转载/">转载</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/07/18/temportary/android.support库/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/temportary/android.support库/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/18/获取今后多少天后的日期/" title="" itemprop="url"></a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-18T05:52:38.203Z" itemprop="datePublished"> 发表于 2015-07-18</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="获取今后多少天后的日期">获取今后多少天后的日期</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Get the date some days later.</span><br><span class="line"> * <span class="doctag">@param</span> year the year</span><br><span class="line"> * <span class="doctag">@param</span> month month of the year</span><br><span class="line"> * <span class="doctag">@param</span> day day of the month</span><br><span class="line"> * <span class="doctag">@return</span> if the parameter is illegal this will return null</span><br><span class="line"> */</span></span><br><span class="line"><span class="annotation">@SuppressLint</span>(<span class="string">"SimpleDateFormat"</span>)</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> String <span class="title">getClosingDate</span><span class="params">(<span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> internalDay = <span class="number">31</span>;</span><br><span class="line">    <span class="keyword">final</span> String pattern = <span class="string">"yyyy-MM-dd"</span>;</span><br><span class="line">    DateFormat dateFormat = <span class="keyword">new</span> SimpleDateFormat(pattern);</span><br><span class="line">    Date closingDate;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Calendar thisDay = Calendar.getInstance();</span><br><span class="line">        thisDay.set(Calendar.YEAR, year);</span><br><span class="line">        thisDay.set(Calendar.MONTH, month - <span class="number">1</span>);<span class="comment">// the first month of the year is 0.</span></span><br><span class="line">        thisDay.set(Calendar.DAY_OF_MONTH, day);</span><br><span class="line">        thisDay.add(Calendar.DAY_OF_MONTH, internalDay);</span><br><span class="line">        closingDate = thisDay.getTime();</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dateFormat.format(closingDate);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
+        <hr>
+<p>|-<br>获取今后多少天后的日期 ===</p>
+<h2 id="java_/**_*_Get_the_date_some_days_later-_*_@param_year_the_year_*_@param_month_month_of_the_year_*_@param_day_day_of_the_month_*_@return_if_the_parameter_is_illegal_this_will_return_null_*/_@SuppressLint(&quot;SimpleDateFormat&quot;)_private_static_String_getClosingDate(int_year,_int_month,_int_day)_{_final_int_internalDay_=_31;_final_String_pattern_=_&quot;yyyy-MM-dd&quot;;_DateFormat_dateFormat_=_new_SimpleDateFormat(pattern);_Date_closingDate;_try_{_Calendar_thisDay_=_Calendar-getInstance();_thisDay-set(Calendar-YEAR,_year);_thisDay-set(Calendar-MONTH,_month_-_1);//_the_first_month_of_the_year_is_0-_thisDay-set(Calendar-DAY_OF_MONTH,_day);_thisDay-add(Calendar-DAY_OF_MONTH,_internalDay);_closingDate_=_thisDay-getTime();_}_catch_(Exception_e)_{_e-printStackTrace();_return_null;_}_return_dateFormat-format(closingDate);_}"><code>java /** * Get the date some days later. * @param year the year * @param month month of the year * @param day day of the month * @return if the parameter is illegal this will return null */ @SuppressLint(&quot;SimpleDateFormat&quot;) private static String getClosingDate(int year, int month, int day) { final int internalDay = 31; final String pattern = &quot;yyyy-MM-dd&quot;; DateFormat dateFormat = new SimpleDateFormat(pattern); Date closingDate; try { Calendar thisDay = Calendar.getInstance(); thisDay.set(Calendar.YEAR, year); thisDay.set(Calendar.MONTH, month - 1);// the first month of the year is 0. thisDay.set(Calendar.DAY_OF_MONTH, day); thisDay.add(Calendar.DAY_OF_MONTH, internalDay); closingDate = thisDay.getTime(); } catch (Exception e) { e.printStackTrace(); return null; } return dateFormat.format(closingDate); }</code></h2><p>title: Java基础-01.Git命令.md categories: Java</p>
 <ul>
 <li>邮箱 ：charon.chui@gmail.com  </li>
-<li>Good Luck! </li>
+<li>Good Luck!</li>
 </ul>
 
         
@@ -183,7 +114,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2015/07/18/获取今后多少天后的日期/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/获取今后多少天后的日期/" data-count-type="comments">&nbsp;</a>
+		<a href="/2015/07/18/java基础-13获取今后多少天后的日期/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/java基础-13获取今后多少天后的日期/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -203,14 +134,77 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/18/网络请求相关内容总结/" title="" itemprop="url"></a>
+      <a href="/2015/07/18/Java基础-02.MD5加密/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-18T05:52:38.202Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    <time datetime="2015-07-18T06:17:41.781Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <hr>
+<blockquote>
+<p>-<br>MD5加密 ===</p>
+</blockquote>
+<p><code>MD5</code>是一种不可逆的加密算法只能将原文加密，不能讲密文再还原去，原来把加密后将这个数组通过<code>Base64</code>给变成字符串，<br>这样是不严格的业界标准的做法是对其加密之后用每个字节<code>&amp;15</code>然后就能得到一个<code>int</code>型的值，再将这个<code>int</code>型的值变成16进制的字符串.虽然MD5不可逆，<br>但是网上出现了将常用的数字用<code>md5</code>加密之后通过数据库查询，所以<code>MD5</code>简单的情况下仍然可以查出来，一般可以对其多加密几次或者<code>&amp;15</code>之后再和别的数运算等，<br>这称之为<em>加盐</em>.</p>
+<figure class="highlight java"><figcaption><span>public class MD5Utils &#123;</span><a href="/**">* md5加密的工具方法 */ public static String</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">encode(String password)&#123; <span class="keyword">try</span> &#123; MessageDigest digest</span><br><span class="line">= MessageDigest.getInstance(<span class="string">"md5"</span>); <span class="keyword">byte</span>[] result</span><br><span class="line">= digest.digest(password.getBytes()); StringBuilder sb = <span class="keyword">new</span></span><br><span class="line">StringBuilder();<span class="comment">//有的数很小还不到10所以得到16进制的字符串有一个 //的情况，这里对于小于10的值前面加上0</span></span><br><span class="line"><span class="comment">//16进制的方式  把结果集byte数组 打印出来 for(byte b :result)&#123; int number = (b&amp;0xff);//加盐.</span></span><br><span class="line">String str =Integer.toHexString(number); <span class="keyword">if</span>(str.length()==<span class="number">1</span>)&#123; sb.append(<span class="string">"0"</span>);</span><br><span class="line">&#125; sb.append(str); &#125; <span class="keyword">return</span> sb.toString(); &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e)</span><br><span class="line">&#123; e.printStackTrace(); <span class="keyword">return</span> <span class="string">""</span>; &#125; &#125; &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="-">-</h2><p>title: Java基础-01.Git命令.md categories: Java</p>
+<ul>
+<li>邮箱 ：charon.chui@gmail.com  </li>
+<li>Good Luck!</li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/07/18/Java基础-02.MD5加密/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/Java基础-02.MD5加密/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/07/18/java基础-12网络请求相关内容总结/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
+		
+  <p class="article-time">
+    <time datetime="2015-07-18T06:10:15.371Z" itemprop="datePublished"> 发表于 2015-07-18</time>
     
   </p>
 </header>
@@ -437,7 +431,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2015/07/18/网络请求相关内容总结/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/网络请求相关内容总结/" data-count-type="comments">&nbsp;</a>
+		<a href="/2015/07/18/java基础-12网络请求相关内容总结/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/java基础-12网络请求相关内容总结/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -457,74 +451,14 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/18/生产者消费者/" title="" itemprop="url"></a>
+      <a href="/2015/07/18/Java基础-09.死锁/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-18T05:52:38.200Z" itemprop="datePublished"> 发表于 2015-07-18</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="生产者消费者">生产者消费者</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProducerConsumerDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Resource r = <span class="keyword">new</span> Resource();</span><br><span class="line"></span><br><span class="line">		Producer pro = <span class="keyword">new</span> Producer(r);</span><br><span class="line">		Consumer con = <span class="keyword">new</span> Consumer(r);</span><br><span class="line"></span><br><span class="line">		Thread t1 = <span class="keyword">new</span> Thread(pro);</span><br><span class="line">		Thread t2 = <span class="keyword">new</span> Thread(pro);</span><br><span class="line">		Thread t3 = <span class="keyword">new</span> Thread(con);</span><br><span class="line">		Thread t4 = <span class="keyword">new</span> Thread(con);</span><br><span class="line"></span><br><span class="line">		t1.start();</span><br><span class="line">		t2.start();</span><br><span class="line">		t3.start();</span><br><span class="line">		t4.start();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span><br><span class="line"> * 对于多个生产者和消费者。 为什么要定义while判断标记。 原因：让被唤醒的线程再一次判断标记。 为什么定义notifyAll， 因为需要唤醒对方线程。</span><br><span class="line"> * 因为只用notify，容易出现只唤醒本方线程的情况。导致程序中的所有线程都等待。</span><br><span class="line"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Resource</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	 * 生产商品</span><br><span class="line">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">set</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">while</span> (flag)</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				<span class="keyword">this</span>.wait();</span><br><span class="line">			&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">this</span>.name = name + <span class="string">"--"</span> + count++;</span><br><span class="line"></span><br><span class="line">		System.out.println(Thread.currentThread().getName() + <span class="string">"...生产者.."</span></span><br><span class="line">				+ <span class="keyword">this</span>.name);</span><br><span class="line">		flag = <span class="keyword">true</span>;</span><br><span class="line">		<span class="keyword">this</span>.notifyAll();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/*</span><br><span class="line">	 * 消费商品</span><br><span class="line">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">out</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">while</span> (!flag)</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				wait();</span><br><span class="line">			&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">			&#125;</span><br><span class="line">		System.out.println(Thread.currentThread().getName() + <span class="string">"...消费者........."</span></span><br><span class="line">				+ <span class="keyword">this</span>.name);</span><br><span class="line">		flag = <span class="keyword">false</span>;</span><br><span class="line">		<span class="keyword">this</span>.notifyAll();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Producer</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Resource res;</span><br><span class="line"></span><br><span class="line">	Producer(Resource res) &#123;</span><br><span class="line">		<span class="keyword">this</span>.res = res;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">			res.set(<span class="string">"+商品+"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Consumer</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Resource res;</span><br><span class="line"></span><br><span class="line">	Consumer(Resource res) &#123;</span><br><span class="line">		<span class="keyword">this</span>.res = res;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">			res.out();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>JDK1.5 中提供了多线程升级解决方案。 将同步Synchronized替换成现实Lock操作。<br>将Object中的wait，notify notifyAll，替换了Condition对象。 该对象可以Lock锁 进行获取。 该示例中，实现了本方只唤醒对方操作。<br>Lock:替代了Synchronized lock unlock newCondition()<br>Condition：替代了Object wait notify notifyAll await(); signal(); signalAll();</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.concurrent.locks.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProducerConsumerDemo2</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Resource r = <span class="keyword">new</span> Resource();</span><br><span class="line"></span><br><span class="line">		Producer pro = <span class="keyword">new</span> Producer(r);</span><br><span class="line">		Consumer con = <span class="keyword">new</span> Consumer(r);</span><br><span class="line"></span><br><span class="line">		Thread t1 = <span class="keyword">new</span> Thread(pro);</span><br><span class="line">		Thread t2 = <span class="keyword">new</span> Thread(pro);</span><br><span class="line">		Thread t3 = <span class="keyword">new</span> Thread(con);</span><br><span class="line">		Thread t4 = <span class="keyword">new</span> Thread(con);</span><br><span class="line"></span><br><span class="line">		t1.start();</span><br><span class="line">		t2.start();</span><br><span class="line">		t3.start();</span><br><span class="line">		t4.start();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Resource</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String name;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">private</span> Lock lock = <span class="keyword">new</span> ReentrantLock();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> Condition condition_pro = lock.newCondition();</span><br><span class="line">	<span class="keyword">private</span> Condition condition_con = lock.newCondition();</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">set</span><span class="params">(String name)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">		lock.lock();</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">while</span> (flag)</span><br><span class="line">				condition_pro.await();<span class="comment">// t1,t2</span></span><br><span class="line">			<span class="keyword">this</span>.name = name + <span class="string">"--"</span> + count++;</span><br><span class="line"></span><br><span class="line">			System.out.println(Thread.currentThread().getName() + <span class="string">"...生产者.."</span></span><br><span class="line">					+ <span class="keyword">this</span>.name);</span><br><span class="line">			flag = <span class="keyword">true</span>;</span><br><span class="line">			condition_con.signal();</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">			lock.unlock();<span class="comment">// 释放锁的动作一定要执行。</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// t3 t4</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">out</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">		lock.lock();</span><br><span class="line">		<span class="keyword">try</span> &#123;</span><br><span class="line">			<span class="keyword">while</span> (!flag)</span><br><span class="line">				condition_con.await();</span><br><span class="line">			System.out.println(Thread.currentThread().getName()</span><br><span class="line">					+ <span class="string">"...消费者........."</span> + <span class="keyword">this</span>.name);</span><br><span class="line">			flag = <span class="keyword">false</span>;</span><br><span class="line">			condition_pro.signal();</span><br><span class="line">		&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">			lock.unlock();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Producer</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Resource res;</span><br><span class="line"></span><br><span class="line">	Producer(Resource res) &#123;</span><br><span class="line">		<span class="keyword">this</span>.res = res;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				res.set(<span class="string">"+商品+"</span>);</span><br><span class="line">			&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Consumer</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> Resource res;</span><br><span class="line"></span><br><span class="line">	Consumer(Resource res) &#123;</span><br><span class="line">		<span class="keyword">this</span>.res = res;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">			<span class="keyword">try</span> &#123;</span><br><span class="line">				res.out();</span><br><span class="line">			&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<hr>
-<ul>
-<li>邮箱 ：charon.chui@gmail.com  </li>
-<li>Good Luck! </li>
-</ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/07/18/生产者消费者/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/生产者消费者/" data-count-type="comments">&nbsp;</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/07/18/死锁/" title="" itemprop="url"></a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-18T05:52:38.199Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    <time datetime="2015-07-18T06:09:45.995Z" itemprop="datePublished"> 发表于 2015-07-18</time>
     
   </p>
 </header>
@@ -555,7 +489,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2015/07/18/死锁/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/死锁/" data-count-type="comments">&nbsp;</a>
+		<a href="/2015/07/18/Java基础-09.死锁/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/Java基础-09.死锁/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -575,14 +509,14 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/18/常用命令行大全/" title="" itemprop="url"></a>
+      <a href="/2015/07/18/Java基础-07.常用命令行大全/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-18T05:52:38.197Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    <time datetime="2015-07-18T06:09:39.283Z" itemprop="datePublished"> 发表于 2015-07-18</time>
     
   </p>
 </header>
@@ -642,7 +576,7 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2015/07/18/常用命令行大全/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/常用命令行大全/" data-count-type="comments">&nbsp;</a>
+		<a href="/2015/07/18/Java基础-07.常用命令行大全/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/Java基础-07.常用命令行大全/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -662,14 +596,14 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/18/单例的最佳实现方式/" title="" itemprop="url"></a>
+      <a href="/2015/07/18/Java基础-06.单例的最佳实现方式/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-18T05:52:38.197Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    <time datetime="2015-07-18T06:09:35.879Z" itemprop="datePublished"> 发表于 2015-07-18</time>
     
   </p>
 </header>
@@ -700,7 +634,65 @@
 <div class="comments-count">
 	
 	  	<span></span>
-		<a href="/2015/07/18/单例的最佳实现方式/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/单例的最佳实现方式/" data-count-type="comments">&nbsp;</a>
+		<a href="/2015/07/18/Java基础-06.单例的最佳实现方式/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/Java基础-06.单例的最佳实现方式/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/07/18/Java基础-04.RMB大小写转换/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
+		
+  <p class="article-time">
+    <time datetime="2015-07-18T06:09:27.633Z" itemprop="datePublished"> 发表于 2015-07-18</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="RMB大小写转换">RMB大小写转换</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RenMingBi</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span>[] data = <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'零'</span>, <span class="string">'壹'</span>, <span class="string">'贰'</span>, <span class="string">'叁'</span>, <span class="string">'肆'</span>, <span class="string">'伍'</span>, <span class="string">'陆'</span>, <span class="string">'柒'</span>, <span class="string">'捌'</span>, <span class="string">'玖'</span> &#125;;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span>[] units = <span class="keyword">new</span> <span class="keyword">char</span>[] &#123; <span class="string">'元'</span>, <span class="string">'拾'</span>, <span class="string">'佰'</span>, <span class="string">'仟'</span>, <span class="string">'万'</span>, <span class="string">'拾'</span>, <span class="string">'佰'</span>, <span class="string">'仟'</span>, <span class="string">'亿'</span> &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(convert(<span class="number">11</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">convert</span><span class="params">(<span class="keyword">int</span> money)</span> </span>&#123;</span><br><span class="line">        StringBuffer sbf = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        <span class="keyword">int</span> unit = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (money != <span class="number">0</span>) &#123;</span><br><span class="line">            sbf.insert(<span class="number">0</span>, units[unit++]);</span><br><span class="line">            System.out.println(sbf.toString());</span><br><span class="line">            <span class="keyword">int</span> number = money % <span class="number">10</span>;</span><br><span class="line">            sbf.insert(<span class="number">0</span>, data[number]);</span><br><span class="line">            money /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sbf.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li>邮箱 ：charon.chui@gmail.com  </li>
+<li>Good Luck! </li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/07/18/Java基础-04.RMB大小写转换/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/18/Java基础-04.RMB大小写转换/" data-count-type="comments">&nbsp;</a>
 	
 </div>
 
@@ -716,7 +708,7 @@
 
 
   <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
@@ -732,13 +724,7 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Android/" title="Android">Android<sup>10</sup></a></li>
-		  
 		
-		  
-		
-		  
-			<li><a href="/categories/WEB/" title="WEB">WEB<sup>1</sup></a></li>
 		  
 		
 		  
@@ -753,23 +739,13 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Android极客学院视频笔记/" title="Android极客学院视频笔记">Android极客学院视频笔记<sup>8</sup></a></li>
+		
 			
 		
 			
-				<li><a href="/tags/Thinking/" title="Thinking">Thinking<sup>1</sup></a></li>
-			
 		
 			
-				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
-			
 		
-			
-				<li><a href="/tags/Android/" title="Android">Android<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/转载/" title="转载">转载<sup>1</sup></a></li>
 			
 		
 			

@@ -4,23 +4,29 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>indexs | Michael&#39;s Blog</title>
+    <title>Michael&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Michael">
     
 
     
-    <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="indexs">
-<meta property="og:url" content="http://tangxin.club/indexs/index.html">
+    <meta name="description" content="-MD5加密 ===
+
+MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再还原去，原来把加密后将这个数组通过Base64给变成字符串，这样是不严格的业界标准的做法是对其加密之后用每个字节&amp;amp;15然后就能得到一个int型的值，再将这个int型的值变成16进制的字符串.虽然MD5不可逆，但是网上出现了将常用的数字用md5加密之后通过数据库查询，所以MD5简单的情况下仍然可以查出来，一般可以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Michael's Blog">
+<meta property="og:url" content="http://tangxin.club/2015/07/18/Java基础-02.MD5加密/index.html">
 <meta property="og:site_name" content="Michael's Blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2015-06-26T07:32:52.591Z">
+<meta property="og:description" content="-MD5加密 ===
+
+MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再还原去，原来把加密后将这个数组通过Base64给变成字符串，这样是不严格的业界标准的做法是对其加密之后用每个字节&amp;amp;15然后就能得到一个int型的值，再将这个int型的值变成16进制的字符串.虽然MD5不可逆，但是网上出现了将常用的数字用md5加密之后通过数据库查询，所以MD5简单的情况下仍然可以查出来，一般可以">
+<meta property="og:updated_time" content="2015-07-18T06:17:41.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="indexs">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Michael's Blog">
+<meta name="twitter:description" content="-MD5加密 ===
+
+MD5是一种不可逆的加密算法只能将原文加密，不能讲密文再还原去，原来把加密后将这个数组通过Base64给变成字符串，这样是不严格的业界标准的做法是对其加密之后用每个字节&amp;amp;15然后就能得到一个int型的值，再将这个int型的值变成16进制的字符串.虽然MD5不可逆，但是网上出现了将常用的数字用md5加密之后通过数据库查询，所以MD5简单的情况下仍然可以查出来，一般可以">
 
     
     <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
@@ -68,26 +74,44 @@
 </div>
     </header>
     <div id="container">
-      <div id="main" class="indexs" itemscope itemprop="blogPost">
+      <div id="main" class="post" itemscope itemprop="blogPost">
   
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/indexs/index.html" title="indexs" itemprop="url">indexs</a>
+      <a href="/2015/07/18/Java基础-02.MD5加密/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-06-26T07:32:52.591Z" itemprop="datePublished"> 发表于 2015-06-26</time>
+    <time datetime="2015-07-18T06:17:41.781Z" itemprop="datePublished"> 发表于 2015-07-18</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
-		  
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#-"><span class="toc-number">1.</span> <span class="toc-text">-</span></a></li></ol>
+		
+		</div>
+		
+		<hr>
+<blockquote>
+<p>-<br>MD5加密 ===</p>
+</blockquote>
+<p><code>MD5</code>是一种不可逆的加密算法只能将原文加密，不能讲密文再还原去，原来把加密后将这个数组通过<code>Base64</code>给变成字符串，<br>这样是不严格的业界标准的做法是对其加密之后用每个字节<code>&amp;15</code>然后就能得到一个<code>int</code>型的值，再将这个<code>int</code>型的值变成16进制的字符串.虽然MD5不可逆，<br>但是网上出现了将常用的数字用<code>md5</code>加密之后通过数据库查询，所以<code>MD5</code>简单的情况下仍然可以查出来，一般可以对其多加密几次或者<code>&amp;15</code>之后再和别的数运算等，<br>这称之为<em>加盐</em>.</p>
+<figure class="highlight java"><figcaption><span>public class MD5Utils &#123;</span><a href="/**">* md5加密的工具方法 */ public static String</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">encode(String password)&#123; <span class="keyword">try</span> &#123; MessageDigest digest</span><br><span class="line">= MessageDigest.getInstance(<span class="string">"md5"</span>); <span class="keyword">byte</span>[] result</span><br><span class="line">= digest.digest(password.getBytes()); StringBuilder sb = <span class="keyword">new</span></span><br><span class="line">StringBuilder();<span class="comment">//有的数很小还不到10所以得到16进制的字符串有一个 //的情况，这里对于小于10的值前面加上0</span></span><br><span class="line"><span class="comment">//16进制的方式  把结果集byte数组 打印出来 for(byte b :result)&#123; int number = (b&amp;0xff);//加盐.</span></span><br><span class="line">String str =Integer.toHexString(number); <span class="keyword">if</span>(str.length()==<span class="number">1</span>)&#123; sb.append(<span class="string">"0"</span>);</span><br><span class="line">&#125; sb.append(str); &#125; <span class="keyword">return</span> sb.toString(); &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e)</span><br><span class="line">&#123; e.printStackTrace(); <span class="keyword">return</span> <span class="string">""</span>; &#125; &#125; &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="-">-</h2><p>title: Java基础-01.Git命令.md categories: Java</p>
+<ul>
+<li>邮箱 ：charon.chui@gmail.com  </li>
+<li>Good Luck!</li>
+</ul>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -133,14 +157,42 @@
    	       
 	</article>
 	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/07/18/java基础-13获取今后多少天后的日期/" title="">
+  <strong>上一篇：</strong><br/>
+  <span>
+  (no title)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/07/18/java基础-12网络请求相关内容总结/"  title="">
+ <strong>下一篇：</strong><br/> 
+ <span>(no title)
+</span>
+</a>
+</div>
+
+</nav>
+
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="indexs/index.html" data-title="indexs" data-url="http://tangxin.club/indexs/index.html"></div>
+	<div class="ds-thread" data-thread-key="2015/07/18/Java基础-02.MD5加密/" data-title="" data-url="http://tangxin.club/2015/07/18/Java基础-02.MD5加密/"></div>
 </section>
 
 
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#-"><span class="toc-number">1.</span> <span class="toc-text">-</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -289,8 +341,36 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
   });
 });
 </script>
@@ -389,4 +469,4 @@ _ts(option);
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
