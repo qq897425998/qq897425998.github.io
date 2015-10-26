@@ -4,30 +4,47 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Context与 Application | Michael&#39;s Blog</title>
+    <title>华为 Mate S Root 步骤 | Michael&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Michael">
     
 
     
-    <meta name="description" content="Context的作用
-常用组件继承Context 方面访问资源像Activity Servers 就继承了Context">
+    <meta name="description" content="经测试所有的一键root对华为mate s都不起作用
+
+首先到华为官网去根据官方教程 解锁http://www.emui.com/plugin.php?id=unlock
+
+下载TWRP Recovery的img文件 并刷入到手机中fastboot flash recovery mates-twrp.img
+
+下载 UPDATE-SuperSU-v2.46.zip复制到手机根目录下
+
+进入TWRP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Context与 Application">
-<meta property="og:url" content="http://tangxin.club/2015/07/04/6.Context 与Application/index.html">
+<meta property="og:title" content="华为 Mate S Root 步骤">
+<meta property="og:url" content="http://tangxin.club/2015/10/26/14.华为Mate S Root步方法/index.html">
 <meta property="og:site_name" content="Michael's Blog">
-<meta property="og:description" content="Context的作用
-常用组件继承Context 方面访问资源像Activity Servers 就继承了Context">
-<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/46806433.jpg">
-<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/8630353.jpg">
-<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/46806433.jpg">
-<meta property="og:image" content="http://img-storage.qiniudn.com/15-7-3/11293811.jpg">
-<meta property="og:updated_time" content="2015-07-18T05:55:29.730Z">
+<meta property="og:description" content="经测试所有的一键root对华为mate s都不起作用
+
+首先到华为官网去根据官方教程 解锁http://www.emui.com/plugin.php?id=unlock
+
+下载TWRP Recovery的img文件 并刷入到手机中fastboot flash recovery mates-twrp.img
+
+下载 UPDATE-SuperSU-v2.46.zip复制到手机根目录下
+
+进入TWRP">
+<meta property="og:updated_time" content="2015-10-26T06:14:02.650Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Context与 Application">
-<meta name="twitter:description" content="Context的作用
-常用组件继承Context 方面访问资源像Activity Servers 就继承了Context">
+<meta name="twitter:title" content="华为 Mate S Root 步骤">
+<meta name="twitter:description" content="经测试所有的一键root对华为mate s都不起作用
+
+首先到华为官网去根据官方教程 解锁http://www.emui.com/plugin.php?id=unlock
+
+下载TWRP Recovery的img文件 并刷入到手机中fastboot flash recovery mates-twrp.img
+
+下载 UPDATE-SuperSU-v2.46.zip复制到手机根目录下
+
+进入TWRP">
 
     
     <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
@@ -81,14 +98,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/04/6.Context 与Application/" title="Context与 Application" itemprop="url">Context与 Application</a>
+      <a href="/2015/10/26/14.华为Mate S Root步方法/" title="华为 Mate S Root 步骤" itemprop="url">华为 Mate S Root 步骤</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-04T06:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-04</time>
+    <time datetime="2015-10-26T00:49:00.000Z" itemprop="datePublished"> 发表于 2015-10-26</time>
     
   </p>
 </header>
@@ -97,27 +114,24 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Context的作用"><span class="toc-number">1.</span> <span class="toc-text">Context的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Application的用途"><span class="toc-number">2.</span> <span class="toc-text">Application的用途</span></a></li></ol>
+			
 		
 		</div>
 		
-		<h2 id="Context的作用">Context的作用</h2><blockquote>
-<p>常用组件继承Context 方面访问资源<br>像Activity Servers 就继承了Context</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/46806433.jpg" alt=""><br><a id="more"></a><br>在Android里面如果你想访问全局的信息必需得都过Context</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/8630353.jpg" alt=""></p>
-<p>除了String还可以访问其它任何资源</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/46806433.jpg" alt=""><br><!--more--></p>
-</blockquote>
-<h2 id="Application的用途">Application的用途</h2><blockquote>
-<p>多个组件之间数据的共享<br>间了解到Context可以做为全局息消共享的桥梁</p>
-<p>1.创建一个App类  extends Application</p>
-<p>2.配制Manifest.xml  android:name=”.App”</p>
-<p>3.两个Activity都设置了<br>category android:name=”android.intent.category.LAUNCHER”<br>会出玩两个图标它们都是应用程序的入口</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/11293811.jpg" alt=""><br>在MainActiviy</p>
-<p>4.通过(App)getApplicationContext().setTextData()<br>       (App)getApplicationContext().getTextData();<br>       来对App类进行数据存取操作</p>
-<p>Application 对于同一个应用程序它是唯一的</p>
-<p>不管从通过哪个Activiy启动的Application Application的onCreate都会持行<br>而且会比Activity的onCreate先执行  对在启动前做初始化操作非常有用</p>
-</blockquote>
+		<p>经测试所有的一键root对华为mate s都不起作用</p>
+<ol>
+<li><p>首先到华为官网去根据官方教程 解锁<br><a href="http://www.emui.com/plugin.php?id=unlock" target="_blank" rel="external">http://www.emui.com/plugin.php?id=unlock</a></p>
+</li>
+<li><p>下载TWRP Recovery的img文件 并刷入到手机中<br>fastboot flash recovery mates-twrp.img</p>
+</li>
+<li><p>下载 UPDATE-SuperSU-v2.46.zip<br>复制到手机根目录下</p>
+</li>
+<li><p>进入TWRP Recovery<br>adb reboot recovery</p>
+</li>
+<li><p>点击Install 选择<br>UPDATE-SuperSU-v2.46.zip</p>
+</li>
+</ol>
+<p>参考文章:<br><a href="http://www.android.gs/root-install-twrp-recovery-huawei-mate-s/" target="_blank" rel="external">http://www.android.gs/root-install-twrp-recovery-huawei-mate-s/</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -131,7 +145,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
+  <span></span> <a href="/tags/root/">root</a>
   </div>
 
 </div>
@@ -176,19 +190,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/07/04/9.权限系统/" title="Android权限系统">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Android权限系统</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/07/04/4.android日志系统/"  title="Android日志系统">
+<a href="/2015/07/24/12.XML/"  title="">
  <strong>下一篇：</strong><br/> 
- <span>Android日志系统
+ <span>(no title)
 </span>
 </a>
 </div>
@@ -197,7 +203,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/07/04/6.Context 与Application/" data-title="Context与 Application" data-url="http://tangxin.club/2015/07/04/6.Context 与Application/"></div>
+	<div class="ds-thread" data-thread-key="2015/10/26/14.华为Mate S Root步方法/" data-title="华为 Mate S Root 步骤" data-url="http://tangxin.club/2015/10/26/14.华为Mate S Root步方法/"></div>
 </section>
 
 
@@ -207,7 +213,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Context的作用"><span class="toc-number">1.</span> <span class="toc-text">Context的作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Application的用途"><span class="toc-number">2.</span> <span class="toc-text">Application的用途</span></a></li></ol>
+ 
  
   </div>
 

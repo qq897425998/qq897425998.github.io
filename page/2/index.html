@@ -75,6 +75,138 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/07/03/7.Intent与IntentFilter/" title="Intent与IntentFilter" itemprop="url">Intent与IntentFilter</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
+		
+  <p class="article-time">
+    <time datetime="2015-07-02T22:49:00.000Z" itemprop="datePublished"> 发表于 2015-07-03</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="显示Intent">显示Intent</h2><p>  startActivity(new Intent(MainActiviy.this,AnotherAcitivy.class));<br>  通过这种方式起动的是显示Intent,  指定的要启动的activity的类的定义</p>
+<h2 id="隐示Intent">隐示Intent</h2><h3 id="启动本应用的Activiy">启动本应用的Activiy</h3><blockquote>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/3934227.jpg" alt=""><br>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2015/07/03/7.Intent与IntentFilter/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/07/03/7.Intent与IntentFilter/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/03/7.Intent与IntentFilter/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/07/02/8.Service/" title="Service" itemprop="url">Service</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
+		
+  <p class="article-time">
+    <time datetime="2015-07-02T00:20:00.000Z" itemprop="datePublished"> 发表于 2015-07-02</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="使用_Service">使用 Service</h2><blockquote>
+<p>Socket、HTTP网络通信、与服务器保持推送的链接<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">startService(<span class="keyword">new</span> Intent(MainActiviy.<span class="keyword">this</span>.MainActiviy.class));</span><br><span class="line">stopService(<span class="keyword">new</span> Intent(MainActiviy.<span class="keyword">this</span>,MyService.class));</span><br><span class="line">这里不用担心<span class="keyword">new</span>了两个Intent 因为它们操作的是同用一个services</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+        
+        
+        <p class="article-more-link">
+          
+            <a href="/2015/07/02/8.Service/#more">Read More</a>
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/07/02/8.Service/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/07/02/8.Service/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/07/01/2.Activity/" title="Activity" itemprop="url">Activity</a>
   </h1>
   <p class="article-author">By
@@ -274,6 +406,87 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/06/25/11.Pull解析与写入XML/" title="Pull解析与写入XML" itemprop="url">Pull解析与写入XML</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
+		
+  <p class="article-time">
+    <time datetime="2015-06-24T23:49:00.000Z" itemprop="datePublished"> 发表于 2015-06-25</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="Pull简介">Pull简介</h2><ul>
+<li>android中跟据布局文件用Pull解析再用反射创建对象</li>
+<li>常见的XML解析方式有三种,DOM,SAX,Pull, Android系统中推荐使用Pull</li>
+<li>Pull解析器是一个开源的java项目,Android系统内部解析XML文件均为此种方式,也可用于JavaEE项目</li>
+<li>Pull解析器运行方式与SAX类似,提供各种事件的判断</li>
+<li><a href="http://xmlpull.org" target="_blank" rel="external">官方网站</a></li>
+</ul>
+<h2 id="使用Pull解析器解析XML文件">使用Pull解析器解析XML文件</h2><ul>
+<li><code>Xml.newPullPaser()</code> 获得解析器</li>
+<li><code>paser.setInput(in,&quot;UTF-8&quot;)</code> 设置输入流以及编码格式</li>
+<li><code>paser.next()</code> 获取下一个解析事件,得到一个事件代码</li>
+<li><code>XmlPullParser</code> 中定义了常量来标识各种解析事件<br><code>START_DOCUMENT</code> <code>END_DOCUMNT</code> <code>START_TAG</code> <code>END_TAG</code> <code>TEXT</code></li>
+</ul>
+<h2 id="使用XmlSerializer写出XML">使用XmlSerializer写出XML</h2><ul>
+<li>使用以下方法生成XML,和XML文档顺序类似<pre><code>获取解析器<span class="pseudo">:Xml</span><span class="class">.newSerializer</span>()
+  设置输出流<span class="pseudo">:serializer</span><span class="class">.setOutput</span>(out,<span class="string">"UTF-8"</span>);
+  开始文档<span class="pseudo">:serializer</span><span class="class">.startDocument</span>(<span class="string">"UTF-8"</span>,true);
+  结束文档<span class="pseudo">:serializer</span><span class="class">.endTag</span>(null,<span class="string">"persons"</span>);
+  开启标签<span class="pseudo">:serializer</span><span class="class">.startTag</span>(null,<span class="string">"persons"</span>);
+  结束标签<span class="pseudo">:serializer</span><span class="class">.endTag</span>(null,<span class="string">"name"</span>);
+  设置属性: <span class="tag">serializer</span><span class="class">.attribute</span>(null,<span class="string">"id"</span>,p.<span class="function">getId</span>()<span class="class">.toString</span>());
+  设置文本: <span class="tag">serializer</span><span class="class">.text</span>(p.<span class="function">getName</span>());
+</code></pre></li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+</div>
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/06/25/11.Pull解析与写入XML/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/06/25/11.Pull解析与写入XML/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/06/25/0.hello-world/" title="Hello World" itemprop="url">Hello World</a>
   </h1>
   <p class="article-author">By
@@ -341,7 +554,7 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/Android/" title="Android">Android<sup>9</sup></a></li>
+			<li><a href="/categories/Android/" title="Android">Android<sup>11</sup></a></li>
 		  
 		
 		  
@@ -369,6 +582,10 @@
 		
 			
 				<li><a href="/tags/转载/" title="转载">转载<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/root/" title="root">root<sup>1</sup></a></li>
 			
 		
 			
