@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Stay foolish, Stay hungry, Learning, Sharing, Growing.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://tangxin.club//"/>
-  <updated>2015-10-26T06:14:02.650Z</updated>
+  <updated>2015-11-20T05:03:46.631Z</updated>
   <id>http://tangxin.club//</id>
   
   <author>
@@ -17,11 +17,11 @@
   
   <entry>
     <title><![CDATA[华为 Mate S Root 步骤]]></title>
-    <link href="http://tangxin.club/2015/10/26/14.%E5%8D%8E%E4%B8%BAMate%20S%20Root%E6%AD%A5%E6%96%B9%E6%B3%95/"/>
-    <id>http://tangxin.club/2015/10/26/14.华为Mate S Root步方法/</id>
-    <published>2015-10-26T00:49:00.000Z</published>
-    <updated>2015-10-26T06:14:02.650Z</updated>
-    <content type="html"><![CDATA[<p>经测试所有的一键root对华为mate s都不起作用</p>
+    <link href="http://tangxin.club/2015/10/11/14.%E5%8D%8E%E4%B8%BAMate%20S%20Root%E6%AD%A5%E6%96%B9%E6%B3%95/"/>
+    <id>http://tangxin.club/2015/10/11/14.华为Mate S Root步方法/</id>
+    <published>2015-10-11T00:49:00.000Z</published>
+    <updated>2015-11-20T05:03:46.631Z</updated>
+    <content type="html"><![CDATA[<p>用了半个月华为Mate S不Root用着各种不爽，花一半天才Root<br>这款机器9月15号出到现在不到一个月 市面上的一键root还没匹配<br>该机型,试了6、7款一键root软件对华为mate s都不起作用于是乎google一下<br>(百度喳喳都查不到root方法),记录以下步骤方便以后再次root。</p>
 <ol>
 <li><p>首先到华为官网去根据官方教程 解锁<br><a href="http://www.emui.com/plugin.php?id=unlock" target="_blank" rel="external">http://www.emui.com/plugin.php?id=unlock</a></p>
 </li>
@@ -37,440 +37,10 @@
 <p>参考文章:<br><a href="http://www.android.gs/root-install-twrp-recovery-huawei-mate-s/" target="_blank" rel="external">http://www.android.gs/root-install-twrp-recovery-huawei-mate-s/</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>经测试所有的一键root对华为mate s都不起作用</p>
-<ol>
-<li><p>首先到华为官网去根据官方教程 解锁<br><a href="http://www.emui.com/plugin.php?id=unlock" target="_blank" rel="e]]>
+    <![CDATA[<p>用了半个月华为Mate S不Root用着各种不爽，花一半天才Root<br>这款机器9月15号出到现在不到一个月 市面上的一键root还没匹配<br>该机型,试了6、7款一键root软件对华为mate s都不起作用于是乎google一下<br>(百度喳喳都查不到root方法]]>
     </summary>
     
       <category term="root" scheme="http://tangxin.club/tags/root/"/>
-    
-      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android.Support.V4, V7, V13是什么？]]></title>
-    <link href="http://tangxin.club/2015/07/18/3.android.support%E5%BA%93/"/>
-    <id>http://tangxin.club/2015/07/18/3.android.support库/</id>
-    <published>2015-07-18T06:28:33.543Z</published>
-    <updated>2015-07-18T05:55:29.723Z</updated>
-    <content type="html"><![CDATA[<p><a href="http://blog.chinaunix.net/uid-24709751-id-4571812.html" target="_blank" rel="external">查看原文</a></p>
-<h2 id="Android_Support_V4,_V7,_V13是什么？">Android Support V4, V7, V13是什么？</h2><p>本质上就是三个java library。</p>
-<h2 id="为什么要有support库？">为什么要有support库？</h2><p>如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库。</p>
-<h2 id="三个Support_库的区别和作用是什么？">三个Support 库的区别和作用是什么？</h2><p>Android Support v4 是最早（2011年4月份）实现的库。用在Android1.6 (API lever 4)或者更高版本之上。它包含了相对V4, V13大的多的功能。<br>                                例如：Fragment，NotificationCompat，LoadBroadcastManager，ViewPager，PageTabAtrip，Loader，FileProvider 等。<br>                                详细API 参考 <a href="http://developer.android.com/reference/android/support/v4/app/package-summary.html" target="_blank" rel="external">http://developer.android.com/reference/android/support/v4/app/package-summary.html</a><br>Android Support v7: 这个包是为了考虑Android2.1(API level 7) 及以上版本而设计的，但是v7是要依赖v4这个包的，也就是如果要使用，两个包得同时 被引用。<br>                                v7支持了Action Bar。<br>Android Support v13:这个包的设计是为了android 3.2及更高版本的，一般我们都不常用，平板开发中能用到。</p>
-<h2 id="如何使用？">如何使用？</h2><p>首先要保证Android Support Library 被安装</p>
-<p>然后在工程中增加（例如 support-v4 Library）</p>
-<p>在ADT中需要按照以下步骤：<br>1、右击当前工程，查找Properties<br>2、选择Java Build Path<br>3、选择Libraries tab，点击右边面板的Add External JARs按钮<br>4、选择android-support-v4.jar文件，这一文件的常见路径为:YOUR_DRIVE\android-sdks\extras\android\support\v4\android-support-v4.jar<br>5、完成添加后，选择Order and Export标签，确认即可。</p>
-<p>5 v4、v7、v13 的例子代码<br>4v : <sdk>/extras/android/support/samples/Support4Demos/<br>7v : <sdk>/extras/android/support/samples/Support7Demos/<br>13v : <sdk>/extras/android/support/samples/Support13Demos/<br>App Navigation: <sdk>/extras/android/support/samples/SupportAppNavigation/</sdk></sdk></sdk></sdk></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p><a href="http://blog.chinaunix.net/uid-24709751-id-4571812.html" target="_blank" rel="external">查看原文</a></p>
-<h2 id="Android_Support_V4,_]]>
-    </summary>
-    
-      <category term="Android" scheme="http://tangxin.club/tags/Android/"/>
-    
-      <category term="转载" scheme="http://tangxin.club/tags/%E8%BD%AC%E8%BD%BD/"/>
-    
-      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android权限系统]]></title>
-    <link href="http://tangxin.club/2015/07/04/9.%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://tangxin.club/2015/07/04/9.权限系统/</id>
-    <published>2015-07-04T12:29:00.000Z</published>
-    <updated>2015-07-18T05:55:29.743Z</updated>
-    <content type="html"><![CDATA[<h2 id="请求权限实例">请求权限实例</h2><blockquote>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/30544911.jpg" alt=""></p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/34097929.jpg" alt=""></p>
-<p>这样设计的意义是为了让用户很方便的看到应用的权限<br><a id="more"></a></p>
-</blockquote>
-<h2 id="为代码添加权限检查">为代码添加权限检查</h2><blockquote>
-<p>给sayhello方法注册权限</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/19442373.jpg" alt=""></p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/58909354.jpg" alt=""></p>
-<p>要执行sayHello方法 要给use加权限 否则就出抛出异常</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/19521677.jpg" alt=""></p>
-</blockquote>
-<h2 id="为基本组件添加权限检查">为基本组件添加权限检查</h2><blockquote>
-<p>权限不仅仅用在Activity上 Android四大组件都可以配制权根</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/78817867.jpg" alt=""></p>
-<p>在同一个程序中没用加use-permission给能启动Activiy</p>
-<p>在不同的程序中就不能了</p>
-<p>在不同应用程序中访问需要加</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/2649790.jpg" alt=""></p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="请求权限实例">请求权限实例</h2><blockquote>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/30544911.jpg" alt=""></p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/34097929.jpg" alt=""></p>
-<p>这样设计的意义是为了让用户很方便的看到应用的权限<br>]]>
-    
-    </summary>
-    
-      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Context与 Application]]></title>
-    <link href="http://tangxin.club/2015/07/04/6.Context%20%E4%B8%8EApplication/"/>
-    <id>http://tangxin.club/2015/07/04/6.Context 与Application/</id>
-    <published>2015-07-04T06:49:00.000Z</published>
-    <updated>2015-07-18T05:55:29.730Z</updated>
-    <content type="html"><![CDATA[<h2 id="Context的作用">Context的作用</h2><blockquote>
-<p>常用组件继承Context 方面访问资源<br>像Activity Servers 就继承了Context</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/46806433.jpg" alt=""><br><a id="more"></a><br>在Android里面如果你想访问全局的信息必需得都过Context</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/8630353.jpg" alt=""></p>
-<p>除了String还可以访问其它任何资源</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/46806433.jpg" alt=""><br><!--more--></p>
-</blockquote>
-<h2 id="Application的用途">Application的用途</h2><blockquote>
-<p>多个组件之间数据的共享<br>间了解到Context可以做为全局息消共享的桥梁</p>
-<p>1.创建一个App类  extends Application</p>
-<p>2.配制Manifest.xml  android:name=”.App”</p>
-<p>3.两个Activity都设置了<br>category android:name=”android.intent.category.LAUNCHER”<br>会出玩两个图标它们都是应用程序的入口</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/11293811.jpg" alt=""><br>在MainActiviy</p>
-<p>4.通过(App)getApplicationContext().setTextData()<br>       (App)getApplicationContext().getTextData();<br>       来对App类进行数据存取操作</p>
-<p>Application 对于同一个应用程序它是唯一的</p>
-<p>不管从通过哪个Activiy启动的Application Application的onCreate都会持行<br>而且会比Activity的onCreate先执行  对在启动前做初始化操作非常有用</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="Context的作用">Context的作用</h2><blockquote>
-<p>常用组件继承Context 方面访问资源<br>像Activity Servers 就继承了Context</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/46806433.jpg" alt=""><br>]]>
-    
-    </summary>
-    
-      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android日志系统]]></title>
-    <link href="http://tangxin.club/2015/07/04/4.android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://tangxin.club/2015/07/04/4.android日志系统/</id>
-    <published>2015-07-04T02:49:00.000Z</published>
-    <updated>2015-07-18T05:55:29.726Z</updated>
-    <content type="html"><![CDATA[<h2 id="使用日志_API">使用日志 API</h2><blockquote>
-<p>之前一直用<br><code>system.out.print</code> <code>system.err.print</code><br>是java本身提供的</p>
-<p>调整Log level 只能看到当前级别和比当前级别高的信息</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/80631137.jpg" alt=""></p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/40361784.jpg" alt=""></p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/86920859.jpg" alt=""></p>
-<p>log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”<br><a id="more"></a></p>
-</blockquote>
-<h2 id="日志分类">日志分类</h2><blockquote>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/82152529.jpg" alt=""></p>
-</blockquote>
-<h2 id="使用_DDMS_查看日志">使用 DDMS 查看日志</h2><blockquote>
-<p>DDMS 是用来调式Android的非常重要的一个工具<br>可以独立运行 还可以模拟打电话 发送短息</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/63744910.jpg" alt=""></p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="使用日志_API">使用日志 API</h2><blockquote>
-<p>之前一直用<br><code>system.out.print</code> <code>system.err.print</code><br>是java本身提供的</p>
-<p>调整Log level 只能看到当前级别和比当前级别高的信息</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/80631137.jpg" alt=""></p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/40361784.jpg" alt=""></p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/86920859.jpg" alt=""></p>
-<p>log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”<br>]]>
-    
-    </summary>
-    
-      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[BroadcastReceiver]]></title>
-    <link href="http://tangxin.club/2015/07/03/5.BroadcastReceiver/"/>
-    <id>http://tangxin.club/2015/07/03/5.BroadcastReceiver/</id>
-    <published>2015-07-03T02:49:00.000Z</published>
-    <updated>2015-07-18T05:55:29.728Z</updated>
-    <content type="html"><![CDATA[<h2 id="使用BroadcastReceiver">使用BroadcastReceiver</h2><blockquote>
-<p>创建new-&gt;other-&gt;BroadcastReceiver</p>
-<p>发送息消<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SendBroadcast(<span class="keyword">new</span> Intent,<span class="keyword">this</span>,MyReceiver.class)</span><br></pre></td></tr></table></figure></p>
-<p>onReceivie 接收消息  Intent可以携带数据<br><a id="more"></a><br><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/76984611.jpg" alt=""></p>
-</blockquote>
-<h2 id="动态注册和注消BroadcastReceiver">动态注册和注消BroadcastReceiver</h2><blockquote>
-<p>在有的时候我们不希望BroadcastReceiver始终处在监听状态</p>
-<p>1在Manifest.xml中删除</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/12367311.jpg" alt=""></p>
-<p>2在MyReceiver中添加ACTION常量</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/62681533.jpg" alt=""></p>
-<p>3通过registerReceiver来注册   unregisterReceiver来注消</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/3286742.jpg" alt=""></p>
-<p>4通过隐式Intent来传送</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/48444028.jpg" alt=""></p>
-</blockquote>
-<h2 id="BroadcastReceiver_的优先级">BroadcastReceiver 的优先级</h2><blockquote>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/28902550.jpg" alt=""></p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="使用BroadcastReceiver">使用BroadcastReceiver</h2><blockquote>
-<p>创建new-&gt;other-&gt;BroadcastReceiver</p>
-<p>发送息消<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SendBroadcast(<span class="keyword">new</span> Intent,<span class="keyword">this</span>,MyReceiver.class)</span><br></pre></td></tr></table></figure></p>
-<p>onReceivie 接收消息  Intent可以携带数据<br>]]>
-    
-    </summary>
-    
-      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Intent与IntentFilter]]></title>
-    <link href="http://tangxin.club/2015/07/03/7.Intent%E4%B8%8EIntentFilter/"/>
-    <id>http://tangxin.club/2015/07/03/7.Intent与IntentFilter/</id>
-    <published>2015-07-02T22:49:00.000Z</published>
-    <updated>2015-07-18T05:55:29.735Z</updated>
-    <content type="html"><![CDATA[<h2 id="显示Intent">显示Intent</h2><p>  startActivity(new Intent(MainActiviy.this,AnotherAcitivy.class));<br>  通过这种方式起动的是显示Intent,  指定的要启动的activity的类的定义</p>
-<h2 id="隐示Intent">隐示Intent</h2><h3 id="启动本应用的Activiy">启动本应用的Activiy</h3><blockquote>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/3934227.jpg" alt=""><br><a id="more"></a><br><img src="http://img-storage.qiniudn.com/15-7-3/37770327.jpg" alt=""></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>约定熟成的命名规则  包名+Intent.action.AnotherAcitivy<br><img src="http://img-storage.qiniudn.com/15-7-3/95602176.jpg" alt=""></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>在AnotherAcitivy添个ACTION常量 方便其它Activity访问<br><img src="http://img-storage.qiniudn.com/15-7-3/3089636.jpg" alt=""></p>
-</blockquote>
-<hr>
-<h3 id="启动外部应用的Activity">启动外部应用的Activity</h3><blockquote>
-<p>在A应用中不可能或取得到B应用的Activiy 类的定义的</p>
-<p>在这种情况下可以通过action来启动是可以做到的</p>
-<p>如果要只让本App内访问 禁止外部App访问 设置android:exported=”false”<br><img src="http://img-storage.qiniudn.com/15-7-3/84708025.jpg" alt=""></p>
-<p>所以启动外部程序Activiy 要记得捕获异常</p>
-<p>如果多个应用配制了同样的action 系统会让你选择</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/50809455.jpg" alt=""></p>
-<p>清除ALAWAYS   到被启动Activity的应用中 CLEAR DEFAULTS</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/60559696.jpg" alt=""></p>
-<p>多个应用同样的action  指明 android:scheme  就不会出现选择了</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/25616824.jpg" alt=""></p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/78854863.jpg" alt=""></p>
-</blockquote>
-<h3 id="通过浏览器链接启动本地_Activity">通过浏览器链接启动本地 Activity</h3><blockquote>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/63104448.jpg" alt=""></p>
-<p>在网页中代码<br>如果在PC上是没反映的它没法处理app协议</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/58685903.jpg" alt=""></p>
-<p>获取传递过来的数据</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/73317927.jpg" alt=""></p>
-</blockquote>
-<h2 id="其它">其它</h2><blockquote>
-<p>&lt;activity android:name=”.AnotherAcitivy”  .会和package的路经连接起来所有加个.</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="显示Intent">显示Intent</h2><p>  startActivity(new Intent(MainActiviy.this,AnotherAcitivy.class));<br>  通过这种方式起动的是显示Intent,  指定的要启动的activity的类的定义</p>
-<h2 id="隐示Intent">隐示Intent</h2><h3 id="启动本应用的Activiy">启动本应用的Activiy</h3><blockquote>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/3934227.jpg" alt=""><br>]]>
-    
-    </summary>
-    
-      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Service]]></title>
-    <link href="http://tangxin.club/2015/07/02/8.Service/"/>
-    <id>http://tangxin.club/2015/07/02/8.Service/</id>
-    <published>2015-07-02T00:20:00.000Z</published>
-    <updated>2015-07-18T05:55:29.737Z</updated>
-    <content type="html"><![CDATA[<h2 id="使用_Service">使用 Service</h2><blockquote>
-<p>Socket、HTTP网络通信、与服务器保持推送的链接<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">startService(<span class="keyword">new</span> Intent(MainActiviy.<span class="keyword">this</span>.MainActiviy.class));</span><br><span class="line">stopService(<span class="keyword">new</span> Intent(MainActiviy.<span class="keyword">this</span>,MyService.class));</span><br><span class="line">这里不用担心<span class="keyword">new</span>了两个Intent 因为它们操作的是同用一个services</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<a id="more"></a>
-<blockquote>
-<p>onStartCommand在外界掉用startService时就执行掉一次执一次而onCreate公一次</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/16479474.jpg" alt=""></p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/38657564.jpg" alt=""></p>
-</blockquote>
-<h2 id="绑定Service">绑定Service</h2><blockquote>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-3/8346086.jpg" alt=""></p>
-<p>出现如下异常  需要反回IBinder 对象</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-3/26015095.jpg" alt=""></p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-3/55256601.jpg" alt=""></p>
-<p>绑定服务退出Activiy会抛出异常 然后停止服务</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/50436641.jpg" alt=""></p>
-</blockquote>
-<h2 id="Service的生命周期">Service的生命周期</h2><p>onCreate<br>onDestroy</p>
-<blockquote>
-<p>同时绑定和启动  必需同时解取绑定和停止服务</p>
-</blockquote>
-<h2 id="Service_通信">Service 通信</h2><h3 id="启动_Service_并传递数据">启动 Service 并传递数据</h3><blockquote>
-<p>onStartCommand 中的第一个参数Intent 用来接收Activity那边传过来的值</p>
-</blockquote>
-<h3 id="绑定Service进行通信">绑定Service进行通信</h3><h4 id="Activity传数据到Service">Activity传数据到Service</h4><blockquote>
-<p>通过onBind 把Activity 和Service 这种两组件连系起来</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/11142844.jpg" alt=""></p>
-<p>return new Binder(); 会被 OnServiceConnected中的 第二个参数IBinder service接收</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/2908310.jpg" alt=""></p>
-<p>在MainActiviy中定义MyService.Binder 类来操作Service中的数据<br><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/71039349.jpg" alt=""></p>
-</blockquote>
-<h4 id="Service传数据到Activity">Service传数据到Activity</h4><blockquote>
-<p>如何让内部通知外界 使用Java中的回调机制</p>
-<p>MyService.java</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/5920396.jpg" alt=""></p>
-<p>把MyService.this 返回Service类的实例</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/53487296.jpg" alt=""></p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/64649959.jpg" alt=""></p>
-<p>在Android有一种这样的安全机制 UI线程是不允许其它辅线程来修改UI线程的资源的</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/75288128.jpg" alt=""></p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/6780481.jpg" alt=""></p>
-</blockquote>
-<h2 id="AIDL">AIDL</h2><h3 id="跨应用启动Service">跨应用启动Service</h3><blockquote>
-<p>Android5以前的版本是可以用action方式起动</p>
-<p>5以后必需使用显示intent 不能使用隐示intent</p>
-<p>但我们或去不到服务的定义  </p>
-<p>可以用Intent的setComponect方法 第1个参数是包名 第2个包名+服务</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/69386350.jpg" alt=""></p>
-</blockquote>
-<h3 id="跨应用绑定Service并通信">跨应用绑定Service并通信</h3><blockquote>
-<p>同一个应用中通过定义一个Binder类 在onBind中返回Binder来实现</p>
-<p>不同应用中 无法种一个程序中去访问另一个程序中的类的定义</p>
-<p>android提供了一种机制AIDL 用于多个应用程序之前的通信</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/81270539.jpg" alt=""></p>
-<p>IAppServiceRemoteBinder是我写的AIDL的类名</p>
-<p>new IAppServiceRemoteBinder时 (如果没有代码示 Build Project 构建一下)</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/71484678.jpg" alt=""></p>
-<p>同一应用在都过访问MyService.Binder 类中的方法来通信</p>
-<p>那不同应用 在IAppServiceRemoteBinder aidl中的方法来通信</p>
-<p>如何通过Binder很方便的去执行一个远程的函数呢？</p>
-<p>在Another 新建一个文件夹 在新建一个包 包名也要相同</p>
-<p>将App中的aidl文拷贝到Another App中</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/52356655.jpg" alt=""></p>
-<h2 id=""><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/93854822.jpg" alt=""></h2><p>不能这样强制转换 虽然这两类类名相同 但在分别在不同的App中内存地址不同</p>
-<p>这两个内的定义所在的内存地址是不一样的</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/47183750.jpg" alt=""></p>
-<p>正确方式</p>
-<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/41316071.jpg" alt=""><br><img src="" alt=""></p>
-</blockquote>
-<h2 id="列出类与方法">列出类与方法</h2><h2 id="自我提问">自我提问</h2><p>1.绑定服务和一般启动服务的区别?</p>
-<p>2.Acitivy到Service传递数据有哪些方式?</p>
-<p>3.Activiy中OnServiceConnected 、Service中onBind、onStartCommand、onCreate、onDestroy有什么用？</p>
-<p>4.怎么实现Service 发送到Activiy?</p>
-<p>5.Message类用应用的场景？</p>
-<p>6.创建了一个类 在使用它时没有代码示怎么办？</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="使用_Service">使用 Service</h2><blockquote>
-<p>Socket、HTTP网络通信、与服务器保持推送的链接<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">startService(<span class="keyword">new</span> Intent(MainActiviy.<span class="keyword">this</span>.MainActiviy.class));</span><br><span class="line">stopService(<span class="keyword">new</span> Intent(MainActiviy.<span class="keyword">this</span>,MyService.class));</span><br><span class="line">这里不用担心<span class="keyword">new</span>了两个Intent 因为它们操作的是同用一个services</span><br></pre></td></tr></table></figure></p>
-</blockquote>]]>
-    
-    </summary>
-    
-      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Activity]]></title>
-    <link href="http://tangxin.club/2015/07/01/2.Activity/"/>
-    <id>http://tangxin.club/2015/07/01/2.Activity/</id>
-    <published>2015-06-30T20:49:00.000Z</published>
-    <updated>2015-07-18T05:55:29.720Z</updated>
-    <content type="html"><![CDATA[<h2 id="Activity">Activity</h2><blockquote>
-<p>Activity绑定自定义视图 setConView()</p>
-<p>启动另一个 Activity<br>startActivity()</p>
-<p>下载帮助文档 用于离线查看<br><a id="more"></a></p>
-</blockquote>
-<h2 id="Activity生命周期">Activity生命周期</h2><pre><code><span class="title">onCreate</span>
-<span class="built_in">on</span>Start         <span class="built_in">on</span>Restart
-<span class="built_in">on</span>Resume
-
-<span class="built_in">on</span>Pause
-<span class="built_in">on</span>Stop
-<span class="built_in">on</span>Destroy
-</code></pre><blockquote>
-<p>按退出键  onPause-onStop-onDestroy<br>再次进入  onCreate-onStart-onResume</p>
-<p>按Home键 onPause-onStop-onDestroy<br>再次进入 onRestart-onStart-onResume</p>
-<p>这是一个全新的生命周期了</p>
-<p>在A B两个Activiy切换时的<br>AonPause-BonCreate-BonStart-BonResume-AonStop</p>
-<p>如果B是对话框 A在背后可见  而A不会执行onStop<br>AonPause-BonCreate-BonStart-BonResume</p>
-<p>关掉B对话框 BonPause-AonResume-BonStop-BonDestroy</p>
-</blockquote>
-<h2 id="Intent传递数据">Intent传递数据</h2><h3 id="传递简单数据">传递简单数据</h3><p>MainActivity.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent i = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,AnotherAcitivy.class);</span><br><span class="line">i.putExtra(<span class="string">"data"</span>,<span class="string">"hello tangxin"</span>);</span><br><span class="line">startActivity(i);</span><br></pre></td></tr></table></figure></p>
-<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent i = getIntent();</span><br><span class="line">textview = (TextView)findViewById(R.id.tv_show);</span><br><span class="line">textView.setText(i.getStringExtra(<span class="string">"data"</span>));</span><br></pre></td></tr></table></figure></p>
-<h3 id="传递数据包">传递数据包</h3><p>MainActivity.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Intent i = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,AnotherAcitivy.class);</span><br><span class="line">Bundle b = <span class="keyword">new</span> Bundle();</span><br><span class="line">b.putString(<span class="string">"name"</span>,<span class="string">"tangxin"</span>);</span><br><span class="line">b.putInt(<span class="string">"age"</span>,<span class="number">21</span>);</span><br><span class="line">i.putExtras(b);</span><br><span class="line"><span class="comment">//i.putExtra("data",b);</span></span><br></pre></td></tr></table></figure></p>
-<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent i = getIntent();</span><br><span class="line"><span class="comment">//Bundle data = i.getExtras(); //与i.putExtra("data",b)对应</span></span><br><span class="line">Bundle data = i.getExtra();</span><br><span class="line">textView.setText(String.format(<span class="string">"name=%s,age=%d"</span>,data.getString(<span class="string">"name"</span>),data.getInt(<span class="string">"age"</span>),date.getString(<span class="string">"name1"</span>,<span class="string">"leo"</span>))); <span class="comment">//如果name1不存在才会 name1=leo</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="传递值对象">传递值对象</h3><p>MainActivity.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i.putExtra(<span class="string">"usr"</span>,<span class="keyword">new</span> User(<span class="string">"tangxin,22"</span>)); <span class="comment">//需要implemente序列化值接写会报错</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="implemente_Serializable">implemente Serializable</h4><p>User.java</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/34890526.jpg" alt="User类implemente Serializable"></p>
-<p>MainActi.java</p>
-<blockquote>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/55647036.jpg" alt="序列化"></p>
-<p>java 提供了 java.io.Serializable</p>
-<p>android 提供了android.os.Parcelable专门面向移动的效率比java.io.Serializable高</p>
-</blockquote>
-<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User user = (Usr) i.getSerializableExtra(<span class="string">"user"</span>);</span><br><span class="line">textview.setText(String.format(<span class="string">"name=%s,age=%d"</span>,user.getName(),user.getAge()));</span><br></pre></td></tr></table></figure></p>
-<hr>
-<blockquote>
-<p>findViewById 被注释掉会出现空指针异常</p>
-</blockquote>
-<h4 id="implemente_Parcelable">implemente Parcelable</h4><p>User.java</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/24677583.jpg" alt="User类implemente Parcelable"></p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/21981610.jpg" alt=""><br>Parcelable 没有全自动的机制需要我们手动写</p>
-<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User user = (Usr) i.getParcelableExtra(<span class="string">"user"</span>);</span><br><span class="line">textview.setText(String.format(<span class="string">"name=%s,age=%d"</span>,user.getName(),user.getAge()));</span><br></pre></td></tr></table></figure></p>
-<h4 id="总结">总结</h4><blockquote>
-<p>用Serializable操作比较简单是系统帮我们操作的速度慢  java提供的</p>
-<p>用Parcelable要手动实现三个方法 速度快 是android提供的</p>
-</blockquote>
-<h3 id="获取_Activity_的返回参数">获取 Activity 的返回参数</h3><p>AnotherAcitivy.java</p>
-<p><img src="http://img-storage.qiniudn.com/15-7-3/74172036.jpg" alt=""></p>
-<blockquote>
-<p>Intent它不仅可以起动一个Activiy还可以做为一个载本把数据在Activiy之间传来传去的</p>
-</blockquote>
-<p>MainActivity.java<br><img src="http://img-storage.qiniudn.com/15-7-3/50854667.jpg" alt=""></p>
-<h2 id="Activity的起动模式">Activity的起动模式</h2><h3 id="标准模式">标准模式</h3><blockquote>
-<p>toString() 可以用来获取Activity实例<br>getTask() 任务ID</p>
-<p>自己起动自己<br>通过观察TaskID和Acitivity实例发现 同一个任务栈里面创建了不同的实例</p>
-<p>任务栈的概念：<br>栈是先入后出 Activity一个一个入栈 当按back键 一个一个出栈就行了,这是Android跳转的一个机制</p>
-<p>在Manifest.xml中<android>下可以配制</android></p>
-<p><anroid:launchmode="standard"> standard是默认的</anroid:launchmode="standard"></p>
-<p>android:testAllCaps=”false” //关闭全不大写</p>
-</blockquote>
-<h3 id="SingleTop">SingleTop</h3><blockquote>
-<p>同一个文件中的ID不能一样,不同文件中的ID可以一样</p>
-<p>在同一个栈里面如果我们指明启动模式是SingleTop如果些时Activiy处于栈顶只创建一个实例<br>如果不处于栈顶会创建新的实例 <a href="[http://www.jikexueyuan.com/course/678_2.html?ss=1]">观看视频</a></p>
-</blockquote>
-<h3 id="SingleTask_与_SingleInstance_模式">SingleTask 与 SingleInstance 模式</h3><h4 id="SingleTask">SingleTask</h4><p>有个任务栈在ID是87  任务栈里有个MainActiviy<br>启动AnotherAcitivy时 任务栈有两个Activiy<br>在AnotherAcitivy中起动MainActiviy时会把AnotherAcitivy<br>弹出 弹到MainActiviy 这时按后退 直退出</p>
-<h4 id="SingleInstance">SingleInstance</h4><blockquote>
-<p>将Activity存在不同的任务栈中 任务<br>从切换的动画效果可以明显看出来</p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="Activity">Activity</h2><blockquote>
-<p>Activity绑定自定义视图 setConView()</p>
-<p>启动另一个 Activity<br>startActivity()</p>
-<p>下载帮助文档 用于离线查看<br>]]>
-    
-    </summary>
-    
-      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
     
       <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
     
@@ -558,10 +128,10 @@
   
   <entry>
     <title><![CDATA[使用Hexo框架搭Blog]]></title>
-    <link href="http://tangxin.club/2015/06/25/1.%E4%BD%BF%E7%94%A8Hexo%E6%A1%86%E6%9E%B6%E6%90%ADBlog/"/>
-    <id>http://tangxin.club/2015/06/25/1.使用Hexo框架搭Blog/</id>
-    <published>2015-06-25T13:49:00.000Z</published>
-    <updated>2015-07-18T08:30:59.722Z</updated>
+    <link href="http://tangxin.club/2015/03/27/1.%E4%BD%BF%E7%94%A8Hexo%E6%A1%86%E6%9E%B6%E6%90%ADBlog/"/>
+    <id>http://tangxin.club/2015/03/27/1.使用Hexo框架搭Blog/</id>
+    <published>2015-03-27T13:49:00.000Z</published>
+    <updated>2015-11-20T04:42:00.043Z</updated>
     <content type="html"><![CDATA[<h2 id="快速部署环境">快速部署环境</h2><h3 id="下载安装hexo">下载安装hexo</h3><pre><code>下载并安装node.js  https:<span class="comment">//nodejs.org/</span>
 下载并安装git      http:<span class="comment">//www.git-scm.com/download/</span>
 安装 hexo         $ npm install -<span class="keyword">g</span> hexo-<span class="keyword">cli</span>
@@ -639,11 +209,68 @@ $ hexo s 或 hexo s -p端口</span>
   </entry>
   
   <entry>
+    <title><![CDATA[android studio使用]]></title>
+    <link href="http://tangxin.club/2015/02/07/13.%E9%BB%91%E9%A9%AC%E5%85%AC%E5%BC%80%E8%AF%BE%E7%AC%94%E8%AE%B0/"/>
+    <id>http://tangxin.club/2015/02/07/13.黑马公开课笔记/</id>
+    <published>2015-02-07T00:49:00.000Z</published>
+    <updated>2015-11-20T04:48:47.013Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>直播用的Gensee 展视互动</p>
+<p>30w 到 50w  黑马 传智   北上深    缺上海    有期权<br>明年公司上市</p>
+</blockquote>
+<h1 id="优化Android_Studio/Gradle构建">优化Android Studio/Gradle构建</h1><blockquote>
+<p><a href="http://bbs.itheima.com/thread-204217-1-1.html" target="_blank" rel="external">http://bbs.itheima.com/thread-204217-1-1.html</a></p>
+<p>android studio  要 jdk1.7以后  否则报JDK not found error</p>
+<p>eclipse 的.ini与也可以配制内存吧</p>
+<p>勾选会很快  如果要加载第三发库不要勾 <img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-7/92151777.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-7/71498533.jpg" alt=""></p>
+<p>true后面注意不好用空格</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-7/78207345.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-7/17848714.jpg" alt=""></p>
+<p>自动生成findviewbyid</p>
+<p>viewHoLd 自动生成</p>
+<p>自动生成Json对象</p>
+<p>图片  选择器自动生成</p>
+<p>mipmap 拿图片与eclipse 不一样</p>
+<p>签名.jks 与.keystore eclipse不一样  只是名字换了</p>
+<p>gradle Android Studio核心 Eclipse  Andstudio 是Moudles</p>
+<p>Android 用目录节够看</p>
+<p>Project 目录节够</p>
+<p>Eclipse 叫项目 And</p>
+<p>在工作时一个工作空间只能出现一个项目一个App 一个modules 一个项目挂了 全都挂了 都不知道是那个Module挂的  所以入一个modules<br><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-7/46371946.jpg" alt=""></p>
+<p>.gradle 文件修改 改改点下同步grandle sysc 按钮</p>
+<p><a href="https://plugins.jetbrains.com/?androidstudio" target="_blank" rel="external">找Android Studio插件</a></p>
+<p><a href="http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Simple-build-files" target="_blank" rel="external">Gradle帮助文档</a></p>
+<p>导别人的Android Studio 项目注意看他的grandle配制的版本 gradle-&gt;gradle-&gt;wrapper.properties 要个自己目录一下的对应</p>
+<p><a href="https://bintray.com/bintray/jcenter" target="_blank" rel="external">jcenter服务器</a></p>
+<p>多渠到打包</p>
+<ul>
+<li><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-8/81877316.jpg" alt=""></li>
+<li><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-8/98538327.jpg" alt=""></li>
+<li><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-8/23180132.jpg" alt=""></li>
+</ul>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>直播用的Gensee 展视互动</p>
+<p>30w 到 50w  黑马 传智   北上深    缺上海    有期权<br>明年公司上市</p>
+</blockquote>
+<h1 id="优化Android_Studio/Gradle构建">优]]>
+    </summary>
+    
+      <category term="android studio" scheme="http://tangxin.club/tags/android-studio/"/>
+    
+      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[XML]]></title>
-    <link href="http://tangxin.club/2015/06/25/12.XML/"/>
-    <id>http://tangxin.club/2015/06/25/12.XML/</id>
-    <published>2015-06-24T23:49:00.000Z</published>
-    <updated>2015-10-26T06:25:33.068Z</updated>
+    <link href="http://tangxin.club/2014/05/29/12.XML/"/>
+    <id>http://tangxin.club/2014/05/29/12.XML/</id>
+    <published>2014-05-28T23:49:00.000Z</published>
+    <updated>2015-11-20T04:47:40.403Z</updated>
     <content type="html"><![CDATA[<h2 id="XML技术:">XML技术:</h2><p>与数据相关技术，在企业中xml技术常用来存储数据和传输数据 ，流行原因 ——- xml与任何编程语言无关<br>xml 可用于 php、java、.net 任何编程语言</p>
 <h2 id="XML典型存储和传输应用：">XML典型存储和传输应用：</h2><p>1、XML 充当数据库 保存数据信息 —- 试题采用xml保存的 、google 数据信息通过xml格式保存<br>2、在AJAX传输数据 、WebService技术 网络中传输数据时，格式采用xml<br>在HTML中预定义了很多标记，每个标记都有相应显示效果，xml所有标记没有被预定义<br>在xml中 <name>HLG</name> ——  想确定name标记含义 ，需要对xml 添加约束</p>
 <h2 id="XML语法">XML语法</h2><p>5、CDATA块<br>6、处理指令</p>
@@ -761,10 +388,10 @@ $ hexo s 或 hexo s -p端口</span>
   
   <entry>
     <title><![CDATA[Pull解析与写入XML]]></title>
-    <link href="http://tangxin.club/2015/06/25/11.Pull%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%86%99%E5%85%A5XML/"/>
-    <id>http://tangxin.club/2015/06/25/11.Pull解析与写入XML/</id>
-    <published>2015-06-24T23:49:00.000Z</published>
-    <updated>2015-07-18T10:58:59.834Z</updated>
+    <link href="http://tangxin.club/2014/05/25/11.Pull%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%86%99%E5%85%A5XML/"/>
+    <id>http://tangxin.club/2014/05/25/11.Pull解析与写入XML/</id>
+    <published>2014-05-24T23:49:00.000Z</published>
+    <updated>2015-11-20T04:47:15.370Z</updated>
     <content type="html"><![CDATA[<h2 id="Pull简介">Pull简介</h2><ul>
 <li>android中跟据布局文件用Pull解析再用反射创建对象</li>
 <li>常见的XML解析方式有三种,DOM,SAX,Pull, Android系统中推荐使用Pull</li>
@@ -802,11 +429,437 @@ $ hexo s 或 hexo s -p端口</span>
   </entry>
   
   <entry>
+    <title><![CDATA[Android权限系统]]></title>
+    <link href="http://tangxin.club/2014/05/10/9.%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://tangxin.club/2014/05/10/9.权限系统/</id>
+    <published>2014-05-10T12:29:00.000Z</published>
+    <updated>2015-11-20T04:46:23.905Z</updated>
+    <content type="html"><![CDATA[<h2 id="请求权限实例">请求权限实例</h2><blockquote>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/30544911.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/34097929.jpg" alt=""></p>
+<p>这样设计的意义是为了让用户很方便的看到应用的权限<br><a id="more"></a></p>
+</blockquote>
+<h2 id="为代码添加权限检查">为代码添加权限检查</h2><blockquote>
+<p>给sayhello方法注册权限</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/19442373.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/58909354.jpg" alt=""></p>
+<p>要执行sayHello方法 要给use加权限 否则就出抛出异常</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/19521677.jpg" alt=""></p>
+</blockquote>
+<h2 id="为基本组件添加权限检查">为基本组件添加权限检查</h2><blockquote>
+<p>权限不仅仅用在Activity上 Android四大组件都可以配制权根</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/78817867.jpg" alt=""></p>
+<p>在同一个程序中没用加use-permission给能启动Activiy</p>
+<p>在不同的程序中就不能了</p>
+<p>在不同应用程序中访问需要加</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/2649790.jpg" alt=""></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="请求权限实例">请求权限实例</h2><blockquote>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/30544911.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/34097929.jpg" alt=""></p>
+<p>这样设计的意义是为了让用户很方便的看到应用的权限<br>]]>
+    
+    </summary>
+    
+      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Service]]></title>
+    <link href="http://tangxin.club/2014/04/28/8.Service/"/>
+    <id>http://tangxin.club/2014/04/28/8.Service/</id>
+    <published>2014-04-28T02:20:00.000Z</published>
+    <updated>2015-11-20T04:46:01.304Z</updated>
+    <content type="html"><![CDATA[<h2 id="使用_Service">使用 Service</h2><blockquote>
+<p>Socket、HTTP网络通信、与服务器保持推送的链接<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">startService(<span class="keyword">new</span> Intent(MainActiviy.<span class="keyword">this</span>.MainActiviy.class));</span><br><span class="line">stopService(<span class="keyword">new</span> Intent(MainActiviy.<span class="keyword">this</span>,MyService.class));</span><br><span class="line">这里不用担心<span class="keyword">new</span>了两个Intent 因为它们操作的是同用一个services</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<a id="more"></a>
+<blockquote>
+<p>onStartCommand在外界掉用startService时就执行掉一次执一次而onCreate公一次</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/16479474.jpg" alt=""></p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/38657564.jpg" alt=""></p>
+</blockquote>
+<h2 id="绑定Service">绑定Service</h2><blockquote>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-3/8346086.jpg" alt=""></p>
+<p>出现如下异常  需要反回IBinder 对象</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-3/26015095.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-3/55256601.jpg" alt=""></p>
+<p>绑定服务退出Activiy会抛出异常 然后停止服务</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/50436641.jpg" alt=""></p>
+</blockquote>
+<h2 id="Service的生命周期">Service的生命周期</h2><p>onCreate<br>onDestroy</p>
+<blockquote>
+<p>同时绑定和启动  必需同时解取绑定和停止服务</p>
+</blockquote>
+<h2 id="Service_通信">Service 通信</h2><h3 id="启动_Service_并传递数据">启动 Service 并传递数据</h3><blockquote>
+<p>onStartCommand 中的第一个参数Intent 用来接收Activity那边传过来的值</p>
+</blockquote>
+<h3 id="绑定Service进行通信">绑定Service进行通信</h3><h4 id="Activity传数据到Service">Activity传数据到Service</h4><blockquote>
+<p>通过onBind 把Activity 和Service 这种两组件连系起来</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/11142844.jpg" alt=""></p>
+<p>return new Binder(); 会被 OnServiceConnected中的 第二个参数IBinder service接收</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/2908310.jpg" alt=""></p>
+<p>在MainActiviy中定义MyService.Binder 类来操作Service中的数据<br><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/71039349.jpg" alt=""></p>
+</blockquote>
+<h4 id="Service传数据到Activity">Service传数据到Activity</h4><blockquote>
+<p>如何让内部通知外界 使用Java中的回调机制</p>
+<p>MyService.java</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/5920396.jpg" alt=""></p>
+<p>把MyService.this 返回Service类的实例</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/53487296.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/64649959.jpg" alt=""></p>
+<p>在Android有一种这样的安全机制 UI线程是不允许其它辅线程来修改UI线程的资源的</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/75288128.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/6780481.jpg" alt=""></p>
+</blockquote>
+<h2 id="AIDL">AIDL</h2><h3 id="跨应用启动Service">跨应用启动Service</h3><blockquote>
+<p>Android5以前的版本是可以用action方式起动</p>
+<p>5以后必需使用显示intent 不能使用隐示intent</p>
+<p>但我们或去不到服务的定义  </p>
+<p>可以用Intent的setComponect方法 第1个参数是包名 第2个包名+服务</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/69386350.jpg" alt=""></p>
+</blockquote>
+<h3 id="跨应用绑定Service并通信">跨应用绑定Service并通信</h3><blockquote>
+<p>同一个应用中通过定义一个Binder类 在onBind中返回Binder来实现</p>
+<p>不同应用中 无法种一个程序中去访问另一个程序中的类的定义</p>
+<p>android提供了一种机制AIDL 用于多个应用程序之前的通信</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/81270539.jpg" alt=""></p>
+<p>IAppServiceRemoteBinder是我写的AIDL的类名</p>
+<p>new IAppServiceRemoteBinder时 (如果没有代码示 Build Project 构建一下)</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/71484678.jpg" alt=""></p>
+<p>同一应用在都过访问MyService.Binder 类中的方法来通信</p>
+<p>那不同应用 在IAppServiceRemoteBinder aidl中的方法来通信</p>
+<p>如何通过Binder很方便的去执行一个远程的函数呢？</p>
+<p>在Another 新建一个文件夹 在新建一个包 包名也要相同</p>
+<p>将App中的aidl文拷贝到Another App中</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/52356655.jpg" alt=""></p>
+<h2 id=""><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/93854822.jpg" alt=""></h2><p>不能这样强制转换 虽然这两类类名相同 但在分别在不同的App中内存地址不同</p>
+<p>这两个内的定义所在的内存地址是不一样的</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/47183750.jpg" alt=""></p>
+<p>正确方式</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/41316071.jpg" alt=""><br><img src="" alt=""></p>
+</blockquote>
+<h2 id="列出类与方法">列出类与方法</h2><h2 id="自我提问">自我提问</h2><p>1.绑定服务和一般启动服务的区别?</p>
+<p>2.Acitivy到Service传递数据有哪些方式?</p>
+<p>3.Activiy中OnServiceConnected 、Service中onBind、onStartCommand、onCreate、onDestroy有什么用？</p>
+<p>4.怎么实现Service 发送到Activiy?</p>
+<p>5.Message类用应用的场景？</p>
+<p>6.创建了一个类 在使用它时没有代码示怎么办？</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="使用_Service">使用 Service</h2><blockquote>
+<p>Socket、HTTP网络通信、与服务器保持推送的链接<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">startService(<span class="keyword">new</span> Intent(MainActiviy.<span class="keyword">this</span>.MainActiviy.class));</span><br><span class="line">stopService(<span class="keyword">new</span> Intent(MainActiviy.<span class="keyword">this</span>,MyService.class));</span><br><span class="line">这里不用担心<span class="keyword">new</span>了两个Intent 因为它们操作的是同用一个services</span><br></pre></td></tr></table></figure></p>
+</blockquote>]]>
+    
+    </summary>
+    
+      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Intent与IntentFilter]]></title>
+    <link href="http://tangxin.club/2014/04/20/7.Intent%E4%B8%8EIntentFilter/"/>
+    <id>http://tangxin.club/2014/04/20/7.Intent与IntentFilter/</id>
+    <published>2014-04-19T22:49:00.000Z</published>
+    <updated>2015-11-20T04:45:40.923Z</updated>
+    <content type="html"><![CDATA[<h2 id="显示Intent">显示Intent</h2><p>  startActivity(new Intent(MainActiviy.this,AnotherAcitivy.class));<br>  通过这种方式起动的是显示Intent,  指定的要启动的activity的类的定义</p>
+<h2 id="隐示Intent">隐示Intent</h2><h3 id="启动本应用的Activiy">启动本应用的Activiy</h3><blockquote>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/3934227.jpg" alt=""><br><a id="more"></a><br><img src="http://img-storage.qiniudn.com/15-7-3/37770327.jpg" alt=""></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>约定熟成的命名规则  包名+Intent.action.AnotherAcitivy<br><img src="http://img-storage.qiniudn.com/15-7-3/95602176.jpg" alt=""></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>在AnotherAcitivy添个ACTION常量 方便其它Activity访问<br><img src="http://img-storage.qiniudn.com/15-7-3/3089636.jpg" alt=""></p>
+</blockquote>
+<hr>
+<h3 id="启动外部应用的Activity">启动外部应用的Activity</h3><blockquote>
+<p>在A应用中不可能或取得到B应用的Activiy 类的定义的</p>
+<p>在这种情况下可以通过action来启动是可以做到的</p>
+<p>如果要只让本App内访问 禁止外部App访问 设置android:exported=”false”<br><img src="http://img-storage.qiniudn.com/15-7-3/84708025.jpg" alt=""></p>
+<p>所以启动外部程序Activiy 要记得捕获异常</p>
+<p>如果多个应用配制了同样的action 系统会让你选择</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/50809455.jpg" alt=""></p>
+<p>清除ALAWAYS   到被启动Activity的应用中 CLEAR DEFAULTS</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/60559696.jpg" alt=""></p>
+<p>多个应用同样的action  指明 android:scheme  就不会出现选择了</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/25616824.jpg" alt=""></p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/78854863.jpg" alt=""></p>
+</blockquote>
+<h3 id="通过浏览器链接启动本地_Activity">通过浏览器链接启动本地 Activity</h3><blockquote>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/63104448.jpg" alt=""></p>
+<p>在网页中代码<br>如果在PC上是没反映的它没法处理app协议</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/58685903.jpg" alt=""></p>
+<p>获取传递过来的数据</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/73317927.jpg" alt=""></p>
+</blockquote>
+<h2 id="其它">其它</h2><blockquote>
+<p>&lt;activity android:name=”.AnotherAcitivy”  .会和package的路经连接起来所有加个.</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="显示Intent">显示Intent</h2><p>  startActivity(new Intent(MainActiviy.this,AnotherAcitivy.class));<br>  通过这种方式起动的是显示Intent,  指定的要启动的activity的类的定义</p>
+<h2 id="隐示Intent">隐示Intent</h2><h3 id="启动本应用的Activiy">启动本应用的Activiy</h3><blockquote>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/3934227.jpg" alt=""><br>]]>
+    
+    </summary>
+    
+      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Context与 Application]]></title>
+    <link href="http://tangxin.club/2014/04/15/6.Context%20%E4%B8%8EApplication/"/>
+    <id>http://tangxin.club/2014/04/15/6.Context 与Application/</id>
+    <published>2014-04-15T06:49:00.000Z</published>
+    <updated>2015-11-20T04:45:24.383Z</updated>
+    <content type="html"><![CDATA[<h2 id="Context的作用">Context的作用</h2><blockquote>
+<p>常用组件继承Context 方面访问资源<br>像Activity Servers 就继承了Context</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/46806433.jpg" alt=""><br><a id="more"></a><br>在Android里面如果你想访问全局的信息必需得都过Context</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/8630353.jpg" alt=""></p>
+<p>除了String还可以访问其它任何资源</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/46806433.jpg" alt=""><br><!--more--></p>
+</blockquote>
+<h2 id="Application的用途">Application的用途</h2><blockquote>
+<p>多个组件之间数据的共享<br>间了解到Context可以做为全局息消共享的桥梁</p>
+<p>1.创建一个App类  extends Application</p>
+<p>2.配制Manifest.xml  android:name=”.App”</p>
+<p>3.两个Activity都设置了<br>category android:name=”android.intent.category.LAUNCHER”<br>会出玩两个图标它们都是应用程序的入口</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/11293811.jpg" alt=""><br>在MainActiviy</p>
+<p>4.通过(App)getApplicationContext().setTextData()<br>       (App)getApplicationContext().getTextData();<br>       来对App类进行数据存取操作</p>
+<p>Application 对于同一个应用程序它是唯一的</p>
+<p>不管从通过哪个Activiy启动的Application Application的onCreate都会持行<br>而且会比Activity的onCreate先执行  对在启动前做初始化操作非常有用</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Context的作用">Context的作用</h2><blockquote>
+<p>常用组件继承Context 方面访问资源<br>像Activity Servers 就继承了Context</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/46806433.jpg" alt=""><br>]]>
+    
+    </summary>
+    
+      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[BroadcastReceiver]]></title>
+    <link href="http://tangxin.club/2014/04/08/5.BroadcastReceiver/"/>
+    <id>http://tangxin.club/2014/04/08/5.BroadcastReceiver/</id>
+    <published>2014-04-08T02:49:00.000Z</published>
+    <updated>2015-11-20T04:45:07.392Z</updated>
+    <content type="html"><![CDATA[<h2 id="使用BroadcastReceiver">使用BroadcastReceiver</h2><blockquote>
+<p>创建new-&gt;other-&gt;BroadcastReceiver</p>
+<p>发送息消<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SendBroadcast(<span class="keyword">new</span> Intent,<span class="keyword">this</span>,MyReceiver.class)</span><br></pre></td></tr></table></figure></p>
+<p>onReceivie 接收消息  Intent可以携带数据<br><a id="more"></a><br><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/76984611.jpg" alt=""></p>
+</blockquote>
+<h2 id="动态注册和注消BroadcastReceiver">动态注册和注消BroadcastReceiver</h2><blockquote>
+<p>在有的时候我们不希望BroadcastReceiver始终处在监听状态</p>
+<p>1在Manifest.xml中删除</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/12367311.jpg" alt=""></p>
+<p>2在MyReceiver中添加ACTION常量</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/62681533.jpg" alt=""></p>
+<p>3通过registerReceiver来注册   unregisterReceiver来注消</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/3286742.jpg" alt=""></p>
+<p>4通过隐式Intent来传送</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/48444028.jpg" alt=""></p>
+</blockquote>
+<h2 id="BroadcastReceiver_的优先级">BroadcastReceiver 的优先级</h2><blockquote>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/28902550.jpg" alt=""></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="使用BroadcastReceiver">使用BroadcastReceiver</h2><blockquote>
+<p>创建new-&gt;other-&gt;BroadcastReceiver</p>
+<p>发送息消<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SendBroadcast(<span class="keyword">new</span> Intent,<span class="keyword">this</span>,MyReceiver.class)</span><br></pre></td></tr></table></figure></p>
+<p>onReceivie 接收消息  Intent可以携带数据<br>]]>
+    
+    </summary>
+    
+      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android日志系统]]></title>
+    <link href="http://tangxin.club/2014/04/05/4.android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://tangxin.club/2014/04/05/4.android日志系统/</id>
+    <published>2014-04-05T02:49:00.000Z</published>
+    <updated>2015-11-20T04:44:47.459Z</updated>
+    <content type="html"><![CDATA[<h2 id="使用日志_API">使用日志 API</h2><blockquote>
+<p>之前一直用<br><code>system.out.print</code> <code>system.err.print</code><br>是java本身提供的</p>
+<p>调整Log level 只能看到当前级别和比当前级别高的信息</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/80631137.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/40361784.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/86920859.jpg" alt=""></p>
+<p>log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”<br><a id="more"></a></p>
+</blockquote>
+<h2 id="日志分类">日志分类</h2><blockquote>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/82152529.jpg" alt=""></p>
+</blockquote>
+<h2 id="使用_DDMS_查看日志">使用 DDMS 查看日志</h2><blockquote>
+<p>DDMS 是用来调式Android的非常重要的一个工具<br>可以独立运行 还可以模拟打电话 发送短息</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/63744910.jpg" alt=""></p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="使用日志_API">使用日志 API</h2><blockquote>
+<p>之前一直用<br><code>system.out.print</code> <code>system.err.print</code><br>是java本身提供的</p>
+<p>调整Log level 只能看到当前级别和比当前级别高的信息</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/80631137.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/40361784.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/86920859.jpg" alt=""></p>
+<p>log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”<br>]]>
+    
+    </summary>
+    
+      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android.Support.V4, V7, V13是什么？]]></title>
+    <link href="http://tangxin.club/2014/04/03/3.android.support%E5%BA%93/"/>
+    <id>http://tangxin.club/2014/04/03/3.android.support库/</id>
+    <published>2014-04-02T20:49:00.000Z</published>
+    <updated>2015-11-20T04:44:06.195Z</updated>
+    <content type="html"><![CDATA[<h2 id="Android_Support_V4,_V7,_V13是什么？">Android Support V4, V7, V13是什么？</h2><p>本质上就是三个java library。</p>
+<h2 id="为什么要有support库？">为什么要有support库？</h2><p>如果在低版本Android平台上开发一个应用程序，而应用程序又想使用高版本才拥有的功能，就需要使用Support库。</p>
+<h2 id="三个Support_库的区别和作用是什么？">三个Support 库的区别和作用是什么？</h2><p>Android Support v4 是最早（2011年4月份）实现的库。用在Android1.6 (API lever 4)或者更高版本之上。它包含了相对V4, V13大的多的功能。<br>                                例如：Fragment，NotificationCompat，LoadBroadcastManager，ViewPager，PageTabAtrip，Loader，FileProvider 等。<br>                                详细API 参考 <a href="http://developer.android.com/reference/android/support/v4/app/package-summary.html" target="_blank" rel="external">http://developer.android.com/reference/android/support/v4/app/package-summary.html</a><br>Android Support v7: 这个包是为了考虑Android2.1(API level 7) 及以上版本而设计的，但是v7是要依赖v4这个包的，也就是如果要使用，两个包得同时 被引用。<br>                                v7支持了Action Bar。<br>Android Support v13:这个包的设计是为了android 3.2及更高版本的，一般我们都不常用，平板开发中能用到。</p>
+<h2 id="如何使用？">如何使用？</h2><p>首先要保证Android Support Library 被安装</p>
+<p>然后在工程中增加（例如 support-v4 Library）</p>
+<p>在ADT中需要按照以下步骤：<br>1、右击当前工程，查找Properties<br>2、选择Java Build Path<br>3、选择Libraries tab，点击右边面板的Add External JARs按钮<br>4、选择android-support-v4.jar文件，这一文件的常见路径为:YOUR_DRIVE\android-sdks\extras\android\support\v4\android-support-v4.jar<br>5、完成添加后，选择Order and Export标签，确认即可。</p>
+<p>5 v4、v7、v13 的例子代码<br>4v : <sdk>/extras/android/support/samples/Support4Demos/<br>7v : <sdk>/extras/android/support/samples/Support7Demos/<br>13v : <sdk>/extras/android/support/samples/Support13Demos/<br>App Navigation: <sdk>/extras/android/support/samples/SupportAppNavigation/</sdk></sdk></sdk></sdk></p>
+<p>参考：<a href="http://blog.chinaunix.net/uid-24709751-id-4571812.html" target="_blank" rel="external">http://blog.chinaunix.net/uid-24709751-id-4571812.html</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Android_Support_V4,_V7,_V13是什么？">Android Support V4, V7, V13是什么？</h2><p>本质上就是三个java library。</p>
+<h2 id="为什么要有support库？">为什么要有suppor]]>
+    </summary>
+    
+      <category term="Android" scheme="http://tangxin.club/tags/Android/"/>
+    
+      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Activity]]></title>
+    <link href="http://tangxin.club/2014/04/01/2.Activity/"/>
+    <id>http://tangxin.club/2014/04/01/2.Activity/</id>
+    <published>2014-03-31T20:49:00.000Z</published>
+    <updated>2015-11-20T04:42:16.286Z</updated>
+    <content type="html"><![CDATA[<h2 id="Activity">Activity</h2><blockquote>
+<p>Activity绑定自定义视图 setConView()</p>
+<p>启动另一个 Activity<br>startActivity()</p>
+<p>下载帮助文档 用于离线查看<br><a id="more"></a></p>
+</blockquote>
+<h2 id="Activity生命周期">Activity生命周期</h2><pre><code><span class="title">onCreate</span>
+<span class="built_in">on</span>Start         <span class="built_in">on</span>Restart
+<span class="built_in">on</span>Resume
+
+<span class="built_in">on</span>Pause
+<span class="built_in">on</span>Stop
+<span class="built_in">on</span>Destroy
+</code></pre><blockquote>
+<p>按退出键  onPause-onStop-onDestroy<br>再次进入  onCreate-onStart-onResume</p>
+<p>按Home键 onPause-onStop-onDestroy<br>再次进入 onRestart-onStart-onResume</p>
+<p>这是一个全新的生命周期了</p>
+<p>在A B两个Activiy切换时的<br>AonPause-BonCreate-BonStart-BonResume-AonStop</p>
+<p>如果B是对话框 A在背后可见  而A不会执行onStop<br>AonPause-BonCreate-BonStart-BonResume</p>
+<p>关掉B对话框 BonPause-AonResume-BonStop-BonDestroy</p>
+</blockquote>
+<h2 id="Intent传递数据">Intent传递数据</h2><h3 id="传递简单数据">传递简单数据</h3><p>MainActivity.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent i = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,AnotherAcitivy.class);</span><br><span class="line">i.putExtra(<span class="string">"data"</span>,<span class="string">"hello tangxin"</span>);</span><br><span class="line">startActivity(i);</span><br></pre></td></tr></table></figure></p>
+<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Intent i = getIntent();</span><br><span class="line">textview = (TextView)findViewById(R.id.tv_show);</span><br><span class="line">textView.setText(i.getStringExtra(<span class="string">"data"</span>));</span><br></pre></td></tr></table></figure></p>
+<h3 id="传递数据包">传递数据包</h3><p>MainActivity.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Intent i = <span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,AnotherAcitivy.class);</span><br><span class="line">Bundle b = <span class="keyword">new</span> Bundle();</span><br><span class="line">b.putString(<span class="string">"name"</span>,<span class="string">"tangxin"</span>);</span><br><span class="line">b.putInt(<span class="string">"age"</span>,<span class="number">21</span>);</span><br><span class="line">i.putExtras(b);</span><br><span class="line"><span class="comment">//i.putExtra("data",b);</span></span><br></pre></td></tr></table></figure></p>
+<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent i = getIntent();</span><br><span class="line"><span class="comment">//Bundle data = i.getExtras(); //与i.putExtra("data",b)对应</span></span><br><span class="line">Bundle data = i.getExtra();</span><br><span class="line">textView.setText(String.format(<span class="string">"name=%s,age=%d"</span>,data.getString(<span class="string">"name"</span>),data.getInt(<span class="string">"age"</span>),date.getString(<span class="string">"name1"</span>,<span class="string">"leo"</span>))); <span class="comment">//如果name1不存在才会 name1=leo</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="传递值对象">传递值对象</h3><p>MainActivity.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i.putExtra(<span class="string">"usr"</span>,<span class="keyword">new</span> User(<span class="string">"tangxin,22"</span>)); <span class="comment">//需要implemente序列化值接写会报错</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="implemente_Serializable">implemente Serializable</h4><p>User.java</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/34890526.jpg" alt="User类implemente Serializable"></p>
+<p>MainActi.java</p>
+<blockquote>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/55647036.jpg" alt="序列化"></p>
+<p>java 提供了 java.io.Serializable</p>
+<p>android 提供了android.os.Parcelable专门面向移动的效率比java.io.Serializable高</p>
+</blockquote>
+<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User user = (Usr) i.getSerializableExtra(<span class="string">"user"</span>);</span><br><span class="line">textview.setText(String.format(<span class="string">"name=%s,age=%d"</span>,user.getName(),user.getAge()));</span><br></pre></td></tr></table></figure></p>
+<hr>
+<blockquote>
+<p>findViewById 被注释掉会出现空指针异常</p>
+</blockquote>
+<h4 id="implemente_Parcelable">implemente Parcelable</h4><p>User.java</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/24677583.jpg" alt="User类implemente Parcelable"></p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/21981610.jpg" alt=""><br>Parcelable 没有全自动的机制需要我们手动写</p>
+<p>AnotherAcitivy.java<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User user = (Usr) i.getParcelableExtra(<span class="string">"user"</span>);</span><br><span class="line">textview.setText(String.format(<span class="string">"name=%s,age=%d"</span>,user.getName(),user.getAge()));</span><br></pre></td></tr></table></figure></p>
+<h4 id="总结">总结</h4><blockquote>
+<p>用Serializable操作比较简单是系统帮我们操作的速度慢  java提供的</p>
+<p>用Parcelable要手动实现三个方法 速度快 是android提供的</p>
+</blockquote>
+<h3 id="获取_Activity_的返回参数">获取 Activity 的返回参数</h3><p>AnotherAcitivy.java</p>
+<p><img src="http://img-storage.qiniudn.com/15-7-3/74172036.jpg" alt=""></p>
+<blockquote>
+<p>Intent它不仅可以起动一个Activiy还可以做为一个载本把数据在Activiy之间传来传去的</p>
+</blockquote>
+<p>MainActivity.java<br><img src="http://img-storage.qiniudn.com/15-7-3/50854667.jpg" alt=""></p>
+<h2 id="Activity的起动模式">Activity的起动模式</h2><h3 id="标准模式">标准模式</h3><blockquote>
+<p>toString() 可以用来获取Activity实例<br>getTask() 任务ID</p>
+<p>自己起动自己<br>通过观察TaskID和Acitivity实例发现 同一个任务栈里面创建了不同的实例</p>
+<p>任务栈的概念：<br>栈是先入后出 Activity一个一个入栈 当按back键 一个一个出栈就行了,这是Android跳转的一个机制</p>
+<p>在Manifest.xml中<android>下可以配制</android></p>
+<p><anroid:launchmode="standard"> standard是默认的</anroid:launchmode="standard"></p>
+<p>android:testAllCaps=”false” //关闭全不大写</p>
+</blockquote>
+<h3 id="SingleTop">SingleTop</h3><blockquote>
+<p>同一个文件中的ID不能一样,不同文件中的ID可以一样</p>
+<p>在同一个栈里面如果我们指明启动模式是SingleTop如果些时Activiy处于栈顶只创建一个实例<br>如果不处于栈顶会创建新的实例 <a href="[http://www.jikexueyuan.com/course/678_2.html?ss=1]">观看视频</a></p>
+</blockquote>
+<h3 id="SingleTask_与_SingleInstance_模式">SingleTask 与 SingleInstance 模式</h3><h4 id="SingleTask">SingleTask</h4><p>有个任务栈在ID是87  任务栈里有个MainActiviy<br>启动AnotherAcitivy时 任务栈有两个Activiy<br>在AnotherAcitivy中起动MainActiviy时会把AnotherAcitivy<br>弹出 弹到MainActiviy 这时按后退 直退出</p>
+<h4 id="SingleInstance">SingleInstance</h4><blockquote>
+<p>将Activity存在不同的任务栈中 任务<br>从切换的动画效果可以明显看出来</p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Activity">Activity</h2><blockquote>
+<p>Activity绑定自定义视图 setConView()</p>
+<p>启动另一个 Activity<br>startActivity()</p>
+<p>下载帮助文档 用于离线查看<br>]]>
+    
+    </summary>
+    
+      <category term="Android极客学院视频笔记" scheme="http://tangxin.club/tags/Android%E6%9E%81%E5%AE%A2%E5%AD%A6%E9%99%A2%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Android" scheme="http://tangxin.club/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://tangxin.club/2015/06/25/0.hello-world/"/>
-    <id>http://tangxin.club/2015/06/25/0.hello-world/</id>
-    <published>2015-06-24T23:49:00.000Z</published>
-    <updated>2015-07-18T05:55:29.732Z</updated>
+    <link href="http://tangxin.club/2014/03/25/0.hello-world/"/>
+    <id>http://tangxin.club/2014/03/25/0.hello-world/</id>
+    <published>2014-03-25T02:49:00.000Z</published>
+    <updated>2015-11-20T04:41:29.877Z</updated>
     <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>

@@ -1,0 +1,595 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>XML | Michael&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Michael">
+    
+
+    
+    <meta name="description" content="XML技术:与数据相关技术，在企业中xml技术常用来存储数据和传输数据 ，流行原因 ——- xml与任何编程语言无关xml 可用于 php、java、.net 任何编程语言
+XML典型存储和传输应用：1、XML 充当数据库 保存数据信息 —- 试题采用xml保存的 、google 数据信息通过xml格式保存2、在AJAX传输数据 、WebService技术 网络中传输数据时，格式采用xml在HTM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XML">
+<meta property="og:url" content="http://tangxin.club/2014/05/29/12.XML/index.html">
+<meta property="og:site_name" content="Michael's Blog">
+<meta property="og:description" content="XML技术:与数据相关技术，在企业中xml技术常用来存储数据和传输数据 ，流行原因 ——- xml与任何编程语言无关xml 可用于 php、java、.net 任何编程语言
+XML典型存储和传输应用：1、XML 充当数据库 保存数据信息 —- 试题采用xml保存的 、google 数据信息通过xml格式保存2、在AJAX传输数据 、WebService技术 网络中传输数据时，格式采用xml在HTM">
+<meta property="og:updated_time" content="2015-11-20T04:47:40.403Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XML">
+<meta name="twitter:description" content="XML技术:与数据相关技术，在企业中xml技术常用来存储数据和传输数据 ，流行原因 ——- xml与任何编程语言无关xml 可用于 php、java、.net 任何编程语言
+XML典型存储和传输应用：1、XML 充当数据库 保存数据信息 —- 试题采用xml保存的 、google 数据信息通过xml格式保存2、在AJAX传输数据 、WebService技术 网络中传输数据时，格式采用xml在HTM">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Michael&#39;s Blog">Michael&#39;s Blog</a></h1>
+				<h2 class="blog-motto">Stay foolish, Stay hungry, Learning, Sharing, Growing.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/indexs">索引</a></li>
+					
+						<li><a href="/about">个人简介</a></li>
+					
+					<li>
+ 					
+						<form class="search">
+							<label>Search</label>
+						<input type="text" id="ts-search-input" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/05/29/12.XML/" title="XML" itemprop="url">XML</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
+		
+  <p class="article-time">
+    <time datetime="2014-05-28T23:49:00.000Z" itemprop="datePublished"> 发表于 2014-05-29</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#XML技术:"><span class="toc-number">1.</span> <span class="toc-text">XML技术:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XML典型存储和传输应用："><span class="toc-number">2.</span> <span class="toc-text">XML典型存储和传输应用：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XML语法"><span class="toc-number">3.</span> <span class="toc-text">XML语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文档声明"><span class="toc-number">3.1.</span> <span class="toc-text">文档声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元素"><span class="toc-number">3.2.</span> <span class="toc-text">元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性和注释"><span class="toc-number">3.3.</span> <span class="toc-text">属性和注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CDATA块"><span class="toc-number">3.4.</span> <span class="toc-text">CDATA块</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XML_技术应用_两大类"><span class="toc-number">4.</span> <span class="toc-text">XML 技术应用 两大类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么xml使用约束？"><span class="toc-number">5.</span> <span class="toc-text">什么xml使用约束？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XML约束技术_DTD_和_Schema"><span class="toc-number">6.</span> <span class="toc-text">XML约束技术 DTD 和 Schema</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DTD技术快速入门"><span class="toc-number">6.1.</span> <span class="toc-text">DTD技术快速入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DTD与xml关联三种方式"><span class="toc-number">6.2.</span> <span class="toc-text">DTD与xml关联三种方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元素（ELEMENT）定义"><span class="toc-number">6.3.</span> <span class="toc-text">元素（ELEMENT）定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性（ATTLIST）定义"><span class="toc-number">6.4.</span> <span class="toc-text">属性（ATTLIST）定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性类型"><span class="toc-number">6.5.</span> <span class="toc-text">属性类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#约束"><span class="toc-number">6.6.</span> <span class="toc-text">约束</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#REQUIERD_属性必须"><span class="toc-number"></span> <span class="toc-text">REQUIERD 属性必须</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IMPLIED_属性可选"><span class="toc-number"></span> <span class="toc-text">IMPLIED 属性可选</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实体（ENTITY）定义"><span class="toc-number">0.1.</span> <span class="toc-text">实体（ENTITY）定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XML_Schema_使用一套预先定义好元素和属性_开发的"><span class="toc-number">1.</span> <span class="toc-text">XML Schema 使用一套预先定义好元素和属性 开发的</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Schema快速入门"><span class="toc-number">1.1.</span> <span class="toc-text">Schema快速入门</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<h2 id="XML技术:">XML技术:</h2><p>与数据相关技术，在企业中xml技术常用来存储数据和传输数据 ，流行原因 ——- xml与任何编程语言无关<br>xml 可用于 php、java、.net 任何编程语言</p>
+<h2 id="XML典型存储和传输应用：">XML典型存储和传输应用：</h2><p>1、XML 充当数据库 保存数据信息 —- 试题采用xml保存的 、google 数据信息通过xml格式保存<br>2、在AJAX传输数据 、WebService技术 网络中传输数据时，格式采用xml<br>在HTML中预定义了很多标记，每个标记都有相应显示效果，xml所有标记没有被预定义<br>在xml中 <name>HLG</name> ——  想确定name标记含义 ，需要对xml 添加约束</p>
+<h2 id="XML语法">XML语法</h2><p>5、CDATA块<br>6、处理指令</p>
+<h3 id="文档声明">文档声明</h3><ol>
+<li>任何xml必须具备文档声明 &lt;?xml version=”1.0” ?&gt;</li>
+<li>XML是一种标记语言 存储和传输数据 —- 保存数据内容</li>
+<li>没有指定xml 编码集 —- 默认采用ISO-8859-1 编码 （不支持中文数据）</li>
+<li>注意问题 当xml 指定encoding=”utf-8” 是浏览器查看编码集  ——— 浏览器查看编码集必须要和文件保存编码集一致</li>
+<li>新建记事本程序采用系统默认编码集 —- 默认编码集gbk —— 使用utf-8编码 另存为</li>
+<li>当声明standalone = “yes” 该xml是独立xml 不依赖外面其它文件，standalone = “no” 该xml 依赖外部一些文件</li>
+<li>通过PI指令控制xml显示样式 （指令之前不能有注释）<br>当xml 使用pi指令 引用CSS —- 效果等同于HTML，进行页面数据展示<br>通过xml进行显示数据 ，通过XSLT 修饰xml数据显示 （类似CSS）</li>
+</ol>
+<h3 id="元素">元素</h3><p>XML 通过元素描述复杂关系模型数据</p>
+<h3 id="属性和注释">属性和注释</h3><ol>
+<li>所有xml元素必须结束<br><abc></abc> ——- 在xml 文件中如果标签中没有内容 自结束 <abc></abc></li>
+<li>标签不允许交叉嵌套</li>
+<li>有且仅有一个根元素</li>
+<li>xml文件中 空格和换行 会被解析器进行解析的</li>
+<li>严格区分大小写，元素和属性名称不能以数字开始</li>
+</ol>
+<p>属性定义语法 &lt;元素名称 属性名称=”属性值” 属性名称=”属性值” ….&gt;<br>一个元素定义多个属性的，每个属性值必须使用单引号和双引号</p>
+<ol>
+<li>属性的值必须用单引号或者双引号 引起来</li>
+<li>xml注释与html注释相同 <!-- --> 注释不能嵌套</li>
+</ol>
+<h3 id="CDATA块">CDATA块</h3><ul>
+<li>CDATA区域内 保留不被解析器解析的内容 ——通常存放特殊代码，这些代码造成xml格式混乱</li>
+<li>CDATA和转义字符在哪些情况使用？区别？</li>
+<li>优先使用CDATA XML技术存储数据，传输数据、解析数据<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="cdata">&lt;![CDATA[ &lt;book&gt;书 &lt;/book&gt; ]]&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="XML_技术应用_两大类">XML 技术应用 两大类</h2><p>1、传输和存储数据 ——- 程序员为了简化开发，不对xml使用约束技术</p>
+<ul>
+<li>不使用xml约束技术，xml 格式不一定正确</li>
+<li>所有xml 数据内容生成，解析过程 都是通过程序来完成的<br>2、使用xml 作为配置文件</li>
+<li>Android SSH ——- 程序员为了保证xml元素准确性，通常xml文档使用约束技术的</li>
+</ul>
+<h2 id="什么xml使用约束？">什么xml使用约束？</h2><ul>
+<li>使用约束xml文档 —- 元素内容格式更加规范</li>
+<li>如果企业中xml没有使用约束 ——— 通过程序生成xml和解析xml时，不使用约束，代码更加简单</li>
+</ul>
+<h2 id="XML约束技术_DTD_和_Schema">XML约束技术 DTD 和 Schema</h2><h3 id="DTD技术快速入门">DTD技术快速入门</h3><ol>
+<li>编写数据xml —- books.xml</li>
+<li>编写dtd文件</li>
+<li>为文档每一个元素(不同名称) &lt;!ELEMENT<br>语法 &lt;!ELEMENT 元素名称 子元素&gt;<br>元素内部文本 #PCDATA</li>
+<li>将xml文件与dtd文件关联起来</li>
+</ol>
+<h3 id="DTD与xml关联三种方式">DTD与xml关联三种方式</h3><ol>
+<li>内部DTD ——- 语法 &lt;!DOCTYPE 根元素 []&gt;</li>
+<li>外部DTD (引用本地DTD) ——- 语法 &lt;!DOCTYPE 根元素 SYSTEM “本地DTD文件位置” &gt;</li>
+<li>公共DTD (引用网络上DTD)  &lt;!DOCTYPE 文档根结点 PUBLIC “DTD名称” “DTD文件的URL”&gt;</li>
+<li>公共DTD 使用 名称 类似W3C规范官方组织规定的</li>
+</ol>
+<h3 id="元素（ELEMENT）定义">元素（ELEMENT）定义</h3><p>内容特点符合含义</p>
+<ul>
+<li>() 子元素、分组</li>
+<li>, 代表子元素顺序</li>
+<li>+ * ?  —— 正则表达式 + 1到多个 、* 任意个（0到多个）、 ? 0或者1个</li>
+<li>| 多选一</li>
+</ul>
+<p>特殊元素内容：文本类型内容 #PCDATA  子元素内容如果为空 EMPTY</p>
+<h3 id="属性（ATTLIST）定义">属性（ATTLIST）定义</h3><ul>
+<li>语法：&lt;!ATTLIST 元素名称 属性列表 &gt;</li>
+<li>属性列表：</li>
+<li>属性名称 类型 约束</li>
+<li>属性名称 类型 约束</li>
+<li>属性名称 类型 约束</li>
+<li>属性名称 类型 约束</li>
+</ul>
+<h3 id="属性类型">属性类型</h3><ul>
+<li>CDATA 文本类型属性</li>
+<li>(值1|值2|值3 ) 三个值选一个</li>
+<li>ID 表示属性值唯一</li>
+</ul>
+<h3 id="约束">约束</h3><ul>
+<li><h1 id="REQUIERD_属性必须">REQUIERD 属性必须</h1></li>
+<li><h1 id="IMPLIED_属性可选">IMPLIED 属性可选</h1></li>
+<li>fixed value 属性值固定</li>
+<li>default 默认值</li>
+</ul>
+<h3 id="实体（ENTITY）定义">实体（ENTITY）定义</h3><p>对于xml数据内容重复，可以抽取实体<br>语法：&lt;!ENTITY 实体名称 “实体内容” &gt;</p>
+<h2 id="XML_Schema_使用一套预先定义好元素和属性_开发的">XML Schema 使用一套预先定义好元素和属性 开发的</h2><ul>
+<li>预先定义好元素和属性 规定了schema 结构和内容</li>
+<li>定义schema 规定xml文档 格式和内容</li>
+<li>预先已经定义好元素和属性 ——— 定义schema  ———- 定义xml实例</li>
+<li>Schema本身也是xml ，不像DTD使用单独语法</li>
+<li>将schema中定义元素，绑定URI地址（名称空间）上，用来唯一标识元素来自哪个schema 。</li>
+<li>为什么要有名称空间？ 一个xml实例 引用多个Schema ，当两个schema定义同名元素，为了区分同名元素引用自哪个文档。</li>
+</ul>
+<h3 id="Schema快速入门">Schema快速入门</h3><p>1、编写数据xml文件</p>
+<p>2、编写schema文件 .xsd</p>
+<p>1） 引入 W3C 名称空间 xmlns=”<a href="http://www.w3.org/2001/XMLSchema" target="_blank" rel="external">http://www.w3.org/2001/XMLSchema</a>“<br>每一个元素 对应 <element></element></p>
+<p>区分复杂元素和简单元素</p>
+<p>2) 为schema定义元素指定名称空间 URI （URI可以是任何路径）</p>
+<p>3、在xml实例数据文件中 ，引用自定义Schema<br>elementFormDefault=”unqualified”</p>
+<p>1、如果schema 将 elementFormDefault=”unqualified” ，xml 实例文档 引用名称空间必须使用前缀 —— 前缀修饰根元素</p>
+<p>2、当前xml实例文档所有子元素必须不能用前缀</p>
+<p>名称空间 作用 —- 唯一标识schema当中定义元素</p>
+<p>简单元素 直接编写type属性 、复杂元素 <complextype></complextype></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/其它/">其它</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/DTD/">DTD</a><a href="/tags/Schema/">Schema</a><a href="/tags/XML/">XML</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	<div class="share-jiathis">
+	  
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+    var jiathis_config={
+    data_track_clickback:true,
+    sm:"copy,renren,cqq",
+    pic:"",
+    summary:"",
+     ralateuid:{"tsina":"678897425"},hideMore:false}
+    
+  </script> 
+<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=
+2042537" charset="utf-8"></script>      
+
+	 </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/02/07/13.黑马公开课笔记/" title="android studio使用">
+  <strong>上一篇：</strong><br/>
+  <span>
+  android studio使用</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2014/05/25/11.Pull解析与写入XML/"  title="Pull解析与写入XML">
+ <strong>下一篇：</strong><br/> 
+ <span>Pull解析与写入XML
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2014/05/29/12.XML/" data-title="XML" data-url="http://tangxin.club/2014/05/29/12.XML/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#XML技术:"><span class="toc-number">1.</span> <span class="toc-text">XML技术:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XML典型存储和传输应用："><span class="toc-number">2.</span> <span class="toc-text">XML典型存储和传输应用：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XML语法"><span class="toc-number">3.</span> <span class="toc-text">XML语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文档声明"><span class="toc-number">3.1.</span> <span class="toc-text">文档声明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元素"><span class="toc-number">3.2.</span> <span class="toc-text">元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性和注释"><span class="toc-number">3.3.</span> <span class="toc-text">属性和注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CDATA块"><span class="toc-number">3.4.</span> <span class="toc-text">CDATA块</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XML_技术应用_两大类"><span class="toc-number">4.</span> <span class="toc-text">XML 技术应用 两大类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么xml使用约束？"><span class="toc-number">5.</span> <span class="toc-text">什么xml使用约束？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XML约束技术_DTD_和_Schema"><span class="toc-number">6.</span> <span class="toc-text">XML约束技术 DTD 和 Schema</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DTD技术快速入门"><span class="toc-number">6.1.</span> <span class="toc-text">DTD技术快速入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DTD与xml关联三种方式"><span class="toc-number">6.2.</span> <span class="toc-text">DTD与xml关联三种方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元素（ELEMENT）定义"><span class="toc-number">6.3.</span> <span class="toc-text">元素（ELEMENT）定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性（ATTLIST）定义"><span class="toc-number">6.4.</span> <span class="toc-text">属性（ATTLIST）定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性类型"><span class="toc-number">6.5.</span> <span class="toc-text">属性类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#约束"><span class="toc-number">6.6.</span> <span class="toc-text">约束</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#REQUIERD_属性必须"><span class="toc-number"></span> <span class="toc-text">REQUIERD 属性必须</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IMPLIED_属性可选"><span class="toc-number"></span> <span class="toc-text">IMPLIED 属性可选</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#实体（ENTITY）定义"><span class="toc-number">0.1.</span> <span class="toc-text">实体（ENTITY）定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XML_Schema_使用一套预先定义好元素和属性_开发的"><span class="toc-number">1.</span> <span class="toc-text">XML Schema 使用一套预先定义好元素和属性 开发的</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Schema快速入门"><span class="toc-number">1.1.</span> <span class="toc-text">Schema快速入门</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>12</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/WEB/" title="WEB">WEB<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/其它/" title="其它">其它<sup>1</sup></a></li>
+		  
+		
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Android极客学院视频笔记/" title="Android极客学院视频笔记">Android极客学院视频笔记<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/root/" title="root">root<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/android-studio/" title="android studio">android studio<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/XML/" title="XML">XML<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/DTD/" title="DTD">DTD<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Schema/" title="Schema">Schema<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 当才华还撑不起野心时,就该静下心来学习 <br/>
+			当能力还驾驭不了目标时,就该沉下心来历练</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/678897425" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/qq897425998" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		<a href="https://www.linkedin.com/in/tangxin1993" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		
+		<a href="http://www.zhihu.com/people/tang-xin-67" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Michael">Michael</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"tangxin"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F31067404449864376fe63c3e704aff64' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<script>
+var option = {
+  engineKey: 'b42197e63be1d5ef8bc5'
+};
+(function(w,d,t,u,n,s,e){
+  s = d.createElement(t);
+  s.src = u;
+  s.async = 1;
+  w[n] = function(r){
+    w[n].opts = r;
+  };
+  e = d.getElementsByTagName(t)[0];
+  e.parentNode.insertBefore(s, e);
+})(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
+_ts(option);
+</script>
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

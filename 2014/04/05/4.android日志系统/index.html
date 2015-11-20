@@ -1,0 +1,531 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Android日志系统 | Michael&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Michael">
+    
+
+    
+    <meta name="description" content="使用日志 API
+之前一直用system.out.print system.err.print是java本身提供的
+调整Log level 只能看到当前级别和比当前级别高的信息
+
+
+
+log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android日志系统">
+<meta property="og:url" content="http://tangxin.club/2014/04/05/4.android日志系统/index.html">
+<meta property="og:site_name" content="Michael's Blog">
+<meta property="og:description" content="使用日志 API
+之前一直用system.out.print system.err.print是java本身提供的
+调整Log level 只能看到当前级别和比当前级别高的信息
+
+
+
+log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/80631137.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/40361784.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/86920859.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/82152529.jpg">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/63744910.jpg">
+<meta property="og:updated_time" content="2015-11-20T04:44:47.459Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android日志系统">
+<meta name="twitter:description" content="使用日志 API
+之前一直用system.out.print system.err.print是java本身提供的
+调整Log level 只能看到当前级别和比当前级别高的信息
+
+
+
+log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Michael&#39;s Blog">Michael&#39;s Blog</a></h1>
+				<h2 class="blog-motto">Stay foolish, Stay hungry, Learning, Sharing, Growing.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/indexs">索引</a></li>
+					
+						<li><a href="/about">个人简介</a></li>
+					
+					<li>
+ 					
+						<form class="search">
+							<label>Search</label>
+						<input type="text" id="ts-search-input" name="q" size="30" placeholder="搜索"><br>
+						</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2014/04/05/4.android日志系统/" title="Android日志系统" itemprop="url">Android日志系统</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
+		
+  <p class="article-time">
+    <time datetime="2014-04-05T02:49:00.000Z" itemprop="datePublished"> 发表于 2014-04-05</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用日志_API"><span class="toc-number">1.</span> <span class="toc-text">使用日志 API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日志分类"><span class="toc-number">2.</span> <span class="toc-text">日志分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用_DDMS_查看日志"><span class="toc-number">3.</span> <span class="toc-text">使用 DDMS 查看日志</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="使用日志_API">使用日志 API</h2><blockquote>
+<p>之前一直用<br><code>system.out.print</code> <code>system.err.print</code><br>是java本身提供的</p>
+<p>调整Log level 只能看到当前级别和比当前级别高的信息</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/80631137.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/40361784.jpg" alt=""></p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/86920859.jpg" alt=""></p>
+<p>log.v无用信息 给程序员唠叨用的 比如 “这段程序好难写呀”<br><a id="more"></a></p>
+</blockquote>
+<h2 id="日志分类">日志分类</h2><blockquote>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/82152529.jpg" alt=""></p>
+</blockquote>
+<h2 id="使用_DDMS_查看日志">使用 DDMS 查看日志</h2><blockquote>
+<p>DDMS 是用来调式Android的非常重要的一个工具<br>可以独立运行 还可以模拟打电话 发送短息</p>
+<p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-7-4/63744910.jpg" alt=""></p>
+</blockquote>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Android/">Android</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android极客学院视频笔记/">Android极客学院视频笔记</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	<div class="share-jiathis">
+	  
+<div class="jiathis_style_24x24">
+	<a class="jiathis_button_tsina"></a>
+	<a class="jiathis_button_weixin"></a>
+	<a class="jiathis_button_renren"></a>
+	<a class="jiathis_button_qzone"></a>
+	<a class="jiathis_button_googleplus"></a>
+	<a class="jiathis_button_douban"></a>
+	<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+    var jiathis_config={
+    data_track_clickback:true,
+    sm:"copy,renren,cqq",
+    pic:"",
+    summary:"",
+     ralateuid:{"tsina":"678897425"},hideMore:false}
+    
+  </script> 
+<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=
+2042537" charset="utf-8"></script>      
+
+	 </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2014/04/08/5.BroadcastReceiver/" title="BroadcastReceiver">
+  <strong>上一篇：</strong><br/>
+  <span>
+  BroadcastReceiver</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2014/04/03/3.android.support库/"  title="Android.Support.V4, V7, V13是什么？">
+ <strong>下一篇：</strong><br/> 
+ <span>Android.Support.V4, V7, V13是什么？
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2014/04/05/4.android日志系统/" data-title="Android日志系统" data-url="http://tangxin.club/2014/04/05/4.android日志系统/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用日志_API"><span class="toc-number">1.</span> <span class="toc-text">使用日志 API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#日志分类"><span class="toc-number">2.</span> <span class="toc-text">日志分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用_DDMS_查看日志"><span class="toc-number">3.</span> <span class="toc-text">使用 DDMS 查看日志</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/Android/" title="Android">Android<sup>12</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/WEB/" title="WEB">WEB<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/其它/" title="其它">其它<sup>1</sup></a></li>
+		  
+		
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Android极客学院视频笔记/" title="Android极客学院视频笔记">Android极客学院视频笔记<sup>8</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/root/" title="root">root<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/android-studio/" title="android studio">android studio<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/XML/" title="XML">XML<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/DTD/" title="DTD">DTD<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Schema/" title="Schema">Schema<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>1</sup></a></li>
+			
+		
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> 当才华还撑不起野心时,就该静下心来学习 <br/>
+			当能力还驾驭不了目标时,就该沉下心来历练</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/678897425" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/qq897425998" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		
+		<a href="https://www.linkedin.com/in/tangxin1993" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		
+		<a href="http://www.zhihu.com/people/tang-xin-67" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Michael">Michael</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"tangxin"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F31067404449864376fe63c3e704aff64' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<script>
+var option = {
+  engineKey: 'b42197e63be1d5ef8bc5'
+};
+(function(w,d,t,u,n,s,e){
+  s = d.createElement(t);
+  s.src = u;
+  s.async = 1;
+  w[n] = function(r){
+    w[n].opts = r;
+  };
+  e = d.getElementsByTagName(t)[0];
+  e.parentNode.insertBefore(s, e);
+})(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
+_ts(option);
+</script>
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
