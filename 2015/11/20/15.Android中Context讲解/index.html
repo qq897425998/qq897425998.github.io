@@ -4,23 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>indexs | Michael&#39;s Blog</title>
+    <title>Michael&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Michael">
     
 
     
-    <meta name="description" content="[百度][http://www.baidu.com][google][https://www.google.com][知乎][http://zhihu.com/][简书][http://www.jianshu.com/]">
-<meta property="og:type" content="website">
-<meta property="og:title" content="indexs">
-<meta property="og:url" content="http://tangxin.club/index/index.html">
+    <meta name="description" content="1.Context类型Android应用都是使用Java语言来编写的，那么可以思考一下，一个Android程序和一个Java程序，他们最大的区别在哪里？划分界限又是什么呢？其实简单点分析，Android程序不像Java程序一样，随便创建一个类，写个main()方法就能跑了，而是要有一个完整的Android工程环境，在这个环境下，我们有像Activity、Service、BroadcastRecei">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Michael's Blog">
+<meta property="og:url" content="http://tangxin.club/2015/11/20/15.Android中Context讲解/index.html">
 <meta property="og:site_name" content="Michael's Blog">
-<meta property="og:description" content="[百度][http://www.baidu.com][google][https://www.google.com][知乎][http://zhihu.com/][简书][http://www.jianshu.com/]">
-<meta property="og:updated_time" content="2015-12-11T11:04:06.671Z">
+<meta property="og:description" content="1.Context类型Android应用都是使用Java语言来编写的，那么可以思考一下，一个Android程序和一个Java程序，他们最大的区别在哪里？划分界限又是什么呢？其实简单点分析，Android程序不像Java程序一样，随便创建一个类，写个main()方法就能跑了，而是要有一个完整的Android工程环境，在这个环境下，我们有像Activity、Service、BroadcastRecei">
+<meta property="og:image" content="http://7xjuns.com1.z0.glb.clouddn.com/15-11-20/44180412.jpg">
+<meta property="og:updated_time" content="2015-11-20T08:07:20.055Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="indexs">
-<meta name="twitter:description" content="[百度][http://www.baidu.com][google][https://www.google.com][知乎][http://zhihu.com/][简书][http://www.jianshu.com/]">
+<meta name="twitter:title" content="Michael's Blog">
+<meta name="twitter:description" content="1.Context类型Android应用都是使用Java语言来编写的，那么可以思考一下，一个Android程序和一个Java程序，他们最大的区别在哪里？划分界限又是什么呢？其实简单点分析，Android程序不像Java程序一样，随便创建一个类，写个main()方法就能跑了，而是要有一个完整的Android工程环境，在这个环境下，我们有像Activity、Service、BroadcastRecei">
 
     
     <link rel="alternative" href="/atom.xml" title="Michael&#39;s Blog" type="application/atom+xml">
@@ -68,26 +69,42 @@
 </div>
     </header>
     <div id="container">
-      <div id="main" class="indexs" itemscope itemprop="blogPost">
+      <div id="main" class="post" itemscope itemprop="blogPost">
   
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/index/index.html" title="indexs" itemprop="url">indexs</a>
+      <a href="/2015/11/20/15.Android中Context讲解/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Michael" target="_blank" itemprop="author">Michael</a>
 		
   <p class="article-time">
-    <time datetime="2015-12-11T11:04:06.671Z" itemprop="datePublished"> 发表于 2015-12-11</time>
+    <time datetime="2015-11-20T08:07:20.055Z" itemprop="datePublished"> 发表于 2015-11-20</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
-		<p>[百度][<a href="http://www.baidu.com" target="_blank" rel="external">http://www.baidu.com</a>]<br>[google][<a href="https://www.google.com" target="_blank" rel="external">https://www.google.com</a>]<br>[知乎][<a href="http://zhihu.com/" target="_blank" rel="external">http://zhihu.com/</a>]<br>[简书][<a href="http://www.jianshu.com/" target="_blank" rel="external">http://www.jianshu.com/</a>]</p>
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Context类型"><span class="toc-number">1.</span> <span class="toc-text">1.Context类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Context的继承结构"><span class="toc-number">2.</span> <span class="toc-text">2.Context的继承结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Context数量"><span class="toc-number">3.</span> <span class="toc-text">3.Context数量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-"><span class="toc-number">4.</span> <span class="toc-text">4.</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="1-Context类型">1.Context类型</h1><p>Android应用都是使用Java语言来编写的，那么可以思考一下，一个Android程序和一个Java程序，他们最大的区别在哪里？划分界限又是什么呢？其实简单点分析，Android程序不像Java程序一样，随便创建一个类，写个main()方法就能跑了，而是要有一个完整的Android工程环境，在这个环境下，我们有像Activity、Service、BroadcastReceiver等系统组件，而这些组件并不是像一个普通的Java对象new一下就能创建实例的了，而是要有它们各自的上下文环境，也就是这里讨论的Context。可以这样讲，Context是维持Android程序中各组件能够正常工作的一个核心功能类。</p>
+<h1 id="2-Context的继承结构">2.Context的继承结构</h1><p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-11-20/44180412.jpg" alt=""><br>可以看到，直系子类有两个，一个是ContextWrapper，一个是ContextImpl。从名字上就可以看出，ContextWrapper是上下文功能的封装类，而ContextImpl则是上下文功能的实现类。而ContextWrapper又有三个直接的子类，ContextThemeWrapper、Service和Application。其中，ContextThemeWrapper是一个带主题的封装类，而它有一个直接子类就是Activity。</p>
+<p>那么在这里我们至少看到了几个所比较熟悉的面孔，Activity、Service、还有Application。由此，其实我们就已经可以得出结论了，Context一共有三种类型，分别是Application、Activity和Service。这三个类虽然分别各种承担着不同的作用，但它们都属于Context的一种，而它们具体Context的功能则是由ContextImpl类去实现的。</p>
+<p>那么Context到底可以实现哪些功能呢？这个就实在是太多了，弹出Toast、启动Activity、启动Service、发送广播、操作数据库等都需要用到Context。由于Context的具体能力是由ContextImpl类去实现的，因此在绝大多数场景下，Activity、Service和Application这三种类型的Context都是可以通用的。不过有几种场景比较特殊，比如启动Activity，还有弹出Dialog。出于安全原因的考虑，Android是不允许Activity或Dialog凭空出现的，一个Activity的启动必须要建立在另一个Activity的基础之上，也就是以此形成的返回栈。而Dialog则必须在一个Activity上面弹出（除非是System Alert类型的Dialog），因此在这种场景下，我们只能使用Activity类型的Context，否则将会出错</p>
+<h1 id="3-Context数量">3.Context数量</h1><p>那么一个应用程序中到底有多少个Context呢？其实根据上面的Context类型我们就已经可以得出答案了。Context一共有Application、Activity和Service三种类型，因此一个应用程序中Context数量的计算公式就可以这样写：</p>
+<blockquote>
+<p>Context数量 = Activity数量 + Service数量 + 1</p>
+</blockquote>
+<p>上面的1代表着Application的数量，因为一个应用程序中可以有多个Activity和多个Service，但是只能有一个Application。</p>
+<h1 id="4-">4.</h1><p>参考: <a href="http://android.jobbole.com/82044/" target="_blank" rel="external">http://android.jobbole.com/82044/</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -134,14 +151,34 @@
    	       
 	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/10/11/14.华为Mate S Root步方法/"  title="华为 Mate S Root 步骤">
+ <strong>下一篇：</strong><br/> 
+ <span>华为 Mate S Root 步骤
+</span>
+</a>
+</div>
+
+</nav>
+
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="index/index.html" data-title="indexs" data-url="http://tangxin.club/index/index.html"></div>
+	<div class="ds-thread" data-thread-key="2015/11/20/15.Android中Context讲解/" data-title="" data-url="http://tangxin.club/2015/11/20/15.Android中Context讲解/"></div>
 </section>
 
 
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Context类型"><span class="toc-number">1.</span> <span class="toc-text">1.Context类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Context的继承结构"><span class="toc-number">2.</span> <span class="toc-text">2.Context的继承结构</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Context数量"><span class="toc-number">3.</span> <span class="toc-text">3.Context数量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-"><span class="toc-number">4.</span> <span class="toc-text">4.</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -318,8 +355,36 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
   });
 });
 </script>
@@ -418,4 +483,4 @@ _ts(option);
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>

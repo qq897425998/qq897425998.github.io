@@ -5,7 +5,7 @@
   <subtitle><![CDATA[Stay foolish, Stay hungry, Learning, Sharing, Growing.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://tangxin.club//"/>
-  <updated>2015-11-20T05:03:46.631Z</updated>
+  <updated>2015-11-20T08:07:20.055Z</updated>
   <id>http://tangxin.club//</id>
   
   <author>
@@ -16,12 +16,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://tangxin.club/2015/11/20/15.Android%E4%B8%ADContext%E8%AE%B2%E8%A7%A3/"/>
+    <id>http://tangxin.club/2015/11/20/15.Android中Context讲解/</id>
+    <published>2015-11-20T08:07:20.055Z</published>
+    <updated>2015-11-20T08:07:20.055Z</updated>
+    <content type="html"><![CDATA[<h1 id="1-Context类型">1.Context类型</h1><p>Android应用都是使用Java语言来编写的，那么可以思考一下，一个Android程序和一个Java程序，他们最大的区别在哪里？划分界限又是什么呢？其实简单点分析，Android程序不像Java程序一样，随便创建一个类，写个main()方法就能跑了，而是要有一个完整的Android工程环境，在这个环境下，我们有像Activity、Service、BroadcastReceiver等系统组件，而这些组件并不是像一个普通的Java对象new一下就能创建实例的了，而是要有它们各自的上下文环境，也就是这里讨论的Context。可以这样讲，Context是维持Android程序中各组件能够正常工作的一个核心功能类。</p>
+<h1 id="2-Context的继承结构">2.Context的继承结构</h1><p><img src="http://7xjuns.com1.z0.glb.clouddn.com/15-11-20/44180412.jpg" alt=""><br>可以看到，直系子类有两个，一个是ContextWrapper，一个是ContextImpl。从名字上就可以看出，ContextWrapper是上下文功能的封装类，而ContextImpl则是上下文功能的实现类。而ContextWrapper又有三个直接的子类，ContextThemeWrapper、Service和Application。其中，ContextThemeWrapper是一个带主题的封装类，而它有一个直接子类就是Activity。</p>
+<p>那么在这里我们至少看到了几个所比较熟悉的面孔，Activity、Service、还有Application。由此，其实我们就已经可以得出结论了，Context一共有三种类型，分别是Application、Activity和Service。这三个类虽然分别各种承担着不同的作用，但它们都属于Context的一种，而它们具体Context的功能则是由ContextImpl类去实现的。</p>
+<p>那么Context到底可以实现哪些功能呢？这个就实在是太多了，弹出Toast、启动Activity、启动Service、发送广播、操作数据库等都需要用到Context。由于Context的具体能力是由ContextImpl类去实现的，因此在绝大多数场景下，Activity、Service和Application这三种类型的Context都是可以通用的。不过有几种场景比较特殊，比如启动Activity，还有弹出Dialog。出于安全原因的考虑，Android是不允许Activity或Dialog凭空出现的，一个Activity的启动必须要建立在另一个Activity的基础之上，也就是以此形成的返回栈。而Dialog则必须在一个Activity上面弹出（除非是System Alert类型的Dialog），因此在这种场景下，我们只能使用Activity类型的Context，否则将会出错</p>
+<h1 id="3-Context数量">3.Context数量</h1><p>那么一个应用程序中到底有多少个Context呢？其实根据上面的Context类型我们就已经可以得出答案了。Context一共有Application、Activity和Service三种类型，因此一个应用程序中Context数量的计算公式就可以这样写：</p>
+<blockquote>
+<p>Context数量 = Activity数量 + Service数量 + 1</p>
+</blockquote>
+<p>上面的1代表着Application的数量，因为一个应用程序中可以有多个Activity和多个Service，但是只能有一个Application。</p>
+<h1 id="4-">4.</h1><p>参考: <a href="http://android.jobbole.com/82044/" target="_blank" rel="external">http://android.jobbole.com/82044/</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="1-Context类型">1.Context类型</h1><p>Android应用都是使用Java语言来编写的，那么可以思考一下，一个Android程序和一个Java程序，他们最大的区别在哪里？划分界限又是什么呢？其实简单点分析，Android程序不像Java程序]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[华为 Mate S Root 步骤]]></title>
     <link href="http://tangxin.club/2015/10/11/14.%E5%8D%8E%E4%B8%BAMate%20S%20Root%E6%AD%A5%E6%96%B9%E6%B3%95/"/>
     <id>http://tangxin.club/2015/10/11/14.华为Mate S Root步方法/</id>
     <published>2015-10-11T00:49:00.000Z</published>
-    <updated>2015-11-20T05:03:46.631Z</updated>
-    <content type="html"><![CDATA[<p>用了半个月华为Mate S不Root用着各种不爽，花一半天才Root<br>这款机器9月15号出到现在不到一个月 市面上的一键root还没匹配<br>该机型,试了6、7款一键root软件对华为mate s都不起作用于是乎google一下<br>(百度喳喳都查不到root方法),记录以下步骤方便以后再次root。</p>
+    <updated>2015-11-20T07:32:25.518Z</updated>
+    <content type="html"><![CDATA[<p>用了半个月华为Mate S没Root用着各种不爽，花半天才Root<br>这款机器。9月15号出到现在不到一个月而市面上的一键root还没匹配<br>该机型,试了6到7款一键root软件对华为mate s都不起作用于是乎google一下<br>查到了解决方法(百度喳喳怎么都查不到),记录以下步骤方便以后再次root。</p>
 <ol>
 <li><p>首先到华为官网去根据官方教程 解锁<br><a href="http://www.emui.com/plugin.php?id=unlock" target="_blank" rel="external">http://www.emui.com/plugin.php?id=unlock</a></p>
 </li>
@@ -37,7 +60,7 @@
 <p>参考文章:<br><a href="http://www.android.gs/root-install-twrp-recovery-huawei-mate-s/" target="_blank" rel="external">http://www.android.gs/root-install-twrp-recovery-huawei-mate-s/</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>用了半个月华为Mate S不Root用着各种不爽，花一半天才Root<br>这款机器9月15号出到现在不到一个月 市面上的一键root还没匹配<br>该机型,试了6、7款一键root软件对华为mate s都不起作用于是乎google一下<br>(百度喳喳都查不到root方法]]>
+    <![CDATA[<p>用了半个月华为Mate S没Root用着各种不爽，花半天才Root<br>这款机器。9月15号出到现在不到一个月而市面上的一键root还没匹配<br>该机型,试了6到7款一键root软件对华为mate s都不起作用于是乎google一下<br>查到了解决方法(百度喳喳怎么都]]>
     </summary>
     
       <category term="root" scheme="http://tangxin.club/tags/root/"/>
