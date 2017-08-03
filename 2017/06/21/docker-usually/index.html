@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://tangxin.site/2017/06/21/docker-usually/index.html">
 <meta property="og:site_name">
 <meta property="og:description" content="Docker基本操作拉去镜像docker pull hub.c.163.com/library/jenkins 查看本地镜像xindeMacBook-Pro-4:~ xin$ docker images REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE h">
-<meta property="og:updated_time" content="2017-08-03T02:29:05.000Z">
+<meta property="og:updated_time" content="2017-08-03T02:29:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初次docker使用记录">
 <meta name="twitter:description" content="Docker基本操作拉去镜像docker pull hub.c.163.com/library/jenkins 查看本地镜像xindeMacBook-Pro-4:~ xin$ docker images REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE h">
@@ -193,8 +193,10 @@ hub.c.163.com/library/jenkins   latest              36cdf943d844        2 months
 -d 代表终端关了还有在后台运行
 —name 容器名
 -p 端口
-</code></pre><h2 id="查看在运行的容器"><a href="#查看在运行的容器" class="headerlink" title="查看在运行的容器"></a>查看在运行的容器</h2><p>xindeMacBook-Pro-4:~ xin$ docker ps<br>CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS              PORTS                 NAMES<br>d5aaaba7b430        hub.c.163.com/library/jenkins   “/bin/tini – /usr…”   40 seconds ago      Up 39 seconds       8080/tcp, 50000/tcp   android-jenkins</p>
-<h2 id="查看所有容器状态"><a href="#查看所有容器状态" class="headerlink" title="查看所有容器状态"></a>查看所有容器状态</h2><pre><code>xindeMacBook-Pro-4:~ xin$ docker ps -a
+</code></pre><h2 id="查看在运行的容器"><a href="#查看在运行的容器" class="headerlink" title="查看在运行的容器"></a>查看在运行的容器</h2><pre><code>xindeMacBook-Pro-4:~ xin$ docker ps
+CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS              PORTS                 NAMES
+d5aaaba7b430        hub.c.163.com/library/jenkins   &quot;/bin/tini -- /usr...&quot;   40 seconds ago      Up 39 seconds       8080/tcp, 50000/tcp   android-jenkins
+</code></pre><h2 id="查看所有容器状态"><a href="#查看所有容器状态" class="headerlink" title="查看所有容器状态"></a>查看所有容器状态</h2><pre><code>xindeMacBook-Pro-4:~ xin$ docker ps -a
 CONTAINER ID        IMAGE                                COMMAND                  CREATED             STATUS                   PORTS                 NAMES
 d5aaaba7b430        hub.c.163.com/library/jenkins        &quot;/bin/tini -- /usr...&quot;   2 minutes ago       Up 2 minutes             8080/tcp, 50000/tcp   android-jenkins
 d84dc40e2d5e        hub.c.163.com/library/mysql:5.5.56   &quot;docker-entrypoint...&quot;   2 weeks ago         Exited (0) 11 days ago                         mysql
@@ -206,8 +208,8 @@ android-jenkins
 android-jenkins
 </code></pre><h2 id="删除单个容器"><a href="#删除单个容器" class="headerlink" title="删除单个容器"></a>删除单个容器</h2><pre><code>docker rm 容器的id
 删除所有的容器:docker rm ${docker ps -a -q}
-</code></pre><h2 id="查看容器日志"><a href="#查看容器日志" class="headerlink" title="查看容器日志"></a>查看容器日志</h2><p>xindeMacBook-Pro-4:~ xin$ docker logs android-jenkins</p>
-<h2 id="登录容器-执行命令"><a href="#登录容器-执行命令" class="headerlink" title="登录容器 执行命令"></a>登录容器 执行命令</h2><pre><code>xindeMacBook-Pro-4:~ xin$ docker exec -t mysql ls
+</code></pre><h2 id="查看容器日志"><a href="#查看容器日志" class="headerlink" title="查看容器日志"></a>查看容器日志</h2><pre><code>xindeMacBook-Pro-4:~ xin$ docker logs android-jenkins
+</code></pre><h2 id="登录容器-执行命令"><a href="#登录容器-执行命令" class="headerlink" title="登录容器 执行命令"></a>登录容器 执行命令</h2><pre><code>xindeMacBook-Pro-4:~ xin$ docker exec -t mysql ls
 bin   docker-entrypoint-initdb.d  home     media    proc  sbin  tmp
 boot  entrypoint.sh          lib     mnt    root  srv   usr
 dev   etc              lib64  opt    run   sys   var
@@ -221,7 +223,7 @@ xindeMacBook-Pro-4:~ xin$ docker exec -it jenkins cat /var/jenkins_home/secrets/
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-08-03T02:29:05.000Z" itemprop="dateUpdated">2017-08-03 10:29:05</time>
+    Last updated: <time datetime="2017-08-03T02:29:41.000Z" itemprop="dateUpdated">2017-08-03 10:29:41</time>
 </span><br>
 
 
